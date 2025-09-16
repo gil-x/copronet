@@ -1,0 +1,226 @@
+/* @font-face {
+    font-family: "Open Sans Light";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/fonts/OpenSans-Light.ttf") format("truetype");
+} */
+
+/* @font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+} */
+
+@font-face {
+    font-family: "Open Sans SemiBold";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("/fonts/OpenSans-SemiBold.ttf") format("truetype");
+    /* src: url("/fonts/Ubuntu-Regular.ttf") format("truetype"); */
+}
+
+@font-face {
+    font-family: "Open Sans Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/OpenSans-Bold.ttf") format("truetype");
+}
+
+/* @font-face {
+    font-family: "Open Sans Extrabold";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("/fonts/OpenSans-ExtraBold.ttf") format("truetype");
+} */
+
+@font-face {
+    font-family: "Fontin Sans Bold";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/fonts/Fontin Sans Bold.otf") format("opentype");
+}
+
+/* @font-face {
+    font-family: "Gill Sans SemiBold";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../fonts/Gill-Sans-SemiBold.ttf") format("truetype");
+} */
+
+:root {
+    font-family: "Open Sans SemiBold", "Sans-Serif";
+    font-size: var(--font-root);
+    line-height: 1.5;
+    color: var(--cpn-blue);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    margin: 0;
+    // padding: 0;
+
+    padding: 0 calc((100vw - var(--body-max-width)) / 2);
+}
+
+strong {
+    font-family: "Open Sans Bold";
+}
+
+small {
+    font-size: var(--font-m-s);
+}
+
+a {
+    color: inherit;
+}
+
+p {
+    margin: 0;
+    text-align: justify;
+}
+
+.title-medium {
+    /* margin: 24px 0; */
+    font-size: var(--font-m-l);
+    text-transform: uppercase;
+    text-align: center;
+
+    strong {
+        color: var(--cpn-blue-light);
+    }
+}
+
+.title-big {
+    font-size: var(--font-m-xxl);
+    text-transform: uppercase;
+    text-align: center;
+
+    background: url(../img/logo_bars3.svg) no-repeat top center / 66px 65px;
+    padding: 76px 0 0;
+
+    strong {
+        color: var(--cpn-blue-light);
+    }
+}
+
+.mobile {
+    display: inline-block;
+}
+
+.desktop {
+    display: none;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.circled {
+    flex-basis: 49%;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    &--left {
+        transform: translate(30px, -20px);
+    }
+
+    &--right {
+        transform: translate(-30px, 20px);
+    }
+
+    $arc-width: 5px;
+
+    @keyframes rotate-left {
+        0% {
+            transform: rotate(135deg);
+        }
+        100% {
+            transform: rotate(225deg);
+        }
+    }
+
+    @keyframes rotate-right {
+        0% {
+            transform: rotate(-45deg);
+        }
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -$arc-width;
+        left: -$arc-width;
+        width: calc(100% + 0px);
+        height: calc(100% + 0px);
+        border-radius: 50%;
+        border: $arc-width solid transparent;
+        pointer-events: none;
+    }
+
+    &--left::before {
+        border-left-color: var(--cpn-blue-light);
+        transform: rotate(-45deg);
+        animation: rotate-right 0.5s cubic-bezier(0.27, 1.11, 0.65, 1.35) 0.5s 1
+            forwards;
+    }
+
+    &--right::before {
+        border-left-color: var(--cpn-blue-light);
+        transform: rotate(135deg);
+        animation: rotate-left 0.5s cubic-bezier(0.27, 1.11, 0.65, 1.35) 0.5s 1
+            forwards;
+    }
+
+    &__img {
+        display: inline-block;
+        max-width: 100%;
+        border-radius: 50%;
+    }
+}
+
+@media (min-width: $bp-medium) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: inline-block;
+    }
+
+    .title-medium {
+        font-size: var(--font-l2);
+    }
+
+    .title-big {
+        font-size: var(--font-xxl);
+        background: none;
+        padding: 48px 0 0;
+        /* transform: translateX(-33px); */
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 66px;
+            height: 65px;
+            transform: translateX(-30px);
+            background: url(../img/logo_bars3.svg) no-repeat left center / 66px
+                65px;
+        }
+    }
+}

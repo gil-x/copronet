@@ -1,0 +1,29 @@
+<svg id="svg1" width="60.88mm" height="66.28mm" version="1.1" viewBox="0 0 60.88 66.28" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs1">
+    <linearGradient id="uuid-0ab84d58-0847-4a9e-a338-a0ccb7915785-5" x1="28.51" x2="94" y1="148.7" y2="148.7" data-name="Dégradé sans nom 5" gradientTransform="matrix(.2539 -.07439 .07439 .2539 -5.543 1.684)" gradientUnits="userSpaceOnUse">
+      <stop id="stop1-6" stop-color="#f1f9fe" offset="0"/>
+      <stop id="stop2-2" stop-color="#c6e7fb" offset=".86"/>
+      <stop id="stop3-9" stop-color="#bfe5fb" offset="1"/>
+    </linearGradient>
+    <linearGradient id="uuid-a7d0117e-54a6-46c7-8a57-bf4dfaa79d8a-1" x1="24.33" x2="5.16" y1="38.44" y2="180.9" data-name="Dégradé sans nom 4" gradientTransform="matrix(.2539 -.07439 .07439 .2539 -5.543 1.684)" gradientUnits="userSpaceOnUse">
+      <stop id="stop4-2" stop-color="#fff" stop-opacity="0" offset="0"/>
+      <stop id="stop5-7" stop-color="#fcfefe" stop-opacity=".04" offset=".09"/>
+      <stop id="stop6-0" stop-color="#f6fbfe" stop-opacity=".14" offset=".23"/>
+      <stop id="stop7-9" stop-color="#ebf7fd" stop-opacity=".31" offset=".41"/>
+      <stop id="stop8-3" stop-color="#dcf1fc" stop-opacity=".54" offset=".63"/>
+      <stop id="stop9-6" stop-color="#cae9fb" stop-opacity=".83" offset=".87"/>
+      <stop id="stop10-0" stop-color="#bfe5fb" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g id="g1" transform="translate(13.65 27.21)">
+    <path id="path10-2" d="m30.41 35.93s-9.075 7.533-18.27-0.725c0 0 7.684-0.9631 9.647-5.382 0 0 7.519 3.463 8.623 6.107" style="fill:url(#uuid-0ab84d58-0847-4a9e-a338-a0ccb7915785-5);stroke-width:.2646"/>
+    <path id="path11-6" d="m11.96 35.22s-3.389-1.505-5.072-6.231c-1.371-3.847-1-10.04 3.178-14.57l-7.781-10.32c0.1085 0.1323-3.225 6.884-3.069 14.36 0.1535 7.472 3.794 15.67 12.74 16.76" style="fill:url(#uuid-a7d0117e-54a6-46c7-8a57-bf4dfaa79d8a-1);stroke-width:.2646"/>
+    <g id="g15-1" transform="matrix(.2646 0 0 .2646 -.7937 -5.555)">
+      <path id="path12-8" d="m81.2 133.4c-1.06 1.61 4.26 4.51 7.11 4.68 0 0 3.22 4.71 16.93 11.46 0 0 9.67 10.52 12.28 7.31s4.56-4.25 4.56-4.25 7.16-6.69 7.31-9.65c0 0 3.34-3.12-0.4-7.09 0 0-2.07-1.24-8.3-3.36-2.17-0.74-1.75-1.54-5.1-2.85-0.89-0.35-2.78-1.27-3.65-1.66-2.03-0.91-7.29-3.62-9.15-4.18 0 0-3.1-3.28-6.35-1.02s-7.42 5.64-7.42 5.64-5.19 0.99-7.8 4.97" style="fill:#3bb9cd"/>
+      <polygon id="polygon12-7" points="90.68 131.5 118.5 147.2 126.4 137.2 100.2 124.7" style="fill:#00568d"/>
+      <path id="path13-9" d="m156 39.26-49.09 91.03s-1.26 1.86 0.73 3.24 3.5-1.58 3.5-1.58l0.6-0.97s48.76-88.76 49.12-89.37c-1.1-1.6-2.77-2.31-4.86-2.35" style="fill:#00568d"/>
+      <path id="path14-2" d="m112.4 129.7c0.1-0.22 2.04 4.85-3.31 4.97-1.69 0.04-2.76-1.07-3.39-2-0.38-0.56-0.45-1.27-0.18-1.9 0.67-1.58 2.46-3.45 2.31-2.44-0.34 2.25 3.12 3.4 4.57 1.37" style="fill:#3bb9cd"/>
+      <path id="path15-0" d="m180.5 0.15c-1.15-0.43-2.57-0.07-4.25 2.53-6.79 10.49-19.35 34.16-19.35 34.16l-0.33 0.35c-0.55 0.46-1.18 1.31-1.29 2.39l0.03 0.26s0.32 1 2.73 1.97 3.03 0.39 3.03 0.39l0.13-0.1c0.62-0.88 0.82-2.11 0.84-2.47l0.07-0.79s13.12-20.89 18.59-33.79c1.3-3.06 0.87-4.49-0.21-4.9m-0.77 4.42c-0.36 1.17-1.37 2.41-2.37 2.03-0.98-0.37-0.36-1.7 0.21-2.81 0.56-1.11 1.27-1.6 1.76-1.39s0.85 0.73 0.4 2.17" style="fill:#3bb9cd"/>
+    </g>
+  </g>
+</svg>

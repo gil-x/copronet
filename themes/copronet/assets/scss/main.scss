@@ -1,0 +1,89 @@
+@import "vars";
+@import "sass_vars";
+@import "global";
+@import "head";
+@import "buttons";
+@import "footer";
+
+.design {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 99999;
+    transition: all 0.5s;
+    pointer-events: none;
+
+    &__mobile {
+        display: block;
+        @media (min-width: $bp-medium) {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: none;
+
+        @media (min-width: $bp-medium) {
+            display: block;
+            width: 1440px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.fixed {
+    display: none;
+}
+
+@media (min-width: $bp-medium) {
+    .fixed {
+        position: fixed;
+        top: 150px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 999;
+        align-items: end;
+
+        .cta-btn-mini {
+            &.hidden {
+                transform: translateX(calc(100% - 30px));
+            }
+
+            &:hover {
+                color: var(--cpn-blue);
+                transition-delay: 0s;
+                transform: none;
+                background-size: auto 23px;
+            }
+        }
+
+        .cta-btn-mini:nth-child(1) {
+            padding: 10px 30px 10px 80px;
+        }
+
+        .cta-btn-mini:nth-child(2) {
+            background:
+                url("../img/arrow_r_white.svg") no-repeat left center,
+                var(--cpn-blue-light);
+            background-size: auto 21px;
+            color: var(--white);
+
+            &:hover {
+                background:
+                    url("../img/arrow_r_white.svg") no-repeat left center,
+                    var(--cpn-blue);
+                // color: var(--cpn-blue-light);
+                background-size: auto 23px;
+            }
+        }
+
+        .cta-btn-mini:nth-child(3) {
+        }
+    }
+}

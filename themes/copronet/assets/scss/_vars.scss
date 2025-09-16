@@ -1,0 +1,88 @@
+//==============
+//  BREAKPOINTS
+//==============
+$bp-mobile: 600px;
+$bp-medium: 960px;
+$bp-hd: 1280px;
+$bp-fhd: 1920px;
+
+:root {
+    //==============
+    //  BREAKPOINTS
+    //==============
+    --bp-mobile: 600px;
+    --bp-medium: 960px;
+    --bp-hd: 1280px;
+    --bp-fhd: 1920px;
+    //==============
+    //  COLORS
+    //==============
+    --cpn-blue: rgba(0, 86, 141, 1);
+    --cpn-blue-light: rgba(59, 185, 205, 1);
+    --black: rgba(25, 20, 0, 1);
+    --white: rgb(255, 255, 255);
+    --gray: rgba(214, 214, 214, 1);
+    --gray-d0: rgba(237, 237, 237, 1);
+    --gray-d1: rgba(193, 193, 193, 1);
+    --gray-d2: rgba(171, 171, 171, 1);
+    --gray-d3: rgba(151, 151, 151, 1);
+    --form-bg: #eeeeee;
+    --form-border: #e9e9e9;
+    --typo-black: rgba(0, 0, 0, 0.75);
+    --valid-green: rgba(0, 128, 0, 1);
+    --invalid-red: rgba(255, 0, 0, 1);
+    --invalid-red-05: rgba(255, 0, 0, 0.5);
+
+    //==============
+    //  FONTS
+    //==============
+
+    --font-root: 16px;
+
+    // Mobile
+    --font-m-s: 12px;
+    --font-m-l: 21px;
+    --font-m-xl: 27px;
+    --font-m-xxl: 37px;
+
+    // Desktop
+    --font-s: 13px;
+    --font-m: 20px;
+    --font-l: 25px;
+    --font-l2: 28px;
+    --font-xl: 36px;
+    --font-xxl: 48px;
+
+    //==============
+    //  MEASURES
+    //==============
+    --gutter: 20px;
+    --body-max-width: 100%;
+    --header-h: 80px;
+}
+
+@media (min-width: $bp-mobile) {
+    :root {
+        --gutter: 20px;
+    }
+}
+
+@media (min-width: $bp-medium) {
+    :root {
+        --body-max-width: 100%;
+    }
+}
+
+@media (min-width: $bp-hd) {
+    /* :root {
+        --body-max-width: 1280px;
+        --body-max-width: 100%;
+    } */
+}
+
+@media (min-width: $bp-fhd) {
+    :root {
+        --body-max-width: 1440px;
+        /* --body-max-width: 1920px; */
+    }
+}

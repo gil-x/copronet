@@ -1,0 +1,149 @@
+{{ define "main" }} {{ with .Params.hero }} {{ $hero := index . 0 }}
+<section class="section section__hero">
+    <video
+        class="video"
+        playsinline
+        autoplay
+        muted
+        loop
+        src="{{ $hero.video }}"
+    ></video>
+
+    <div class="section__hero__block section__hero__block--left">
+        <p class="p">{{ $hero.intro | markdownify }}</p>
+    </div>
+    <div class="section__hero__block section__hero__block--right">
+        <h1 class="section__hero__block__h1">{{ $hero.h1 | markdownify }}</h1>
+        <p class="p">
+            {{ $hero.texte | markdownify }}
+            <span>{{ $hero.texte_grand | markdownify }}</span>
+        </p>
+    </div>
+    <div class="section__hero__strike"></div>
+</section>
+{{ end }}
+
+<section class="section section__numbers">
+    {{ with .Params.chiffres }} {{ $chiffres := index . 0 }}
+    <h2 class="section__numbers__title title-medium">
+        {{ $chiffres.titre | markdownify }}
+    </h2>
+    {{ end }} {{ range .Params.chiffre }}
+    <div class="section__numbers__number">
+        <img
+            class="section__numbers__number__img"
+            src="{{ .image | markdownify }}"
+            alt=""
+        />
+        <span class="section__numbers__number__digit"
+            >{{ .chiffre | markdownify }}</span
+        >
+        <div class="section__numbers__number__text">
+            {{ .texte | markdownify }}
+        </div>
+    </div>
+    {{ end }}
+</section>
+
+{{ with .Params.offre }} {{ $offre := index . 0 }}
+
+<section class="section section__offer">
+    <!--<div class="section__offer__strike"></div>-->
+    <img
+        class="section__offer__illustration"
+        src="{{ $offre.photo | markdownify }}"
+        alt=""
+    />
+    <div class="section__offer__price">
+        <h2 class="section__offer__price__title title">
+            Notre <strong class="blue">offre</strong>
+        </h2>
+        <span class="section__offer__span t1">
+            L’entretien de votre copropriété
+        </span>
+        <!--<p class="p">-->
+        <span
+            class="section__offer__span section__offer__span--blue section__offer__span--p t1"
+            >à partir de</span
+        >
+        <span class="section__offer__price__amount">459 € TTC</span>
+        <span class="section__offer__span">par mois<sup>*</sup></span>
+
+        <!--</p>-->
+        <span
+            class="section__offer__span section__offer__span--blue section__offer__span--p t1"
+            >Prestations incluses</span
+        >
+
+        <span class="section__offer__span t2"
+            >Nettoyage des parties communes</span
+        >
+
+        <span class="section__offer__span t2"
+            >Vitrerie - Gestion des containers</span
+        >
+
+        <p class="p">
+            <small class="small">
+                (<sup>*</sup>pour un immeuble de 5-6 étages à Paris ou en
+                Île-de-France)</small
+            >
+        </p>
+    </div>
+    <div class="section__offer__strike"></div>
+</section>
+{{ end }} {{ with .Params.clients }}
+<section class="section__customers">
+    {{ $clients := index . 0 }}
+    <h2 class="title-medium">Ils nous font <strong>confiance</strong></h2>
+
+    <p class="section__customers__p">{{ $clients.texte | markdownify }}</p>
+
+    <div class="section__customers__container">
+        <ul class="section__customers__roll">
+            {{ range $clients.liste }}
+            <li class="section__customers__roll__item">{{ . }}</li>
+            {{ end }}
+            <li
+                class="section__customers__roll__item section__customers__roll__item--dots"
+            >
+                ...
+            </li>
+        </ul>
+    </div>
+    {{end }}
+</section>
+
+<section class="section__services">
+    {{ with .Params.services }} {{ $services := index . 0 }}
+    <h2 class="title-big">{{ $services.titre | markdownify }}</h2>
+    <p class="p">{{ $services.texte | markdownify }}</p>
+    {{ end }}
+    <div class="section__services__container">
+        {{ range .Params.service}}
+        <a class="section__services__service">
+            <h3 class="section__services__service__title title-medium">
+                {{ .titre | markdownify }}
+            </h3>
+            <img
+                class="section__services__service__img"
+                src="{{ .photo }}"
+                alt=""
+            />
+            <p class="section__services__service__p">
+                {{ .texte | markdownify }}<span
+                    class="section__services__service__p--dots"
+                >
+                    (...)</span
+                >
+            </p>
+        </a>
+        <hr class="mobile" />
+        {{ end}} {{ with .Params.servicesBouton }} {{ $bouton := index . 0 }}
+        <div class="section__services__service__button-container">
+            <a class="cta-btn-blue">{{ $bouton.bouton | markdownify }}</a>
+        </div>
+        {{ end}}
+    </div>
+</section>
+{{ end}}

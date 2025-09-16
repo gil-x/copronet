@@ -1,0 +1,9 @@
+name = "Copronet"
+   license = "MIT"
+   licenselink = "https://github.com/gil-x/copronet/blob/master/LICENSE"
+   description = "A beautiful theme"
+   min_version = "0.0.0"
+
+[author]
+    name = "Gino Ladowitch"
+    homepage = "https://gil-web.com/"

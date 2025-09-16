@@ -1,0 +1,32 @@
+<svg id="svg1" width="28.74mm" height="31.73mm" version="1.1" viewBox="0 0 28.74 31.73" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs1">
+    <clipPath id="clipPath211-0">
+      <path id="path211-8" d="m0 5013h1366v-5013h-1366z"/>
+    </clipPath>
+    <clipPath id="clipPath213-8">
+      <path id="path213-5" d="m0 5013h1366v-5013h-1366z"/>
+    </clipPath>
+    <clipPath id="clipPath215-0">
+      <path id="path215-9" d="m0 5013h1366v-5013h-1366z"/>
+    </clipPath>
+    <clipPath id="clipPath217-6">
+      <path id="path217-3" d="m0 5013h1366v-5013h-1366z"/>
+    </clipPath>
+    <clipPath id="clipPath219-8">
+      <path id="path219-5" d="m0 5013h1366v-5013h-1366z"/>
+    </clipPath>
+    <clipPath id="clipPath221-6">
+      <path id="path221-1" transform="translate(-182.9,-523.5)" d="m0 5013h1366v-5013h-1366z"/>
+    </clipPath>
+  </defs>
+  <g id="layer1" transform="translate(-106.3 -86.22)">
+    <g id="g1" transform="matrix(1.01 0 0 1.01 -1.102 -.8935)" style="stroke-width:.9897">
+      <path id="path210-5" transform="matrix(.3528 0 0 -.3528 56.29 275.4)" d="m158.3 447.2h-16.36v28.44h16.36z" clip-path="url(#clipPath211-0)" style="fill-rule:evenodd;fill:#095590"/>
+      <path id="path212-9" transform="matrix(.3528 0 0 -.3528 56.29 275.4)" d="m201.3 494.7h-15v14.66h15z" clip-path="url(#clipPath213-8)" style="fill-rule:evenodd;fill:#3bb9cd"/>
+      <path id="path214-7" transform="matrix(.3528 0 0 -.3528 56.29 275.4)" d="m201.3 463.7h-15v15.61h15z" clip-path="url(#clipPath215-0)" style="fill-rule:evenodd;fill:#095590"/>
+      <path id="path216-5" transform="matrix(.3528 0 0 -.3528 56.29 275.4)" d="m201.3 447.3h-15v14.66h15z" clip-path="url(#clipPath217-6)" style="fill-rule:evenodd;fill:#095590"/>
+      <path id="path218-3" transform="matrix(.3528 0 0 -.3528 56.29 275.4)" d="m181.4 447.1h-18.02v54.38h18.02z" clip-path="url(#clipPath219-8)" style="fill-rule:evenodd;fill:#095590"/>
+      <path id="path220-8" transform="matrix(.3528 0 0 -.3528 120.8 90.7)" d="m0 0s-1.063-16.65 1.621-15.82c5.907 1.829 4.343 11.25 4.343 11.25l7.763 6.757 10.49-4.768s-6.817-8.344-7.19-9.332 1.025-3.263 2.714-2.524c1.69 0.739 2.96 3.356 12.08 7.347 1.247 0.546 7.935 4.156 7.935 4.156l-0.119 13.06s-16.15 3.573-24.2 2.157c-5.748-1.012-11.56-8.242-15.44-12.28" clip-path="url(#clipPath221-6)" style="fill-rule:evenodd;fill:#3bb9cd"/>
+    </g>
+  </g>
+</svg>

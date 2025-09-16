@@ -1,0 +1,110 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    height: 45px;
+    padding: 0 20px 0 40px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0;
+
+    font-family: "Open Sans SemiBold";
+    font-size: var(--font-root);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+
+    strong {
+        margin-left: 8px;
+        /* transform: scale(0.98); */
+    }
+    /* white-space: nowrap; */
+
+    /* strong {
+        transform-origin: bottom left;
+        transform: scale(1.04);
+    } */
+
+    /* .b {
+        font-family: "Open Sans Extrabold";
+    } */
+
+    @media (min-width: $bp-medium) {
+        height: 65px;
+        padding: 0 20px 0 50px;
+        background-size: auto 41px;
+        cursor: pointer;
+        transition: all 0.1s;
+        font-size: var(--font-l);
+
+        /* strong {
+            transform-origin: bottom left;
+            transform: scale(1.02);
+        } */
+    }
+}
+
+.cta-btn-blue {
+    @extend .btn;
+    background:
+        url("../img/arrow_r_btn_bluelight.svg") no-repeat left center,
+        var(--cpn-blue);
+    background-size: auto 31px;
+
+    @media (min-width: $bp-medium) {
+        background-size: auto 41px;
+
+        &:hover {
+            background:
+                url("../img/arrow_r_blue.svg") no-repeat left center,
+                var(--cpn-blue-light);
+        }
+    }
+}
+
+.cta-btn-light {
+    @extend .btn;
+    background:
+        url("../img/arrow_r_white.svg") no-repeat left center,
+        var(--cpn-blue-light);
+    background-size: auto 41px;
+
+    @media (min-width: $bp-medium) {
+        background-size: auto 41px;
+
+        &:hover {
+            color: var(--cpn-blue);
+            background:
+                url("../img/arrow_r_blue.svg") no-repeat left center,
+                var(--white);
+        }
+    }
+}
+
+.cta-btn-mini {
+    @extend .btn;
+    background:
+        url("../img/arrow_r_white.svg") no-repeat left center,
+        var(--cpn-blue);
+    height: 35px;
+    background-size: auto 21px;
+    transition:
+        transform 0.75s,
+        background 0.05s;
+    transition-delay: 0.15s;
+    font-family: "Open Sans Bold";
+    font-weight: 800;
+    justify-content: end;
+
+    @media (min-width: $bp-medium) {
+        padding: 10px 30px 10px 30px;
+        color: var(--cpn-blue-light);
+        font-size: var(--font-s);
+
+        &:hover {
+            background:
+                url("../img/arrow_r_blue.svg") no-repeat left center,
+                var(--cpn-blue-light);
+            background-size: auto 23px;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+baseURL = 'https://cpnet2.gil-web.com/'
+languageCode = 'fr-fr'
+title = 'Copronet'
+theme = 'copronet'
+
+[markup.goldmark.renderer]
+unsafe = true

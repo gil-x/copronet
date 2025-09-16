@@ -1,0 +1,10 @@
+<svg id="svg1" width="8.715mm" height="8.592mm" version="1.1" viewBox="0 0 8.715 8.592" xmlns="http://www.w3.org/2000/svg">
+  <defs id="defs1">
+    <clipPath id="SVGID_90_">
+      <rect id="use555" y="-.004" width="1366" height="4772"/>
+    </clipPath>
+  </defs>
+  <rect id="rect602" transform="matrix(.2646 0 0 .2646 -29.66 -10.57)" x="112.1" y="56.62" width="7.935" height="15.79" clip-path="url(#SVGID_90_)" fill="#00568d"/>
+  <rect id="rect603" transform="matrix(.2646 0 0 .2646 -29.66 -10.57)" x="124.8" y="39.95" width="7.935" height="32.46" clip-path="url(#SVGID_90_)" fill="#3bb9cd" style="fill:#3bb9cd"/>
+  <rect id="rect604" transform="matrix(.2646 0 0 .2646 -29.66 -10.57)" x="137.1" y="49.38" width="7.935" height="23.04" clip-path="url(#SVGID_90_)" fill="#00568d"/>
+</svg>
