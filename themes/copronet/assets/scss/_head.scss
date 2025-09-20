@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 20vh;
+    height: var(--header-h);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +95,7 @@
     .header {
         left: 0;
         width: var(--body-max-width);
-        height: 100px;
+        height: var(--header-h);
         box-shadow:
             0 20px 30px rgba(0, 0, 0, 0.2),
             0 5px 25px rgba(0, 0, 0, 0.1),

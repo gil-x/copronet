@@ -49,6 +49,8 @@ document.addEventListener("click", (event) => {
 document.addEventListener("DOMContentLoaded", function () {
   const image = document.getElementById("circle");
 
+  // alert(window.innerWidth);
+
   if (image) {
     // Store the original src
     const originalSrc = image.src;

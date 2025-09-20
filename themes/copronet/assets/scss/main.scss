@@ -14,7 +14,8 @@
     display: flex;
     justify-content: center;
     z-index: 99999;
-    transition: all 0.5s;
+    /* transition: all 0.5s; */
+
     pointer-events: none;
 
     &__mobile {
@@ -51,12 +52,17 @@
         align-items: end;
 
         .cta-btn-mini {
+            transition:
+                background 0.5s,
+                color 0;
+
             &.hidden {
                 transform: translateX(calc(100% - 30px));
             }
 
             &:hover {
                 color: var(--cpn-blue);
+                /* color: red; */
                 transition-delay: 0s;
                 transform: none;
                 background-size: auto 23px;

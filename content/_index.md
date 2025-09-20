@@ -57,7 +57,7 @@ titre = "**Nettoyage**<br>des parties communes"
 photo = "offre1.webp"
 texte = """Parce que les premières impressions comptent, nous veillons à"""
 [[service]]
-titre = "**Gestion**<br>des conteneurs"
+titre = "Gestion<br> **des conteneurs**"
 photo = "offre2.webp"
 texte = """Fini les tracas liés à la gestion des poubelles ! Nous sortons et rentrons dans le respect des horaires de collecte""""
 [[service]]

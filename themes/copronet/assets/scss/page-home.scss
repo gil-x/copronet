@@ -10,6 +10,9 @@ $bp-fhd: 1920px;
     0% {
         transform: translateX(100%);
     }
+    5% {
+        transform: translateX(0%);
+    }
     100% {
         transform: translateX(-250%);
     }
@@ -43,7 +46,7 @@ $bp-fhd: 1920px;
 
             &--left {
                 grid-area: image;
-                padding: 40px 15% 70px;
+                padding: 40px var(--gutter-y) 70px;
                 background: var(--cpn-blue-light) url("../img/stroke1.svg")
                     no-repeat bottom right / 170%;
                 font-size: var(--font-m-l);
@@ -87,15 +90,17 @@ $bp-fhd: 1920px;
             "title title "
             "number1 number2"
             "number3 number4";
-        gap: 25px 0;
-        margin: 0 0 50px;
-        padding: 0 20px;
+        gap: 24px 0;
+        padding: calc(2 * var(--gutter-y));
+        /* margin: 0 0 50px; */
+        /* padding: 0 20px; */
         box-sizing: border-box;
         font-family: "Fontin Sans Bold";
 
         &__title {
             grid-area: title;
-            margin: 30px 0 0;
+            margin: 0;
+            /* margin: 30px 0 0; */
         }
 
         &__number {
@@ -141,7 +146,8 @@ $bp-fhd: 1920px;
     }
 
     &__customers {
-        padding: 24px 24px 0;
+        padding: var(--gutter-y) var(--gutter-y) 0;
+        box-sizing: border-box;
 
         &__roll {
             margin: 32px 0 0;
@@ -303,7 +309,7 @@ $bp-fhd: 1920px;
                 "image image"
                 "left right";
             grid-template-columns: 50% 50%;
-            margin: 100px 0 0 0;
+            margin: var(--header-h) 0 0 0;
 
             .video {
                 grid-area: image;
@@ -332,13 +338,14 @@ $bp-fhd: 1920px;
 
                 &--left {
                     background: var(--cpn-blue-light);
-                    display: flex;
+                    /* display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: center; */
                     grid-area: left;
                     text-align: left;
                     font-size: var(--font-l2);
-                    padding: 70px 72px;
+                    /* padding: var(--gutter-y) var(--gutter-x); */
+                    padding: var(--gutter-x);
 
                     .p {
                         transform: translateY(-7px);
@@ -353,7 +360,7 @@ $bp-fhd: 1920px;
                 &--right {
                     background: var(--cpn-blue);
                     text-align: left;
-                    padding: 70px 72px;
+                    padding: var(--gutter-x);
 
                     .p {
                         /* padding: 35px 10% 0; */
@@ -378,6 +385,7 @@ $bp-fhd: 1920px;
                 "title title title title"
                 "number1 number2 number3 number4";
             padding: 48px 0;
+            gap: 48px 24px;
 
             &__title {
                 /* &.title {
@@ -427,9 +435,11 @@ $bp-fhd: 1920px;
 
                 &__title {
                     flex-grow: 1;
-                    margin: 30px 0 0;
+                    margin: 24px 0 -72px;
+                    padding: 72px 0 0;
                     justify-content: end;
                     font-size: var(--font-xxl);
+                    font-weight: 300; // TODO marche avec gecko
                     background: url("../img/logo_bars.svg") no-repeat top
                         center / 10% auto;
                 }
@@ -457,6 +467,7 @@ $bp-fhd: 1920px;
 
                 .small {
                     font-size: var(--font-s);
+                    padding: 0 0 24px;
                 }
             }
 
@@ -478,34 +489,39 @@ $bp-fhd: 1920px;
         &__customers {
             order: 5;
             width: var(--body-max-width);
-            padding: 24px 0 0;
+            padding: var(--gutter-y) var(--gutter-x);
             background: #eeeeee;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: var(--gutter-y);
 
             .title {
                 font-size: var(--font-xl);
             }
 
             &__p {
-                padding: 0 48px 20px;
+                /* margin: var(--gutter-x); */
                 font-size: var(--font-l);
             }
 
             &__container {
                 background: var(--cpn-blue-light);
+                margin: 0 calc(-1 * var(--gutter-x));
             }
 
             &__roll {
-                margin: 20px 0 40px;
+                margin: 20px 0;
                 list-style-type: none;
                 display: flex;
                 align-items: center;
                 background: var(--cpn-blue-light);
 
                 height: 60px;
-                animation: scroll 25s linear infinite;
+                animation: scroll 40s linear infinite;
 
                 &__item {
+                    font-family: "Open Sans Light";
                     font-size: var(--font-l);
                     text-transform: uppercase;
                     white-space: nowrap;
@@ -526,8 +542,12 @@ $bp-fhd: 1920px;
             /* display: grid; */
             /* grid-templates-columns: 1fr 1fr 1fr; */
             /* grid-templates-columns: repeat(3, 1fr); */
+            display: flex;
+            flex-direction: column;
+            padding: 24px 0;
+            /* gap: 24px; */
 
-            padding: 0 72px;
+            /* padding: var(--gutter-y) var(--gutter-x); */
             box-sizing: border-box;
 
             &__container {
@@ -536,8 +556,21 @@ $bp-fhd: 1920px;
                 /* grid-template-columns: 1fr 1fr 1fr; */
                 gap: 0 48px;
                 background: #eeeeee;
-                margin: 48px calc((var(--body-max-width) - 100vw) / 2) 0;
-                padding: 32px calc((100vw - var(--body-max-width)) / 2);
+                /* margin: 48px calc((var(--body-max-width) - 100vw) / 2) 0;
+                padding: 32px calc((100vw - var(--body-max-width)) / 2); */
+                margin: 48px 0 0;
+                padding: 32px var(--gutter-x);
+            }
+
+            .p {
+                padding: 0 var(--gutter-x);
+                font-family: "Open Sans Bold";
+                line-height: 1.75;
+            }
+
+            .title-big {
+                margin: 24px;
+                padding: 0;
             }
 
             .title-big,

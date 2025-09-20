@@ -3,7 +3,7 @@
 //==============
 $bp-mobile: 600px;
 $bp-medium: 960px;
-$bp-hd: 1280px;
+$bp-hd: 1440px;
 $bp-fhd: 1920px;
 
 :root {
@@ -56,28 +56,32 @@ $bp-fhd: 1920px;
     //==============
     //  MEASURES
     //==============
-    --gutter: 20px;
+    --gutter-x: 24px;
+    --gutter-y: 24px;
     --body-max-width: 100%;
-    --header-h: 80px;
+    --header-h: 20vh;
 }
 
 @media (min-width: $bp-mobile) {
     :root {
-        --gutter: 20px;
+        /* --gutter: 20px; */
     }
 }
 
 @media (min-width: $bp-medium) {
     :root {
         --body-max-width: 100%;
+        --header-h: 120px;
+        --gutter-x: 72px;
+        --gutter-y: 48px;
     }
 }
 
 @media (min-width: $bp-hd) {
-    /* :root {
-        --body-max-width: 1280px;
-        --body-max-width: 100%;
-    } */
+    :root {
+        --body-max-width: 1440px;
+        /* --body-max-width: 100%; */
+    }
 }
 
 @media (min-width: $bp-fhd) {

@@ -18,8 +18,9 @@
             &__text {
                 max-width: 75%;
                 margin: 0 auto;
-                font-size: var(--font-s);
-                font-weight: 600;
+                font-family: "Fontin Sans Bold";
+                font-size: var(--font-root);
+                /* font-weight: 600; */
                 color: var(--cpn-blue);
                 text-align: center;
             }
@@ -218,6 +219,12 @@
                 /* font-weight: 800; */
                 font-family: "Open Sans Bold";
             }
+
+            &__li {
+                &.desktop {
+                    text-decoration: underline;
+                }
+            }
         }
 
         &__background {
@@ -269,6 +276,7 @@
 
         .w1 {
             font-size: var(--font-root);
+            margin: 0 0 6px;
         }
 
         .w2 {
@@ -276,6 +284,7 @@
             font-family: "Open Sans Bold";
 
             text-transform: uppercase;
+            line-height: 22px;
             color: var(--cpn-blue-light);
         }
 
@@ -283,13 +292,13 @@
             font-size: calc(var(--font-root) + 2px);
             font-family: "Open Sans Bold";
             text-transform: uppercase;
-            line-height: 13px;
+            line-height: 22px;
         }
 
         .w4 {
-            /* font-size: var(--font-l); */
-            text-transform: uppercase;
-            margin: 10px 0 0;
+            font-size: var(--font-root);
+            /* text-transform: uppercase; */
+            margin: 6px 0 0;
         }
     }
 }
