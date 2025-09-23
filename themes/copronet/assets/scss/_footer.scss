@@ -1,6 +1,6 @@
 .footer {
     color: var(--white);
-    margin: 40px 0 0;
+    /* margin: 40px 0 0; */
 
     &__icons {
         display: grid;
@@ -162,7 +162,7 @@
             grid-area: icons;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             background: none;
-            padding: 20px 0 40px;
+            padding: 48px 0;
         }
 
         &__logo {

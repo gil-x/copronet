@@ -54,7 +54,7 @@
         transform: translateX(0);
     }
 
-    .ul {
+    &__ul {
         margin: 0;
         padding: 0;
         display: flex;
@@ -63,7 +63,7 @@
         // Mobile
         flex-direction: column;
 
-        .menu-item {
+        &__li {
             padding: 20px;
 
             a {
@@ -85,7 +85,7 @@
         height: auto;
         justify-content: center;
 
-        .ul {
+        &__ul {
             flex-direction: row;
         }
     }
@@ -121,8 +121,8 @@
         position: static;
         transform: none;
 
-        .ul {
-            .menu-item {
+        &__ul {
+            &__li {
                 padding: 21px 30px 0;
 
                 a {
@@ -145,8 +145,8 @@
 
 @media (min-width: $bp-medium) {
     .nav {
-        .ul {
-            .menu-item {
+        &__ul {
+            &__li {
                 a {
                     font-size: 17px;
                 }

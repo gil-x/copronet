@@ -2,7 +2,7 @@
 # ⚠️ NE PAS TOUCHER !
 styles = ["page-home"]
 # scripts = ["modules/concession"]
-layout = "estimer"
+# layout = "estimer"
 
 # SEO
 slug = ""
@@ -39,6 +39,15 @@ texte = "appréciation<br>sur Google"
 
 [[offre]]
 photo = "service1.webp"
+titre = "Notre **offre**"
+texte1 = "L’entretien de votre copropriété"
+texte2 = "à partir de"
+prix = "459 € TTC"
+frequence = "par mois"
+texte3 = "Prestations incluses"
+prestation1 = "Nettoyage des parties communes"
+prestation2 = "Gestion des conteneurs"
+asterisque = "pour un immeuble de 5-6 étages à Paris ou en Île-de-France)"
 
 [[clients]]
 titre = "Ils nous font **confiance**"

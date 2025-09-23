@@ -56,37 +56,40 @@
     />
     <div class="section__offer__price">
         <h2 class="section__offer__price__title title">
-            Notre <strong class="blue">offre</strong>
+            {{ $offre.titre | markdownify }}
         </h2>
         <span class="section__offer__span t1">
-            L’entretien de votre copropriété
+            {{ $offre.texte1 | markdownify }}
         </span>
         <!--<p class="p">-->
         <span
             class="section__offer__span section__offer__span--blue section__offer__span--p t1"
-            >à partir de</span
+            >{{ $offre.texte2 | markdownify }}</span
         >
-        <span class="section__offer__price__amount">459 € TTC</span>
-        <span class="section__offer__span">par mois<sup>*</sup></span>
+        <span class="section__offer__price__amount"
+            >{{ $offre.prix | markdownify }}</span
+        >
+        <span class="section__offer__span"
+            >{{ $offre.frequence | markdownify }}<sup>*</sup></span
+        >
 
         <!--</p>-->
         <span
             class="section__offer__span section__offer__span--blue section__offer__span--p t1"
-            >Prestations incluses</span
+            >{{ $offre.texte3 | markdownify }}</span
         >
 
         <span class="section__offer__span t2"
-            >Nettoyage des parties communes</span
+            >{{ $offre.prestation1 | markdownify }}</span
         >
 
         <span class="section__offer__span t2"
-            >Vitrerie - Gestion des containers</span
+            >{{ $offre.prestation2 | markdownify }}</span
         >
 
         <p class="p">
             <small class="small">
-                (<sup>*</sup>pour un immeuble de 5-6 étages à Paris ou en
-                Île-de-France)</small
+                (<sup>*</sup>{{ $offre.asterisque | markdownify }}</small
             >
         </p>
     </div>

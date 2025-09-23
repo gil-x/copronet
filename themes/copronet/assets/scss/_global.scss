@@ -68,9 +68,11 @@ html {
 
 .body {
     margin: 0;
-    /* // padding: 0; */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 
-    padding: 0 calc((100vw - var(--body-max-width)) / 2);
+    /* padding: 0 calc((100vw - var(--body-max-width)) / 2); */
 }
 
 strong {
@@ -120,11 +122,6 @@ p {
 
 .desktop {
     display: none;
-}
-
-.body {
-    display: flex;
-    flex-direction: column;
 }
 
 .circled {
@@ -223,4 +220,15 @@ p {
                 65px;
         }
     }
+}
+
+@media (min-width: $bp-hd) {
+    .body {
+        /* background: yellowgreen; */
+        /* padding: 0; */
+        padding: 0 calc((100vw - var(--body-max-width)) / 2);
+    }
+}
+
+@media (min-width: $bp-fhd) {
 }

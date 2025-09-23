@@ -1,40 +1,11 @@
 <nav class="nav">
-    <ul id="menu-menu-principal" class="ul">
+    <ul id="menu-menu-principal" class="nav__ul">
+        {{ range .Site.Menus.main }}
         <li
-            id="menu-item-104"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"
+            class="nav__ul__li {{ if eq $.Page.RelPermalink .URL }}active{{ end }}"
         >
-            <a href="https://cpnet2.gil-web.com/notre-offre/">Notre offre</a>
+            <a href="{{ .URL }}/">{{ .Name }}</a>
         </li>
-        <li
-            id="menu-item-26"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"
-        >
-            <a href="https://cpnet2.gil-web.com/nos-services/">Nos services</a>
-        </li>
-        <li
-            id="menu-item-22"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22"
-        >
-            <a
-                rel="privacy-policy"
-                href="https://cpnet2.gil-web.com/nous-connaitre/"
-                >Nous Connaître</a
-            >
-        </li>
-        <li
-            id="menu-item-112"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"
-        >
-            <a href="https://cpnet2.gil-web.com/nous-contacter/"
-                >Nous contacter</a
-            >
-        </li>
-        <li
-            id="menu-item-19"
-            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"
-        >
-            <a href="https://cpnet2.gil-web.com/blog/">Blog</a>
-        </li>
+        {{ end }}
     </ul>
 </nav>

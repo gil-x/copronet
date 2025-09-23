@@ -1,0 +1,74 @@
+{{ define "main" }}
+
+<div class="hero">
+    <span class="hero__title">{{ .Params.h0 | markdownify }}</span>
+    <div class="hero__content">
+        <h1 class="hero__content__h1">{{ .Params.h1 | markdownify }}</h1>
+        <p class="hero__content__p">{{ .Params.intro | markdownify }}</p>
+    </div>
+</div>
+
+<div class="services">
+    {{ range .Params.service }} {{ if eq .titre "cta" }}
+    <div class="cta">
+        <button class="cta__btn">
+            <strong>Voir</strong> notre <strong>offre</strong>
+        </button>
+        <button class="cta__btn cta__btn--light">
+            Devis <strong>gratuit</strong> sous 24h
+        </button>
+    </div>
+    {{ else }}
+    <div class="service">
+        <h2 class="service__name">{{ .titre | markdownify }}</h2>
+        <div class="service__img">
+            <img src="{{ .image | markdownify }}" alt="" />
+        </div>
+        <p class="service__p">{{ .texte | markdownify }}</p>
+    </div>
+    {{ end }} {{ end }} {{ with .Params.offre }} {{ $offre := index . 0 }}
+
+    <div class="offer">
+        <h2 class="offer__title">{{ $offre.titre | markdownify }}</h2>
+        <span class="offer__txt1 t1"> {{ $offre.texte1 | markdownify }} </span>
+        <!--<p class="p">-->
+        <span class="offer__txt2 t1">{{ $offre.texte2 | markdownify }}</span>
+        <span class="offer__amount">{{ $offre.prix | markdownify }}</span>
+        <span class="offer__txt3"
+            >{{ $offre.frequence | markdownify }}<sup>*</sup></span
+        >
+
+        <span class="offer__txt4 t1">{{ $offre.texte3 | markdownify }}</span>
+
+        <span class="offer__txt5 t2"
+            >{{ $offre.prestation1 | markdownify }}</span
+        >
+
+        <span class="offer__txt6 t2"
+            >{{ $offre.prestation2 | markdownify }}</span
+        >
+
+        <p class="offer__p">
+            <small class="offer__p__small">
+                (<sup>*</sup>{{ $offre.asterisque | markdownify }}</small
+            >
+        </p>
+    </div>
+
+    {{ end }}
+</div>
+{{ with .Params.extra }} {{ $extra := index . 0 }}
+
+<div class="extra">
+    <p class="extra__p">{{ $extra.texte1 | markdownify }}</p>
+    <p class="extra__p">
+        {{ $extra.texte2 | markdownify }} <br class="mobile" /><a
+            class="extra__mail"
+            href="mailto:{{ $extra.mail | markdownify }}"
+            >{{ $extra.mail | markdownify }}</a
+        >
+    </p>
+
+    {{ end }}
+</div>
+{{ end }}

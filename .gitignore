@@ -1,4 +1,6 @@
 .hugo_build.lock
 public/
 resources/
+design/
+wp/
 TODO

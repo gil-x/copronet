@@ -1,10 +1,10 @@
 //==============
 //  BREAKPOINTS
 //==============
-$bp-mobile: 600px;
+/* $bp-mobile: 600px;
 $bp-medium: 960px;
 $bp-hd: 1440px;
-$bp-fhd: 1920px;
+$bp-fhd: 1920px; */
 
 :root {
     //==============
@@ -12,7 +12,7 @@ $bp-fhd: 1920px;
     //==============
     --bp-mobile: 600px;
     --bp-medium: 960px;
-    --bp-hd: 1280px;
+    --bp-hd: 1440px;
     --bp-fhd: 1920px;
     //==============
     //  COLORS
@@ -51,7 +51,7 @@ $bp-fhd: 1920px;
     --font-l: 25px;
     --font-l2: 28px;
     --font-xl: 36px;
-    --font-xxl: 48px;
+    --font-xxl: 42px;
 
     //==============
     //  MEASURES
@@ -70,7 +70,7 @@ $bp-fhd: 1920px;
 
 @media (min-width: $bp-medium) {
     :root {
-        --body-max-width: 100%;
+        /* --body-max-width: 100%; */
         --header-h: 120px;
         --gutter-x: 72px;
         --gutter-y: 48px;
@@ -86,7 +86,7 @@ $bp-fhd: 1920px;
 
 @media (min-width: $bp-fhd) {
     :root {
-        --body-max-width: 1440px;
+        /* --body-max-width: 1440px; */
         /* --body-max-width: 1920px; */
     }
 }
