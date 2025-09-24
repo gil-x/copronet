@@ -2,18 +2,26 @@
 
 <div class="hero">
     <span class="hero__title">{{ .Params.h0 | markdownify }}</span>
-    <h1 class="hero__h1">{{ .Params.h1 | markdownify }}</h1>
+    <h1 class="hero__h1">
+        <span>{{ .Params.h1Part1 | markdownify }}</span>
+        <span>{{ .Params.h1Part2 | markdownify }}</span>
+    </h1>
     <p class="hero__intro">{{ .Params.intro | markdownify }}</p>
 
     {{ with .Params.offre }} {{ $offre := index . 0 }}
     <div class="offer">
+        <div class="hero__brush"></div>
+        <div class="offer__reflect"></div>
         <h2 class="offer__title">{{ $offre.titre | markdownify }}</h2>
         <span class="offer__txt1 t1"> {{ $offre.texte1 | markdownify }} </span>
         <span class="offer__txt2 t1">{{ $offre.texte2 | markdownify }}</span>
         <span class="offer__amount">{{ $offre.prix | markdownify }}</span>
         <span class="offer__txt3"
-            >{{ $offre.frequence | markdownify }}<sup>*</sup></span
+            >{{ $offre.frequence | markdownify }}<sup class="mobile"
+                >*</sup
+            ></span
         >
+        <div class="offer__standart desktop"></div>
         <div class="offer__img">
             <img class="offer__pict__img" src="{{ $offre.photo }}" alt="" />
         </div>
@@ -26,29 +34,39 @@
 
         <p class="offer__p">
             <small class="offer__p__small">
-                (<sup>*</sup>{{ $offre.asterisque | markdownify }}</small
+                (<sup>*</sup>{{ $offre.asterisque | markdownify }})</small
             >
         </p>
     </div>
+
+    <div class="illustration">
+        <img class="illustration__img" src="{{ $offre.photo }}" alt="" />
+    </div>
     {{ end }}
 
-    <div class="hero__expend">
-        <h2 class="hero__expend__title">
-            {{ .Params.prestationsTitre | markdownify }}
-        </h2>
-        <div class="hero__expend__p hidden">
-            {{ .Params.prestationsTexte | markdownify }}
+    <div class="hero__expends">
+        <div class="hero__expend">
+            <h2 class="hero__expend__title">
+                {{ .Params.prestationsTitre | markdownify }}
+            </h2>
+            <div class="hero__expend__p hidden">
+                {{ .Params.prestationsTexte | markdownify }}
+            </div>
         </div>
-    </div>
-    <div class="hero__expend">
-        <h2 class="hero__expend__title">
-            {{ .Params.supervisionTitre | markdownify }}
-        </h2>
-        <div class="hero__expend__p hidden">
-            {{ .Params.supervisionTexte | markdownify }}
+        <div class="hero__expend">
+            <h2 class="hero__expend__title">
+                {{ .Params.supervisionTitre | markdownify }}
+            </h2>
+            <div class="hero__expend__p hidden">
+                {{ .Params.supervisionTexte | markdownify }}
+            </div>
         </div>
     </div>
 </div>
+
+{{ with .Params.reputation }} {{ $reputation := index . 0 }}
+
+<h2 class="title-medium">{{ $reputation.titre | markdownify }}</h2>
 
 <div class="section__customers__comments">
     <div class="section__customers__comments__comment">
@@ -88,12 +106,11 @@
     </div>
 </div>
 
-{{ with .Params.reputation }} {{ $reputation := index . 0 }}
 <div class="reputation">
     <button class="offer__cta__btn">
         {{ $reputation.bouton | markdownify }}
     </button>
-    <p>Pas de Copronet sur Batiref</p>
+    <p>Pas de Copronet sur Batiref !!!</p>
 </div>
 {{ end }} {{ with .Params.immeubles }} {{ $immeubles := index . 0 }}
 <h2 class="title-medium">{{ $immeubles.titre | markdownify }}</h2>

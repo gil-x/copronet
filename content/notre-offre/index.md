@@ -14,7 +14,8 @@ title = "Notre Offre"
 description = "Notre Offre"
 
 h0 = """Notre **Offre**"""
-h1 = """Depuis 2004, COPRONET est votre partenaire pour le nettoyage et l'entretien des parties communes de vos immeubles."""
+h1Part1 = "Depuis 2004, COPRONET est votre partenaire pour le nettoyage"
+h1Part2 = "et l'entretien des parties communes de vos immeubles."
 
 intro = """**Nous avons conçu une offre standard pour un immeuble haussmannien de 5/6 étages à Paris & Île-de-France.** Le tarif sera adapté en fonction de la taille de l’immeuble et des prestations de nettoyage choisies afin de vous proposer une solution juste, efficace et sur mesure."""
 prestationsTitre = "Prestations incluses"
@@ -36,6 +37,7 @@ bouton = "Devis **Gratuit sous 24h**"
 asterisque = "pour un immeuble de 5-6 étages à Paris ou en Île-de-France"
 
 [[reputation]]
+titre = "Votre avis **compte**"
 bouton = "Retrouvez **tous nos avis**"
 lien = ""
 
