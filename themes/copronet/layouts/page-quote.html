@@ -1,0 +1,351 @@
+{{ define "main" }}
+
+<div class="hero">
+    <span class="hero__title">{{ .Params.h0 | markdownify }}</span>
+    <div class="hero__content">
+        <h1 class="hero__content__h1">{{ .Params.h1 | markdownify }}</h1>
+        <p class="hero__content__p">{{ .Params.intro | markdownify }}</p>
+    </div>
+</div>
+
+<div class="contact-content">
+    <form id="multiStepForm" novalidate>
+        <!-- Step 1: Vos Informations -->
+        <div class="form-step" data-step="1">
+            <h2 class="step-title" data-target-step="1">
+                <span>VOS <span class="blue-light">INFORMATIONS</span></span
+                ><img
+                    src="/img/arrow_r_bluelight.svg"
+                    alt=""
+                    class="step-arrow"
+                />
+            </h2>
+            <div class="step-content">
+                <div class="form-group form-row">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            id="prenom"
+                            name="prenom"
+                            placeholder="prenom"
+                            required
+                        />
+                        <label for="prenom">Prénom*</label>
+                    </div>
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            placeholder="nom"
+                            required
+                        />
+                        <label for="nom">Nom*</label>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <div class="form-group">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="email"
+                            required
+                        />
+                        <label for="email">Mail*</label>
+                    </div>
+                    <div class="form-group">
+                        <input
+                            type="tel"
+                            id="telephone"
+                            name="telephone"
+                            placeholder="téléphone"
+                            required
+                            pattern="[0-9\s\-\+]{10,}"
+                            title="Numéro de téléphone valide (min 10 chiffres)"
+                        />
+                        <label for="telephone">Téléphone*</label>
+                    </div>
+                </div>
+                <div class="form-group form-row">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            id="adresse"
+                            name="adresse"
+                            placeholder="adresse"
+                        />
+                        <label for="adresse">Adresse (facultatif)</label>
+                    </div>
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            id="cpville"
+                            name="cpville"
+                            placeholder="CP et ville"
+                            required
+                        />
+                        <label for="cpville">CP et Ville*</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="syndic"
+                        name="syndic"
+                        placeholder="syndic"
+                    />
+                    <label for="syndic">Nom du syndic (facultatif)</label>
+                </div>
+                <p class="required-notice">* obligatoire</p>
+            </div>
+        </div>
+
+        <!-- Step 2: Votre Résidence -->
+        <div class="form-step" data-step="2">
+            <h2 class="step-title" data-target-step="2">
+                <span>VOTRE <span class="blue-light">RÉSIDENCE</span></span
+                ><img
+                    src="/img/arrow_r_bluelight.svg"
+                    alt=""
+                    class="step-arrow"
+                />
+            </h2>
+            <div class="step-content">
+                <!-- <div class="form-group form-row"> -->
+                <div class="form-group rowed">
+                    <label for="nb_logements">Nb de logements*</label>
+                    <input
+                        type="number"
+                        id="nb_logements"
+                        name="nb_logements"
+                        required
+                        min="1"
+                    />
+                </div>
+                <div class="form-group rowed">
+                    <label for="nb_batiments">Nb de bâtiment(s)*</label>
+                    <input
+                        type="number"
+                        id="nb_batiments"
+                        name="nb_batiments"
+                        required
+                        min="1"
+                    />
+                </div>
+                <!-- </div> -->
+                <!-- <div class="form-group form-row"> -->
+                <div class="form-group rowed">
+                    <label for="nb_etages"
+                        >Nb d'étage(s) par bâtiment*
+                        <span class="note">(en moyenne)</span></label
+                    >
+                    <input
+                        type="number"
+                        id="nb_etages"
+                        name="nb_etages"
+                        required
+                        min="0"
+                    />
+                </div>
+                <!-- </div> -->
+                <div class="form-group radio-group">
+                    <label>Ascenseur* :</label>
+                    <div class="radio-options">
+                        <label for="ascenseur_oui">
+                            <input
+                                type="radio"
+                                id="ascenseur_oui"
+                                name="ascenseur"
+                                value="oui"
+                                required
+                            />
+                            OUI
+                        </label>
+                        <label for="ascenseur_non">
+                            <input
+                                type="radio"
+                                id="ascenseur_non"
+                                name="ascenseur"
+                                value="non"
+                                required
+                            />
+                            NON
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group radio-group last">
+                    <label>Parking* :</label>
+                    <div class="radio-options">
+                        <label for="parking_oui">
+                            <input
+                                type="radio"
+                                id="parking_oui"
+                                name="parking"
+                                value="oui"
+                                required
+                            />
+                            OUI
+                        </label>
+                        <label for="parking_non">
+                            <input
+                                type="radio"
+                                id="parking_non"
+                                name="parking"
+                                value="non"
+                                required
+                            />
+                            NON
+                        </label>
+                    </div>
+                </div>
+                <!-- <div class="form-group form-row"> -->
+                <div class="form-group rowed">
+                    <label for="nb_niveaux">Nb de niveaux</label>
+                    <input
+                        type="number"
+                        id="nb_niveaux"
+                        name="nb_niveaux"
+                        min="0"
+                    />
+                </div>
+                <div class="form-group rowed">
+                    <label for="nb_poubelles">Nb de local(aux) poubelles</label>
+                    <input
+                        type="number"
+                        id="nb_poubelles"
+                        name="nb_poubelles"
+                        min="0"
+                    />
+                </div>
+                <!-- </div> -->
+                <p class="required-notice">* obligatoire</p>
+            </div>
+        </div>
+
+        <!-- Step 3: Question de Fréquence -->
+        <div class="form-step" data-step="3">
+            <h2 class="step-title" data-target-step="3">
+                <span
+                    >QUESTION DE <span class="blue-light">FRÉQUENCE</span></span
+                ><img
+                    src="/img/arrow_r_bluelight.svg"
+                    alt=""
+                    class="step-arrow"
+                />
+            </h2>
+            <div class="step-content">
+                <div class="form-group">
+                    <label for="freq_entretien"
+                        >Nb de passage pour l'entretien des parties communes
+                        :</label
+                    >
+                    <!-- Using a select might be better, but sticking to image -->
+                    <!-- <input type="text" id="freq_entretien" name="freq_entretien" value="1 fois par semaine" required> -->
+                    <select name="freq_entretien" id="" required>
+                        <option value="" disabled selected hidden>
+                            Choisir une fréquence
+                        </option>
+                        <option value="1-in-week">1 fois par semaine</option>
+                        <option value="2-in-week">2 fois par semaine</option>
+                        <option value="3-in-week">3 fois par semaine</option>
+                        <option value="4-in-week">4 fois par semaine</option>
+                        <option value="5-in-week">5 fois par semaine</option>
+                        <option value="all-days">Tous les jours</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="freq_collecte"
+                        >Nb de passage de la collecte de vos containers :</label
+                    >
+                    <select name="freq_collecte" id="" required>
+                        <option value="" disabled selected hidden>
+                            Choisir une fréquence
+                        </option>
+                        <option value="1-in-week">1 fois par semaine</option>
+                        <option value="2-in-week">2 fois par semaine</option>
+                        <option value="3-in-week">3 fois par semaine</option>
+                        <option value="4-in-week">4 fois par semaine</option>
+                        <option value="5-in-week">5 fois par semaine</option>
+                        <option value="all-days">Tous les jours</option>
+                    </select>
+                    <!-- <input type="text" id="freq_collecte" name="freq_collecte" value="1 fois par semaine" required> -->
+                </div>
+                <div class="form-group gdpr-group">
+                    <input type="checkbox" id="gdpr" name="gdpr" required />
+                    <label for="gdpr"
+                        >Accord GDPR : Je consens à ce que ce site web stocke
+                        les informations que j'ai fournies afin de pouvoir
+                        répondre à ma demande.*</label
+                    >
+                </div>
+                <p class="required-notice">* obligatoire</p>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="form-navigation">
+            <!-- <button type="submit" id="sendBtn" class="btn-nav send">ENVOYER</button> -->
+            <input
+                type="submit"
+                id="sendBtn"
+                class="btn-nav send"
+                value="ENVOYER"
+            />
+            <button type="button" id="nextBtn" class="btn-nav">
+                SUIVANT >
+            </button>
+            <button type="button" id="prevBtn" class="btn-nav">
+                < PRÉCÉDENT
+            </button>
+        </div>
+    </form>
+    <div class="side">
+        <h2 class="side__title">{{ .Params.forcesTitre | markdownify }}</h2>
+
+        <ul>
+            <li>{{ .Params.forcesTexte1 | markdownify }}</li>
+            <li>{{ .Params.forcesTexte2 | markdownify }}</li>
+        </ul>
+
+        <h2 class="side__title up">{{ .Params.contactTitre | markdownify }}</h2>
+
+        <p class="side__p">{{ .Params.contactIntro | markdownify }}</p>
+
+        <ul>
+            <li>
+                <span>Email :</span>
+                <a
+                    href="{{ .Params.mail | markdownify
+            }}"
+                    >{{ .Params.mail | markdownify }}</a
+                >
+            </li>
+            <li><span>Téléphone : </span>{{ .Params.tel | markdownify }}</li>
+        </ul>
+
+        <!-- <div class="m-hide">
+
+        <p class="p"><span class="blue-light">Contactez-nous !</span><br>
+            Email: info@copronetproprete.fr<br>
+            Téléphone : 01 53 11 05 58</p>
+      </div> -->
+
+        <!--<ul>
+            <li>
+                <strong>Le sur-mesure</strong> avec des solutions ajustées à vos
+                besoins.
+            </li>
+            <li>
+                <strong>Un(e) superviseur(e)</strong> 100% engagé(e) pour votre
+                immeuble
+            </li>
+            <li>
+                <strong>Le respect de l’environnement</strong> avec desproduits
+                et techniques éco-responsables
+            </li>
+        </ul>-->
+    </div>
+</div>
+{{ end }}

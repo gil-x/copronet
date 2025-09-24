@@ -6,6 +6,7 @@
 @import "footer";
 
 .design {
+    display: none !important;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -58,13 +59,17 @@
         .cta-btn-mini {
             transition:
                 background 0.5s,
-                color 0;
+                color 0,
+                box-shadow 0.5s;
             box-shadow:
                 -10px 10px 40px rgba(0, 0, 0, 0.1),
                 -5px 5px 10px rgba(0, 0, 0, 0.1);
 
             &.hidden {
                 transform: translateX(calc(100% - 30px));
+                box-shadow:
+                    -5px 5px 20px rgba(0, 0, 0, 0.1),
+                    -2px 2px 5px rgba(0, 0, 0, 0.25);
             }
 
             &:hover {

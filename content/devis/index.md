@@ -1,0 +1,26 @@
++++
+# ⚠️ NE PAS TOUCHER !
+styles = ["page-quote"]
+layout = "page-quote"
+scripts = ["quote"]
+
+##############
+####  SEO ####
+##############
+slug = "devis-gratuit-sous-24h"
+# Meta Title
+title = "Devis gratuit sous 24h"
+# Meta Description
+description = "Devis gratuit sous 24h"
+
+h0 = "Votre devis **sous 24h**"
+h1 = "Remplissez ce formulaire rapide et recevez sous 24h chrono le tarif pour votre immeuble :"
+
+forcesTitre = "Ce qui fait la force de **Copronet**"
+forcesTexte1 = "Un.e superviseur.e dédiée et 100% engagé pour votre immeuble"
+forcesTexte2 = "Un.e superviseur.e dédiée et 100% engagé pour votre immeuble"
+contactTitre = "Nous **contacter**"
+contactIntro = "Vous souhaitez nous contacter directement pour obtenir le prix pour l'entretien de votre immeuble ?"
+mail = "info@copronet.fr"
+tel = "01 53 11 05 58"
++++
