@@ -1,0 +1,127 @@
+{{ define "main" }}
+
+<div class="hero">
+    <span class="hero__title">{{ .Params.h0 | markdownify }}</span>
+    <div class="hero__content">
+        <h1 class="hero__content__h1">{{ .Params.h1 | markdownify }}</h1>
+        <p class="hero__content__p">{{ .Params.intro | markdownify }}</p>
+    </div>
+</div>
+
+<div class="team">
+    {{ with .Params.image }} {{ $hero := index . 0 }} {{ $desktopImg :=
+    $.Resources.GetMatch $hero.src_desktop }} {{ $mobileImg :=
+    $.Resources.GetMatch $hero.src_mobile }} {{ if and $desktopImg $mobileImg }}
+    <picture class="team__pict">
+        <source
+            media="(min-width: 768px)"
+            srcset="{{ $desktopImg.RelPermalink }}"
+        />
+        <img
+            class="team__img"
+            src="{{ $mobileImg.RelPermalink }}"
+            alt="{{ $hero.alt }}"
+        />
+    </picture>
+    {{ end }} {{ end }} {{ with .Params.equipe }} {{ $equipe := index . 0 }}
+    <!--<h2 class="team__title title-big">{{ $equipe.titre | markdownify }}</h2>-->
+    <h2 class="team__title">
+        <span
+            style='
+                background: url("{{ $equipe.titreImage1 | markdownify }}") no-repeat center /
+                    contain;
+            '
+            >Votre</span
+        >
+        relais de confiance avec
+        <span
+            style='
+            background: url("{{ $equipe.titreImage2 | markdownify }}") no-repeat center /
+                contain;
+        '
+            >notre</span
+        >
+        équipe sur le terrain
+    </h2>
+
+    <div class="team__content">
+        <div class="content__left">{{ $equipe.texte1 | markdownify }}</div>
+        <div class="content__right">
+            {{ $equipe.texte2 | markdownify }} {{ $equipe.tel | markdownify }}
+            {{ $equipe.jointure | markdownify }}
+            <a
+                href="{{ $equipe.mail | markdownify
+            }}"
+                >{{ $equipe.mail | markdownify }}</a
+            >
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+<div class="bosses">
+    {{ range .Params.responsable }}
+    <div class="boss">
+        <div class="boss__pict__container boss__pict__container--left">
+            <img
+                src="{{ .photoSrc | markdownify }}"
+                alt="{{ .photoAlt | markdownify }}"
+                title="{{ .photoTitle | markdownify }}"
+                class="boss__pict__container__img"
+            />
+        </div>
+        <div class="boss__content">
+            <h2 class="boss__title">
+                <span>{{ .titreP1 | safeHTML | markdownify }}</span>
+                <span>{{ .titreP2 | safeHTML | markdownify }}</span>
+            </h2>
+            <p class="boss__content__p">{{ .texte | markdownify }}</p>
+            <p class="boss__content__contact">
+                {{ .contactTexte | markdownify }}
+                <a href="mailto:{{ .mail | markdownify }}"
+                    >{{ .mail | markdownify }}</a
+                >
+            </p>
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+<div class="engagements">
+    {{ with .Params.engagemments }} {{ $engagemments := index . 0 }}
+    <h2 class="engagements__title title-medium">
+        {{ $engagemments.titre | markdownify }}
+    </h2>
+    <div class="engagements__p">{{ $engagemments.texte | markdownify }}</div>
+    {{ end }}
+    <div class="engagements__grid">
+        {{ range .Params.engagemment }}
+        <div class="engagements__grid__item">
+            <img
+                class="engagements__grid__item__img"
+                src="{{ .photoSrc }}"
+                alt="{{ .photoAlt }}"
+                title="{{ .photoTitle }}"
+            />
+            <p>
+                <strong>{{ .titre }}</strong><br />
+                {{ .texte }}
+            </p>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<div class="big-buttons">
+    <button class="cta-btn-light left">
+        Devis&nbsp;<span class="b">gratuit sous 24h</span>
+    </button>
+    <button class="cta-btn-blue right">
+        Pressé(e)&nbsp;?&nbsp;<span class="b">Contactez-nous&nbsp;!</span>
+    </button>
+</div>
+<div class="contacts">
+    Email: <a href="mailto:info@copronetpropre.fr">info@copronetpropre.fr</a> ou
+    par téléphone : <a href="tel:0153110858">01 53 11 08 58</a>
+</div>
+{{ end }}

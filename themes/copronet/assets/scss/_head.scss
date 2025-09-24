@@ -74,6 +74,12 @@
                 font-family: "Open Sans Bold";
                 /* font-weight: bold; */
             }
+
+            &.active {
+                a {
+                    color: var(--cpn-blue-light);
+                }
+            }
         }
     }
 }
