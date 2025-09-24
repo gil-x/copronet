@@ -1,0 +1,131 @@
+{{ define "main" }}
+
+<div class="hero">
+    <span class="hero__title">{{ .Params.h0 | markdownify }}</span>
+    <h1 class="hero__h1">{{ .Params.h1 | markdownify }}</h1>
+    <p class="hero__intro">{{ .Params.intro | markdownify }}</p>
+
+    {{ with .Params.offre }} {{ $offre := index . 0 }}
+    <div class="offer">
+        <h2 class="offer__title">{{ $offre.titre | markdownify }}</h2>
+        <span class="offer__txt1 t1"> {{ $offre.texte1 | markdownify }} </span>
+        <span class="offer__txt2 t1">{{ $offre.texte2 | markdownify }}</span>
+        <span class="offer__amount">{{ $offre.prix | markdownify }}</span>
+        <span class="offer__txt3"
+            >{{ $offre.frequence | markdownify }}<sup>*</sup></span
+        >
+        <div class="offer__img">
+            <img class="offer__pict__img" src="{{ $offre.photo }}" alt="" />
+        </div>
+
+        <div class="offer__cta">
+            <button class="offer__cta__btn">
+                {{ $offre.bouton | markdownify }}
+            </button>
+        </div>
+
+        <p class="offer__p">
+            <small class="offer__p__small">
+                (<sup>*</sup>{{ $offre.asterisque | markdownify }}</small
+            >
+        </p>
+    </div>
+    {{ end }}
+
+    <div class="hero__expend">
+        <h2 class="hero__expend__title">
+            {{ .Params.prestationsTitre | markdownify }}
+        </h2>
+        <div class="hero__expend__p hidden">
+            {{ .Params.prestationsTexte | markdownify }}
+        </div>
+    </div>
+    <div class="hero__expend">
+        <h2 class="hero__expend__title">
+            {{ .Params.supervisionTitre | markdownify }}
+        </h2>
+        <div class="hero__expend__p hidden">
+            {{ .Params.supervisionTexte | markdownify }}
+        </div>
+    </div>
+</div>
+
+<div class="section__customers__comments">
+    <div class="section__customers__comments__comment">
+        <img
+            src="avis1.png"
+            alt=""
+            class="section__customers__comments__debug_img"
+        />
+    </div>
+    <div class="section__customers__comments__comment">
+        <img
+            src="avis2.png"
+            alt=""
+            class="section__customers__comments__debug_img"
+        />
+    </div>
+    <div class="section__customers__comments__comment">
+        <img
+            src="avis3.png"
+            alt=""
+            class="section__customers__comments__debug_img"
+        />
+    </div>
+    <div class="section__customers__comments__comment">
+        <img
+            src="avis1.png"
+            alt=""
+            class="section__customers__comments__debug_img"
+        />
+    </div>
+    <div class="section__customers__comments__comment">
+        <img
+            src="avis2.png"
+            alt=""
+            class="section__customers__comments__debug_img"
+        />
+    </div>
+</div>
+
+{{ with .Params.reputation }} {{ $reputation := index . 0 }}
+<div class="reputation">
+    <button class="offer__cta__btn">
+        {{ $reputation.bouton | markdownify }}
+    </button>
+    <p>Pas de Copronet sur Batiref</p>
+</div>
+{{ end }} {{ with .Params.immeubles }} {{ $immeubles := index . 0 }}
+<h2 class="title-medium">{{ $immeubles.titre | markdownify }}</h2>
+{{ end }}
+
+<div class="building-types-grid">
+    {{ range .Params.immeuble }}
+    <div class="building-types-grid__item">
+        <img src="{{ .photo }}" alt="" class="building-types-grid__item__img" />
+        <span class="building-types-grid__item__span"
+            >{{ .nom | markdownify }}</span
+        >
+    </div>
+    {{ end }}
+    <div class="building-types-grid__item building-types-grid__item--contact">
+        <div>
+            <p>
+                Nos équipes sont <strong>disponibles</strong> pour un suivi
+                direct et efficace de vos demandes.
+            </p>
+            <p>
+                <strong class="blue-light">Contactez-nous !</strong><br />
+                Email : info@copronetpropre.fr<br />
+                Téléphone : 01 53 11 05 58
+            </p>
+        </div>
+        <a
+            class="building-types-grid__item__span"
+            href="/devis-gratuit-sous-24h"
+            >Devis <strong>gratuit</strong> <span>sous 24H</span></a
+        >
+    </div>
+</div>
+
+{{ end }}
