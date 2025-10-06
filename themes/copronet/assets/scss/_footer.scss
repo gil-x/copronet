@@ -153,7 +153,7 @@
 @media (min-width: $bp-medium) {
     .footer {
         display: grid;
-        grid-template-columns: 28% 72%;
+        grid-template-columns: 34% 66%;
         grid-template-areas:
             "icons icons"
             "img   links";
@@ -178,6 +178,7 @@
 
             &__img {
                 width: 55%;
+                max-width: 220px;
             }
 
             &__baseline {
@@ -187,10 +188,10 @@
 
         &__links {
             grid-area: links;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: auto auto auto 1fr;
             grid-template-rows: auto;
-            gap: 60px;
-            padding: 60px;
+            gap: 100px;
+            padding: 60px 60px 80px 60px;
             background: linear-gradient(
                 to bottom,
                 rgba(255, 255, 255, 0.825),
@@ -199,6 +200,11 @@
             );
 
             &__section {
+                &--a {
+                    &.footer__links__ul {
+                        padding: 0;
+                    }
+                }
                 &--b {
                     display: block;
                     grid-row: 1/2;
@@ -206,6 +212,7 @@
                 }
                 &--c {
                     grid-column: 3/4;
+                    padding: 0;
                 }
                 &--d {
                     max-width: 150px;
@@ -237,7 +244,7 @@
         &__background {
             display: block;
             pointer-events: none;
-            background: url("../img/footer.webp") no-repeat -70px -40px / cover;
+            background: url("../img/footer.webp") no-repeat top left / cover;
             grid-area: img;
             grid-column: span img / 3;
         }
