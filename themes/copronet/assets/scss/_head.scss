@@ -99,6 +99,8 @@
 
 @media (min-width: $bp-medium) {
     .header {
+        display: flex;
+        justify-content: center;
         left: 0;
         width: var(--body-max-width);
         height: var(--header-h);
@@ -110,7 +112,7 @@
 
         &__logo {
             transform: translateY(calc(20px + 8.23%));
-            padding: 0 50px 50px;
+            padding: 0 50px 50px 0;
             margin: -20px 0 0 0;
 
             &__img {
@@ -124,8 +126,10 @@
     }
 
     .nav {
+        flex-grow: 0;
         position: static;
         transform: none;
+        justify-content: start;
 
         &__ul {
             &__li {

@@ -202,6 +202,7 @@
                     grid-column: 3/4;
                 }
                 &--d {
+                    max-width: 150px;
                     grid-row: 1/2;
                     grid-column: 4/5;
                 }
@@ -276,7 +277,7 @@
 
         .w1 {
             font-size: var(--font-root);
-            margin: 0 0 6px;
+            /* margin: 0 0 6px; */
         }
 
         .w2 {
@@ -298,7 +299,7 @@
         .w4 {
             font-size: var(--font-root);
             /* text-transform: uppercase; */
-            margin: 6px 0 0;
+            /* margin: 6px 0 0; */
         }
     }
 }
