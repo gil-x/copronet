@@ -163,6 +163,12 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             background: none;
             padding: 48px 0;
+
+            &__icon {
+                &__text {
+                    line-height: 1.1;
+                }
+            }
         }
 
         &__logo {
@@ -187,9 +193,9 @@
             padding: 60px;
             background: linear-gradient(
                 to bottom,
-                rgba(255, 255, 255, 0.75),
-                rgba(255, 255, 255, 0.75) 50%,
-                rgba(255, 255, 255, 0.6)
+                rgba(255, 255, 255, 0.825),
+                rgba(255, 255, 255, 0.825) 50%,
+                rgba(255, 255, 255, 0.7)
             );
 
             &__section {
@@ -218,7 +224,7 @@
                 text-transform: none;
                 color: var(--cpn-blue);
                 /* font-weight: 800; */
-                font-family: "Open Sans Bold";
+                /* font-family: "Open Sans Bold"; */
             }
 
             &__li {
@@ -231,7 +237,7 @@
         &__background {
             display: block;
             pointer-events: none;
-            background: url("../img/footer.webp") no-repeat top left / cover;
+            background: url("../img/footer.webp") no-repeat -70px -40px / cover;
             grid-area: img;
             grid-column: span img / 3;
         }
