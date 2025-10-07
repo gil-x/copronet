@@ -29,39 +29,49 @@ titreImage1 = "hw_votre.png"
 titreInter1 = "relais de confiance avec"
 titreImage2 = "hw_notre.png"
 titreInter2 = "équipe sur le terrain"
-texte1 = """**La présence d'un(e) superviseur(e) Qualité dédié(e)** garantit un suivi rigoureux de l'entretien de vos locaux.
-Il veille au bon déroulement des prestations, au respect de vos consignes spécifiques et intervient rapidement en cas d'anomalie.<br>
-Grâce à des contrôles réguliers et une gestion efficace des remplacements, vous bénéficiez d'un **service continu, fiable et conforme à des standards élevés.**
-Une organisation par zone géographique nous permet d'optimiser nos interventions sur le terrain."""
-texte2 = """Les coordonnées de votre superviseur(e) sont disponibles sur simple demande par e-mail. **Nos superviseurs s'appuient au quotidien sur une équipe d'assistant(e)s d'exploitation, disponible et réactive,** afin d'assurer un accompagnement constant et une coordination fluide de l'ensemble des prestations.
-
-Nos collaborateurs sont joignables de 9h00 à 13h00 et de 14h00 à 17h00 par téléphone&nbsp;:"""
+texte1 = """**Un(e) superviseur(e) Qualité dédié(e) assure le suivi rigoureux de l’entretien de vos locaux :** contrôle des prestations,
+respect de vos consignes et intervention rapide en cas de besoin.<br>
+Grâce à des contrôles réguliers et une gestion optimisée des remplacements,
+vous bénéficiez d’un service fiable, continu et conforme à nos standards.
+Leurs coordonnées sont disponibles sur demande."""
+texte2 = """L’organisation par zone géographique renforce notre efficacité sur le terrain.
+Nos superviseurs sont appuyés(e)s au quotidien par une équipe d’assistant(e)s d’exploitation, disponibles et réactif(ve)s."""
+texte2b = "Pour les joindre par tél.&nbsp;"
 tel = "**01 53 11 08 58**"
 jointure = "ou par mail&nbsp;:"
 mail = "**info@copronetproprete.fr**"
+texte2c = """du lundi au vendredi de 9h à 13h et de 14h à 17h"""
 
 [[responsables]]
 [[responsable]]
-titreP1 = "**Notre** responsable commercial :<br>"
-titreP2 = "Faites connaissance avec **Wilson Da Moura**"
+titreP1 = "Notre **responsable commercial**<br>"
+titreP2 = "Faites connaissance avec **Wilson Da Moura** !"
 photoSrc = "mokrane.jpeg"
 photoAlt = "mokrane a"
 photoTitle = "mokrane t"
-texte = """Responsable commercial, Wilson est avant tout une personne solaire et tou- jours à l'écoute. D'origine capverdienne, il apporte à notre équipe sa bonne humeur naturelle, son sens du contact et une grande générosité dans les échanges.\
-
-Accessible et bienveillant, il prend le temps de comprendre les besoins de chacun, tout en gardant un regard rigoureux et professionnel sur chaque dossier. Disponible, simple et chaleureux, Wilson est la personne idéale pour parler de vos projets en toute confiance."""
+texte = """D’origine capverdienne, Wilson **est une personne solaire, accessible et
+toujours à l’écoute.** Il apporte à l’équipe sa bonne humeur, son sens du
+contact et sa générosité.
+Professionnel et bienveillant, il prend le temps de comprendre chaque
+besoin et **sait accompagner les projets avec rigueur et simplicité.**"""
 contactTexte = "Pour le joindre :"
-mail = "info@copronetproprete.fr"
+mail = "dmwilson@copronetproprete.fr"
 [[responsable]]
-titreP1 = "**Notre** responsable commercial :<br>"
-titreP2 = "Faites connaissance avec **Wilson Da Moura**"
+titreP1 = "**Chez Copronet** Une nouvelle génération de talents<br>"
+titreP2 = "prend les commandes de l’exploitation !"
 photoSrc = "mokrane.jpeg"
 photoAlt = "mokrane a"
 photoTitle = "mokrane t"
-texte = """Responsable commercial, Wilson est avant tout une personne solaire et tou- jours à l'écoute. D'origine capverdienne, il apporte à notre équipe sa bonne humeur naturelle, son sens du contact et une grande générosité dans les échanges.\
-
-Accessible et bienveillant, il prend le temps de comprendre les besoins de chacun, tout en gardant un regard rigoureux et professionnel sur chaque dossier. Disponible, simple et chaleureux, Wilson est la personne idéale pour parler de vos projets en toute confiance."""
-contactTexte = "Pour le joindre :"
+texte = """**Mehdi Chekkal, notre Responsable Administratif et Technique**,
+connaît Copronet sur le bout des doigts. Avec plusieurs années d’expérience
+à son actif, il allie rigueur, expertise métier et une approche résolument
+pragmatique.<br>
+À ses côtés, **Maimouna Dia, notre Responsable Exploitation**, met
+à profit son expérience terrain et son sens de l’écoute pour assurer une
+coordination fluide avec les équipes. Elle est votre interlocutrice privilégiée
+pour toutes les questions techniques et organisationnelles du quotidien.
+Ensemble, ils forment un duo complémentaire, réactif et à votre écoute pour **vous garantir un service efficace, jour après jour**."""
+contactTexte = "Pour les joindre :"
 mail = "info@copronetproprete.fr"
 
 [[engagemments]]
@@ -77,22 +87,28 @@ photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
 texte = """Chez Copronet, nous ajustons nos services de nettoyage, entretien et gestion des espaces communs de vos copropriétés selon vos besoins. Notre équipe garantit une qualité constante a chaque intervention."""
 [[engagemment]]
-titre = "Des prestations sur-mesure"
+titre = "Un(e) superviseur(se) impliqué(e)"
 photoSrc = "engage1.png"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
-texte = """Chez Copronet, nous ajustons nos services de nettoyage, entretien et gestion des espaces communs de vos copropriétés selon vos besoins. Notre équipe garantit une qualité constante a chaque intervention."""
+texte = """Votre copropriété est entre de bonnes mains avec un(e)
+superviseur(se) réactif(ve) et disponible. Il/elle veille à la
+qualité des prestations et répond rapidement à vos besoins."""
 [[engagemment]]
-titre = "Des prestations sur-mesure"
+titre = "Un suivi direct et efficace"
 photoSrc = "engage1.png"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
-texte = """Chez Copronet, nous ajustons nos services de nettoyage, entretien et gestion des espaces communs de vos copropriétés selon vos besoins. Notre équipe garantit une qualité constante a chaque intervention."""
+texte = """Une question ? Contactez-nous par une adresse mail et un
+numéro uniques. Nous assurons un suivi rapide et une
+réponse claire à toutes vos demandes."""
 [[engagemment]]
-titre = "Des prestations sur-mesure"
+titre = "Le respect de l’environnement"
 photoSrc = "engage1.png"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
-texte = """Chez Copronet, nous ajustons nos services de nettoyage, entretien et gestion des espaces communs de vos copropriétés selon vos besoins. Notre équipe garantit une qualité constante a chaque intervention."""
+texte = """Nous privilégions des produits écologiques et des méthodes
+de nettoyage respectueuses de l'environnement,
+assurant ainsi des espaces propres tout en préservant la planète."""
 
 +++

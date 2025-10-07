@@ -14,9 +14,13 @@ description = "Page d'accueil de mon premier site Hugo"
 [[hero]]
 intro = """Chez **Copronet**, nous savons combien il est important de rentrer chez soi, et de se sentir bien, dans un espace propre et accueillant."""
 video = "vid1.mp4"
-h1 = """Chaque jour, nous vous assurons <br>un service de qualité."""
-texte = """Des halls aux escaliers, en passant par les ascenseurs, couloirs, parkings et autres espaces, nous savons que"""
-texte_grand = """**chaque détail compte pour vous et votre** bien-être est **notre** priorité."""
+h1 = """Chaque jour, nous vous assurons <br>un nettoyage de qualité des
+parties communes de vos immeubles :"""
+texte = """des halls aux escaliers, en passant par les ascenseurs, couloirs, parkings
+et autres espaces, nous savons que """
+texte_grand = """**chaque détail
+compte** pour vous et **votre bien-être est notre
+priorité.**"""
 
 [[chiffres]]
 titre = "**Copronet** en quelques chiffres"
@@ -31,7 +35,7 @@ texte = "agent(e)s de propreté<br>formé(e)s et impliqué(e)s"
 [[chiffre]]
 image = "chiffre3.png"
 chiffre = "1200"
-texte = "copropriétés<br>entretenues au quotidien"
+texte = "copropriétés entretenues<br>quotidiennement"
 [[chiffre]]
 image = "chiffre4.svg"
 chiffre = "4,6/5"
@@ -46,20 +50,37 @@ prix = "459 € TTC"
 frequence = "par mois"
 texte3 = "Prestations incluses"
 prestation1 = "Nettoyage des parties communes"
-prestation2 = "Gestion des conteneurs"
+prestation2 = "Gestion des containers"
 asterisque = "pour un immeuble de 5-6 étages à Paris ou en Île-de-France)"
 
 [[clients]]
 titre = "Ils nous font **confiance**"
 texte = """Nous ne nous contentons pas de nettoyer les immeubles, nous prenons soins de leurs résidents. Toujours à l’écoute des syndics, nous sommes engagés au quotidien pour l’entretien de leurs copropriétés dans un esprit de partenariat professionnel et direct."""
-liste = ["Artcop", "Century 21", "Citya", "Cogeim", "Craunot", "Credassur", "Degueldre", "Foncia", "Jean-Charpentier", "Tiffen Coge", "Jourdan", "Larigaudry", "Lema Immobilier", "Loiselet & Daigremont", "Nation Gestion Conseil", "Nexity"]
+# liste = ["Artcop", "Century 21", "Citya", "Cogeim", "Craunot", "Credassur", "Degueldre", "Foncia", "Jean-Charpentier", "Tiffen Coge", "Jourdan", "Larigaudry", "Lema Immobilier", "Loiselet & Daigremont", "Nation Gestion Conseil", "Nexity"]
+liste = [
+  "Cabinet Credassur",
+  "Cabinet Debayle",
+  "Cabinet Degueldre",
+  "Cabinet Lerms",
+  "Cabinet Morgand",
+  "Cabinet Plisson",
+  "Citya",
+  "Cogeim",
+  "Cpab",
+  "Delsarte Patrimoine",
+  "Etude Caraudrey",
+  "Foncia",
+  "Kairos Gestion Conseil",
+  "Lema Immobilier",
+  "Pickering Real Estate",
+  "Segine"
+]
 # , "O'Real", "Plisson Immobilier", "Sergic", "Bonus Pater Familias",
 
 [[services]]
 titre = "Nos **services**"
 texte = """Chez **Copronet**, nous sommes là pour vous simpliﬁer la vie et garantir la propreté et le bon entretien de votre cadre de vie.<br>
-Spécialistes du nettoyage et de la gestion des parties communes d’immeubles, nous vous
-proposons une gamme complète de services adaptés à vos besoins."""
+Spécialistes du nettoyage et de la gestion des parties communes d’immeubles, nous vous proposons une gamme complète de services adaptés à vos besoins."""
 bouton = "Voir **tous nos services**"
 [[service]]
 titre = "**Nettoyage**<br>des parties communes"
@@ -68,11 +89,11 @@ texte = """Parce que les premières impressions comptent, nous veillons à"""
 [[service]]
 titre = "Gestion<br> **des conteneurs**"
 photo = "offre2.webp"
-texte = """Fini les tracas liés à la gestion des poubelles ! Nous sortons et rentrons dans le respect des horaires de collecte""""
+texte = """Fini les tracas liés à la gestion des poubelles ! Nous sortons et rentrons dans le respect des horaires de collecte"""
 [[service]]
 titre = "**Gardien**<br>régisseur"
 photo = "offre3.webp"
-texte = """Un gardien absent ou en congé ? Besoin d’un régisseur ? Pas de souci"""
+texte = """Un gardien absent ou en congé ? Besoin d’un régisseur ? Pas de souci, nous avons la solution"""
 
 [[servicesBouton]]
 bouton = "Voir **tous nos services**"

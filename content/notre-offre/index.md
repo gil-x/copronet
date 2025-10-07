@@ -22,9 +22,15 @@ prestationsTitre = "Prestations incluses"
 prestationsTexte = """
 - Nettoyage des parties communes
 - Vitrerie
-- Gestiondes containers"""
+- Gestion des containers"""
 supervisionTitre = "Supervision Qualité au quotidien"
-supervisionTexte = """LOREM Un.e superviseur.se dédié.e à votre copropriété, qui sera votre relais de confiance avec l’agent en charge du nettoyage de votre immeuble. Un.e superviseur.se dédié.e à votre copropriété, qui sera votre relais de confiance avec l’agent en charge du nettoyage de votre immeuble."""
+supervisionTexte = """Nos superviseurs, munis de tablettes numériques,
+garantissent la qualité des services en temps réel.
+Servant de relais d'information, Ils sont en mesure de
+signaler immédiatement toute fuite, anomalie électrique
+ou autre problème, et coordonner efficacement les
+interventions. Tout cela en maintenant une relation
+humaine de proximité."""
 
 [[offre]]
 photo = "offer_img1.webp"

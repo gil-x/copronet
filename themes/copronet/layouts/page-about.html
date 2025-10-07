@@ -45,15 +45,22 @@
     </h2>
 
     <div class="team__content">
-        <div class="content__left">{{ $equipe.texte1 | markdownify }}</div>
-        <div class="content__right">
-            {{ $equipe.texte2 | markdownify }} {{ $equipe.tel | markdownify }}
+        <div class="team__content__left">
+            {{ $equipe.texte1 | markdownify }}
+        </div>
+        <div class="team__content__right">
+            {{ $equipe.texte2 | markdownify }}
+            <p>
+                {{ $equipe.texte2b | markdownify }} {{ $equipe.tel | markdownify
+                }}
+            </p>
             {{ $equipe.jointure | markdownify }}
             <a
                 href="{{ $equipe.mail | markdownify
             }}"
                 >{{ $equipe.mail | markdownify }}</a
             >
+            <p>{{ $equipe.texte2c | markdownify }}</p>
         </div>
     </div>
     {{ end }}

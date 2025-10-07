@@ -30,18 +30,28 @@
     &__content {
         padding: calc(var(--gutter-y) * 1.5) calc(var(--gutter-x) * 2)
             calc(var(--gutter-y) * 2);
+        text-align: center;
         background:
             url(../img/stroke2m.svg) no-repeat right 20px / 135%,
             var(--cpn-blue);
         color: var(--white);
 
         &__h1 {
-            text-align: center;
+            display: block;
+
             font-size: var(--font-m-l);
+            margin: 0 0 12px;
+
+            strong {
+                text-transform: uppercase;
+                color: var(--cpn-blue-light);
+            }
         }
 
         &__p {
+            display: inline;
             text-align: center;
+
             strong {
                 color: var(--cpn-blue-light);
             }
@@ -217,7 +227,9 @@
             color: var(--cpn-blue);
 
             &__h1 {
+                display: inline;
                 font-size: var(--font-l);
+                margin: 0;
             }
         }
     }

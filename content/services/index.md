@@ -14,46 +14,82 @@ title = "Nos services"
 description = "Nos services"
 
 h0 = """Nos **Services**"""
-h1 = """Nos Services - Votre Propreté,<br>Notre Engagement."""
-intro = """Chez **Copronet**, nous sommes là pour garantir la propreté de votre cadre de vie. Spécialistes du nettoyage des parties communes d’immeubles, nous proposons une gamme complète de services adaptés à vos besoins."""
+h1 = """Chez **Copronet**, nous sommes là pour garantir la propreté de votre cadre de vie."""
+intro = """ Spécialistes du nettoyage des parties communes d’immeubles, nous proposons une gamme complète de services adaptés à vos besoins."""
 
 [[services]]
 [[service]]
 titre = "**Nettoyage** & Vitrerie"
 image = "nettoyage_et_vitrerie.webp"
-texte = "Des espaces communs toujours propres, à la fréquence de votre choix. Nous nous assurons que vos parties communes restent accueillantes grâce à nos équipes réactives et expérimentées. Escaliers, sols, vitres, ascenseurs, halls… Nos services incluent également une vérification régulière des ampoules."
+texte = """**Des espaces communs toujours propres, à la
+fréquence de votre choix.**
+Nous nous assurons que vos halls d’entrée, escaliers,
+couloirs, miroirs et vitres restent impeccables, selon les
+fréquences que vous avez définies. Nos services incluent
+également une vérification régulière des ampoules."""
 [[service]]
 titre = "Gestion des **Conteneurs**"
 image = "nettoyage_et_vitrerie.webp"
-texte = """**Fini les tracas liés à la gestion des poubelles !** Nous sortons et rentrons vos conteneurs, conformément au calendrier municipal, en garantissant propreté et désinfection régulière des locaux poubelles. Toujours en parfaite efficacité et dans le respect des horaires de collecte."""
+texte = """**Fini les tracas liés à la gestion des poubelles !** Nous prenons en charge la sortie, la rentrée et l’entretien
+des conteneurs, garantissant un environnement propre
+et sans désagrément. Nous assurons cette gestion
+efficacement et dans le respect des horaires de collecte."""
 [[service]]
 titre = "**Gardiens** & Régisseurs"
 image = "nettoyage_et_vitrerie.webp"
-texte = """**Besoin d’un gardien ou d’un régisseur ?** Nous avons la solution. Notre équipe est prête à intervenir rapidement pour maintenir votre immeuble. Nous mettons également en place des régisseurs dédiés, rigoureux et disponibles, pour garantir un suivi optimal de votre résidence. Propreté, liens de proximité, sécurité : nous veillons sur chaque détail."""
+texte = """**Besoin d’un gardien ou d’un régisseur ?** Nous avons la solution ! Notre équipe est prête à
+intervenir rapidement pour remplacer votre gardien.
+Nous mettons également en place des régisseurs
+permanents, ayant toutes les attributions du gardien,
+sans loger dans la résidence. Professionnalisme,
+discrétion et efficacité : nous veillons sur chaque détail."""
 [[service]]
 titre = "cta"
 [[service]]
-titre = "**Nettoyage** & Vitrerie"
+titre = "Traitement des **Sols**"
 image = "nettoyage_et_vitrerie.webp"
-texte = "Des espaces communs toujours propres, à la fréquence de votre choix. Nous nous assurons que vos parties communes restent accueillantes grâce à nos équipes réactives et expérimentées. Escaliers, sols, vitres, ascenseurs, halls… Nos services incluent également une vérification régulière des ampoules."
+texte = """**Sols impeccables et propreté durable grâce à un
+traitement sur-mesure.**
+Pour que vos sols restent entretenus sur le long terme,
+nous proposons un traitement mécanisé adapté à chaque
+type de surface.
+Redonnez vie à vos sols !
+Shampoing moquette, Ponçage, vitrification ou
+cristallisation du marbre, carrelage et parquet, Copronet
+se charge de tout !"""
 [[service]]
-titre = "Gestion des **Conteneurs**"
+titre = "Débarras & **Encombrants**"
 image = "nettoyage_et_vitrerie.webp"
-texte = """**Fini les tracas liés à la gestion des poubelles !** Nous sortons et rentrons vos conteneurs, conformément au calendrier municipal, en garantissant propreté et désinfection régulière des locaux poubelles. Toujours en parfaite efficacité et dans le respect des horaires de collecte."""
-[[service]]
-titre = "**Gardiens** & Régisseurs"
-image = "nettoyage_et_vitrerie.webp"
-texte = """**Besoin d’un gardien ou d’un régisseur ?** Nous avons la solution. Notre équipe est prête à intervenir rapidement pour maintenir votre immeuble. Nous mettons également en place des régisseurs dédiés, rigoureux et disponibles, pour garantir un suivi optimal de votre résidence. Propreté, liens de proximité, sécurité : nous veillons sur chaque détail."""
+texte = """**Dites adieu aux objets et déchets qui encombrent vos
+parties communes.**
+Copronet s'occupe de l’enlèvement et de la mise en
+décharge de tout type d’encombrants, vous libérant ainsi
+des espaces propres et dégagés."""
 [[service]]
 titre = "cta"
 [[service]]
-titre = "**Gardiens** & Régisseurs"
+titre = "Nettoyage **Parkings & Caves**"
 image = "nettoyage_et_vitrerie.webp"
-texte = """**Besoin d’un gardien ou d’un régisseur ?** Nous avons la solution. Notre équipe est prête à intervenir rapidement pour maintenir votre immeuble. Nous mettons également en place des régisseurs dédiés, rigoureux et disponibles, pour garantir un suivi optimal de votre résidence. Propreté, liens de proximité, sécurité : nous veillons sur chaque détail."""
+texte = """**Parkings et caves : propreté et entretien
+professionnel.**
+Vos parkings et caves méritent autant d’attention que les
+autres parties de l’immeuble. Nous intervenons avec des
+méthodes professionnelles pour éliminer les saletés,
+poussières et traces d’usure, et garantir des espaces
+sains et agréables."""
+[[service]]
+titre = "Petits **Bricolages**"
+image = "nettoyage_et_vitrerie.webp"
+texte = """**Chez Copronet, nous avons l’expertise pour résoudre
+efficacement vos petits soucis du quotidien.**
+Nos techniciens interviennent rapidement pour réparer
+vos équipements courants : portails, poignées de porte,
+boîtes aux lettres, rampes d’escalier, et plus encore."""
 
 [[extra]]
-texte1 = """Nous proposons également > complètent leurs services par des interventions rapides : fixation de tringles, remplacement d’ampoules, réparations légères, petits travaux de peinture, montage de meubles, petites retouches, réglages divers."""
-texte2 = """N’hésitez pas à nous faire part de vos besoins à l’adresse suivante :"""
+texte1 = """Chez **COPRONET**, Nous proposons également une gamme complète de services spécifiques :
+entretien des espaces verts, vitrerie en hauteur, remise en état d'appartements, lessivage de murs, et bien plus encore."""
+texte2 = """N’hésitez pas à nous faire part de vos besoins à l’adresse :"""
 mail = "info@copronetproprete.fr"
 
 [[offre]]
@@ -65,6 +101,6 @@ prix = "459 € TTC"
 frequence = "par mois"
 texte3 = "Prestations incluses"
 prestation1 = "Nettoyage des parties communes"
-prestation2 = "Gestion des conteneurs"
+prestation2 = "Vitrerie - Gestion des conteneurs"
 asterisque = "pour un immeuble de 5-6 étages à Paris ou en Île-de-France)"
 +++

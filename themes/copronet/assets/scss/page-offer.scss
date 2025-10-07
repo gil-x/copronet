@@ -399,7 +399,7 @@
       margin: -40px 0 0;
       div {
         box-sizing: border-box;
-        background: var(--gray);
+        background: var(--gray-d0);
         padding: calc(var(--gutter-y) * 2) calc(var(--gutter-x) * 2)
           calc(var(--gutter-y) * 1);
 
@@ -755,7 +755,7 @@
       padding: 0 calc(var(--gutter-x) * 1);
 
       &__item {
-        cursor: pointer;
+
 
         &__span {
           width: 50%;
@@ -800,6 +800,7 @@
 
         &--contact {
             margin: 0;
+            z-index: 1;
 
             .building-types-grid__item__span {
                 width: 60%;
@@ -810,6 +811,7 @@
 
             div {
                 height: calc(100% - 50px);
+                /* aspect-ratio: 550/367; */
                 padding: calc(var(--gutter-y) * 1.5) calc(var(--gutter-x) * 1);
                 font-size: var(--font-m);
                 display: flex;
