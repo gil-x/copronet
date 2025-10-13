@@ -29,14 +29,14 @@ fréquences que vous avez définies. Nos services incluent
 également une vérification régulière des ampoules."""
 [[service]]
 titre = "Gestion des **Conteneurs**"
-image = "nettoyage_et_vitrerie.webp"
+image = "gestion_des_containers.webp"
 texte = """**Fini les tracas liés à la gestion des poubelles !** Nous prenons en charge la sortie, la rentrée et l’entretien
 des conteneurs, garantissant un environnement propre
 et sans désagrément. Nous assurons cette gestion
 efficacement et dans le respect des horaires de collecte."""
 [[service]]
 titre = "**Gardiens** & Régisseurs"
-image = "nettoyage_et_vitrerie.webp"
+image = "gardiens_et_regisseurs.webp"
 texte = """**Besoin d’un gardien ou d’un régisseur ?** Nous avons la solution ! Notre équipe est prête à
 intervenir rapidement pour remplacer votre gardien.
 Nous mettons également en place des régisseurs
@@ -47,7 +47,7 @@ discrétion et efficacité : nous veillons sur chaque détail."""
 titre = "cta"
 [[service]]
 titre = "Traitement des **Sols**"
-image = "nettoyage_et_vitrerie.webp"
+image = "traitements_des_sols.webp"
 texte = """**Sols impeccables et propreté durable grâce à un
 traitement sur-mesure.**
 Pour que vos sols restent entretenus sur le long terme,
@@ -59,7 +59,7 @@ cristallisation du marbre, carrelage et parquet, Copronet
 se charge de tout !"""
 [[service]]
 titre = "Débarras & **Encombrants**"
-image = "nettoyage_et_vitrerie.webp"
+image = "debarras.webp"
 texte = """**Dites adieu aux objets et déchets qui encombrent vos
 parties communes.**
 Copronet s'occupe de l’enlèvement et de la mise en
@@ -69,7 +69,7 @@ des espaces propres et dégagés."""
 titre = "cta"
 [[service]]
 titre = "Nettoyage **Parkings & Caves**"
-image = "nettoyage_et_vitrerie.webp"
+image = "nettoyage_parkings.webp"
 texte = """**Parkings et caves : propreté et entretien
 professionnel.**
 Vos parkings et caves méritent autant d’attention que les
@@ -79,7 +79,7 @@ poussières et traces d’usure, et garantir des espaces
 sains et agréables."""
 [[service]]
 titre = "Petits **Bricolages**"
-image = "nettoyage_et_vitrerie.webp"
+image = "petit_bricolage.webp"
 texte = """**Chez Copronet, nous avons l’expertise pour résoudre
 efficacement vos petits soucis du quotidien.**
 Nos techniciens interviennent rapidement pour réparer

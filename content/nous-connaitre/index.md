@@ -59,7 +59,7 @@ mail = "dmwilson@copronetproprete.fr"
 [[responsable]]
 titreP1 = "**Chez Copronet** Une nouvelle génération de talents<br>"
 titreP2 = "prend les commandes de l’exploitation !"
-photoSrc = "mokrane.jpeg"
+photoSrc = "maimouna_dia_mehdi_chekkal.webp"
 photoAlt = "mokrane a"
 photoTitle = "mokrane t"
 texte = """**Mehdi Chekkal, notre Responsable Administratif et Technique**,
