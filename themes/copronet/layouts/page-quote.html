@@ -13,7 +13,7 @@
         <!-- Step 1: Vos Informations -->
         <div class="form-step" data-step="1">
             <h2 class="step-title" data-target-step="1">
-                <span>VOS <span class="blue-light">INFORMATIONS</span></span
+                <span>VOS INFORMATIONS</span
                 ><img
                     src="/img/arrow_r_bluelight.svg"
                     alt=""
@@ -43,51 +43,51 @@
                         <label for="nom">Nom*</label>
                     </div>
                 </div>
-                <div class="form-group form-row">
-                    <div class="form-group">
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="email"
-                            required
-                        />
-                        <label for="email">Mail*</label>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="tel"
-                            id="telephone"
-                            name="telephone"
-                            placeholder="téléphone"
-                            required
-                            pattern="[0-9\s\-\+]{10,}"
-                            title="Numéro de téléphone valide (min 10 chiffres)"
-                        />
-                        <label for="telephone">Téléphone*</label>
-                    </div>
+                <!--<div class="form-group form-row">-->
+                <div class="form-group">
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="email"
+                        required
+                    />
+                    <label for="email">Mail*</label>
                 </div>
-                <div class="form-group form-row">
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            id="adresse"
-                            name="adresse"
-                            placeholder="adresse"
-                        />
-                        <label for="adresse">Adresse (facultatif)</label>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            id="cpville"
-                            name="cpville"
-                            placeholder="CP et ville"
-                            required
-                        />
-                        <label for="cpville">CP et Ville*</label>
-                    </div>
+                <div class="form-group">
+                    <input
+                        type="tel"
+                        id="telephone"
+                        name="telephone"
+                        placeholder="téléphone"
+                        required
+                        pattern="[0-9\s\-\+]{10,}"
+                        title="Numéro de téléphone valide (min 10 chiffres)"
+                    />
+                    <label for="telephone">Téléphone*</label>
                 </div>
+                <!--</div>-->
+                <!--<div class="form-group form-row">-->
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="adresse"
+                        name="adresse"
+                        placeholder="adresse"
+                    />
+                    <label for="adresse">Adresse (facultatif)</label>
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="cpville"
+                        name="cpville"
+                        placeholder="CP et ville"
+                        required
+                    />
+                    <label for="cpville">CP et Ville*</label>
+                </div>
+                <!--</div>-->
                 <div class="form-group">
                     <input
                         type="text"
@@ -105,48 +105,47 @@
         <div class="form-step" data-step="2">
             <h2 class="step-title" data-target-step="2">
                 <span>VOTRE <span class="blue-light">RÉSIDENCE</span></span
-                ><img
-                    src="/img/arrow_r_bluelight.svg"
-                    alt=""
-                    class="step-arrow"
-                />
+                ><img src="/img/arrow_r_blue.svg" alt="" class="step-arrow" />
             </h2>
             <div class="step-content">
                 <!-- <div class="form-group form-row"> -->
-                <div class="form-group rowed">
-                    <label for="nb_logements">Nb de logements*</label>
+                <div class="form-group">
                     <input
                         type="number"
                         id="nb_logements"
                         name="nb_logements"
+                        placeholder="Nb de logements*"
                         required
                         min="1"
                     />
+                    <label for="nb_logements">Nb de logements*</label>
                 </div>
-                <div class="form-group rowed">
-                    <label for="nb_batiments">Nb de bâtiment(s)*</label>
+                <div class="form-group">
                     <input
                         type="number"
                         id="nb_batiments"
                         name="nb_batiments"
+                        placeholder="Nb de bâtiment(s)*"
                         required
                         min="1"
                     />
+                    <label for="nb_batiments">Nb de bâtiment(s)*</label>
                 </div>
                 <!-- </div> -->
                 <!-- <div class="form-group form-row"> -->
-                <div class="form-group rowed">
-                    <label for="nb_etages"
-                        >Nb d'étage(s) par bâtiment*
-                        <span class="note">(en moyenne)</span></label
-                    >
+                <div class="form-group">
                     <input
                         type="number"
                         id="nb_etages"
                         name="nb_etages"
+                        placeholder="Nb d'étage(s) par bâtiment (en moyenne)*"
                         required
                         min="0"
                     />
+                    <label for="nb_etages"
+                        >Nb d'étage(s) par bâtiment*
+                        <span class="note">(en moyenne)</span></label
+                    >
                 </div>
                 <!-- </div> -->
                 <div class="form-group radio-group">
@@ -201,23 +200,25 @@
                     </div>
                 </div>
                 <!-- <div class="form-group form-row"> -->
-                <div class="form-group rowed">
-                    <label for="nb_niveaux">Nb de niveaux</label>
+                <div class="form-group">
                     <input
                         type="number"
                         id="nb_niveaux"
                         name="nb_niveaux"
+                        placeholder="Nb de niveaux"
                         min="0"
                     />
+                    <label for="nb_niveaux">Nb de niveaux</label>
                 </div>
-                <div class="form-group rowed">
-                    <label for="nb_poubelles">Nb de local(aux) poubelles</label>
+                <div class="form-group">
                     <input
                         type="number"
                         id="nb_poubelles"
                         name="nb_poubelles"
+                        placeholder="Nb de local(aux) poubelles"
                         min="0"
                     />
+                    <label for="nb_poubelles">Nb de local(aux) poubelles</label>
                 </div>
                 <!-- </div> -->
                 <p class="required-notice">* obligatoire</p>
@@ -229,11 +230,7 @@
             <h2 class="step-title" data-target-step="3">
                 <span
                     >QUESTION DE <span class="blue-light">FRÉQUENCE</span></span
-                ><img
-                    src="/img/arrow_r_bluelight.svg"
-                    alt=""
-                    class="step-arrow"
-                />
+                ><img src="/img/arrow_r_white.svg" alt="" class="step-arrow" />
             </h2>
             <div class="step-content">
                 <div class="form-group">
@@ -302,17 +299,15 @@
         </div>
     </form>
     <div class="side">
-        <h2 class="side__title">{{ .Params.forcesTitre | markdownify }}</h2>
+        <!--<h2 class="side__title">{{ .Params.forcesTitre | markdownify }}</h2>
 
         <ul>
             <li>{{ .Params.forcesTexte1 | markdownify }}</li>
             <li>{{ .Params.forcesTexte2 | markdownify }}</li>
-        </ul>
+        </ul>-->
 
-        <h2 class="side__title up">{{ .Params.contactTitre | markdownify }}</h2>
-
+        <!--<h2 class="side__title up">{{ .Params.contactTitre | markdownify }}</h2>
         <p class="side__p">{{ .Params.contactIntro | markdownify }}</p>
-
         <ul>
             <li>
                 <span>Email :</span>
@@ -323,6 +318,24 @@
                 >
             </li>
             <li><span>Téléphone : </span>{{ .Params.tel | markdownify }}</li>
+        </ul>-->
+
+        <h2 class="side__title up">{{ .Params.contactTitre | markdownify }}</h2>
+        <ul>
+            <li class="side__li">
+                Par mail :
+                <a class="side__li__a" href="{{ .Params.mail | markdownify}}"
+                    >{{ .Params.mail }}</a
+                >
+            </li>
+            <li class="side__li">
+                ou par tél.
+                <a
+                    class="side__li__a"
+                    href="tel:{{ .Params.tel | markdownify }}"
+                    >{{ .Params.tel | markdownify }}</a
+                >
+            </li>
         </ul>
 
         <!-- <div class="m-hide">
