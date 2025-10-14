@@ -83,13 +83,13 @@ texte = """Chez **COPRONET**, *"Nous prenons soin de votre quotidien"*, et c'est
 """
 [[engagemment]]
 titre = "Des prestations sur-mesure"
-photoSrc = "engage1.png"
+photoSrc = "engage1.webp"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
 texte = """Chez Copronet, nous ajustons nos services de nettoyage, entretien et gestion des espaces communs de vos copropriétés selon vos besoins. Notre équipe garantit une qualité constante a chaque intervention."""
 [[engagemment]]
 titre = "Un(e) superviseur(se) impliqué(e)"
-photoSrc = "engage1.png"
+photoSrc = "engage2.webp"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
 texte = """Votre copropriété est entre de bonnes mains avec un(e)
@@ -97,7 +97,7 @@ superviseur(se) réactif(ve) et disponible. Il/elle veille à la
 qualité des prestations et répond rapidement à vos besoins."""
 [[engagemment]]
 titre = "Un suivi direct et efficace"
-photoSrc = "engage1.png"
+photoSrc = "engage3.webp"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
 texte = """Une question ? Contactez-nous par une adresse mail et un
@@ -105,7 +105,7 @@ numéro uniques. Nous assurons un suivi rapide et une
 réponse claire à toutes vos demandes."""
 [[engagemment]]
 titre = "Le respect de l’environnement"
-photoSrc = "engage1.png"
+photoSrc = "engage4.webp"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
 texte = """Nous privilégions des produits écologiques et des méthodes
