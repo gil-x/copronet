@@ -2,6 +2,7 @@
 # ⚠️ NE PAS TOUCHER !
 styles = ["page-about"]
 layout = "page-about"
+scripts = ["about"]
 
 ##############
 ####  SEO ####
@@ -46,9 +47,9 @@ texte2c = """du lundi au vendredi de 9h à 13h et de 14h à 17h"""
 [[responsable]]
 titreP1 = "Notre **responsable commercial**<br>"
 titreP2 = "Faites connaissance avec **Wilson Da Moura** !"
-photoSrc = "mokrane.jpeg"
-photoAlt = "mokrane a"
-photoTitle = "mokrane t"
+photoSrc = "wilson.webp"
+photoAlt = "Wilson Da Moura"
+photoTitle = "Wilson Da Moura"
 texte = """D’origine capverdienne, Wilson **est une personne solaire, accessible et
 toujours à l’écoute.** Il apporte à l’équipe sa bonne humeur, son sens du
 contact et sa générosité.
@@ -60,8 +61,8 @@ mail = "dmwilson@copronetproprete.fr"
 titreP1 = "**Chez Copronet** Une nouvelle génération de talents<br>"
 titreP2 = "prend les commandes de l’exploitation !"
 photoSrc = "maimouna_dia_mehdi_chekkal.webp"
-photoAlt = "mokrane a"
-photoTitle = "mokrane t"
+photoAlt = "Maimouna Dia & Mehdi Chekkal"
+photoTitle = "Maimouna Dia & Mehdi Chekkal"
 texte = """**Mehdi Chekkal, notre Responsable Administratif et Technique**,
 connaît Copronet sur le bout des doigts. Avec plusieurs années d’expérience
 à son actif, il allie rigueur, expertise métier et une approche résolument

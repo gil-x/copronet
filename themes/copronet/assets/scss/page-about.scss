@@ -200,15 +200,6 @@
             var(--cpn-blue-light);
 
         transition: transform 0.15s ease-in-out;
-
-        &:hover {
-            color: var(--white);
-            background:
-                url("../img/arrow_r_white.svg") no-repeat left center,
-                var(--cpn-blue);
-
-            transform: scale(1.1);
-        }
     }
 
     .right {
@@ -218,19 +209,6 @@
             var(--cpn-blue);
 
         transition: transform 0.35s ease-in-out;
-
-        &:hover {
-            color: var(--cpn-blue);
-            background:
-                url("../img/arrow_r_blue.svg") no-repeat left center,
-                var(--cpn-blue-light);
-
-            .b {
-                color: var(--cpn-blue);
-            }
-
-            transform: scale(1.1);
-        }
 
         .b {
             color: var(--cpn-blue-light);
@@ -408,5 +386,50 @@
         padding: calc(var(--gutter-y) * 1) calc(var(--gutter-x) * 1)
             calc(var(--gutter-y) * 0);
         background: var(--gray-d0);
+
+        .left {
+            &:hover,
+            &.hovered {
+                color: var(--white);
+                background:
+                    url("../img/arrow_r_white.svg") no-repeat left center,
+                    var(--cpn-blue);
+
+                /* transform: scale(1.1); */
+
+                & ~ .right {
+                    &,
+                    .b {
+                        color: var(--cpn-blue);
+                    }
+                    background:
+                        url("../img/arrow_r_blue.svg") no-repeat left center,
+                        var(--cpn-blue-light);
+                }
+            }
+        }
+
+        .right {
+            &:hover {
+                color: var(--cpn-blue);
+                background:
+                    url("../img/arrow_r_blue.svg") no-repeat left center,
+                    var(--cpn-blue-light);
+
+                .b {
+                    color: var(--cpn-blue);
+                }
+
+                /* & ~ .left {
+                    color: red !important;
+
+                    background:
+                        url("../img/arrow_r_blue.svg") no-repeat left center,
+                        var(--cpn-blue);
+                } */
+
+                /* transform: scale(1.1); */
+            }
+        }
     }
 }
