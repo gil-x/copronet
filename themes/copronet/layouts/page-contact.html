@@ -1,0 +1,123 @@
+{{ define "main" }}
+
+<div class="hero">
+    <span class="hero__title">{{ .Params.h0 | markdownify }}</span>
+    <div class="hero__content">
+        <h1 class="hero__content__h1">{{ .Params.h1 | markdownify }}</h1>
+        <p class="hero__content__p">{{ .Params.intro | markdownify }}</p>
+    </div>
+</div>
+
+<div class="grid">
+    {{ with .Params.illustration }} {{ $illustration := index . 0 }} {{
+    $desktopImg := $.Resources.GetMatch $illustration.src_desktop }} {{
+    $mobileImg := $.Resources.GetMatch $illustration.src_mobile }} {{ if and
+    $desktopImg $mobileImg }}
+    <picture class="illustration">
+        <source
+            media="(min-width: 768px)"
+            srcset="{{ $desktopImg.RelPermalink }}"
+        />
+        <img
+            class="illustration__img"
+            src="{{ $mobileImg.RelPermalink }}"
+            alt="{{ $illustration.alt }}"
+        />
+    </picture>
+    {{ end }} {{ end }} {{ with .Params.slogan }} {{ $slogan := index . 0 }}
+    <span class="slogan">
+        <span
+            style='
+            background: url("{{ $slogan.image1 }}") no-repeat center /
+                contain;
+        '
+            >{{ $slogan.image1Texte | markdownify }}</span
+        >
+        {{ $slogan.text1 | markdownify }}
+        <span
+            style='
+        background: url("{{ $slogan.image2 }}") no-repeat center /
+            contain;
+    '
+            >{{ $slogan.image2Texte | markdownify }}</span
+        >
+        {{ $slogan.text2 | markdownify }}
+    </span>
+    {{ end }}
+
+    <span class="form-title">Vos informations</span>
+</div>
+
+<form id="multiStepForm" novalidate>
+    <div class="form-group form-row">
+        <div class="form-group">
+            <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                placeholder="prenom"
+                required
+            />
+            <label for="prenom">Prénom*</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="nom" name="nom" placeholder="nom" required />
+            <label for="nom">Nom*</label>
+        </div>
+    </div>
+    <!--<div class="form-group form-row">-->
+    <div class="form-group">
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email"
+            required
+        />
+        <label for="email">Mail*</label>
+    </div>
+    <div class="form-group">
+        <input
+            type="tel"
+            id="telephone"
+            name="telephone"
+            placeholder="téléphone"
+            required
+            pattern="[0-9\s\-\+]{10,}"
+            title="Numéro de téléphone valide (min 10 chiffres)"
+        />
+        <label for="telephone">Téléphone*</label>
+    </div>
+    <!--</div>-->
+    <!--<div class="form-group form-row">-->
+    <div class="form-group">
+        <input type="text" id="adresse" name="adresse" placeholder="adresse" />
+        <label for="adresse">Adresse (facultatif)</label>
+    </div>
+    <div class="form-group">
+        <input
+            type="text"
+            id="cpville"
+            name="cpville"
+            placeholder="CP et ville"
+            required
+        />
+        <label for="cpville">CP et Ville*</label>
+    </div>
+    <!--</div>-->
+    <div class="form-group">
+        <input type="text" id="syndic" name="syndic" placeholder="syndic" />
+        <label for="syndic">Nom du syndic (facultatif)</label>
+    </div>
+    <p class="required-notice">* obligatoire</p>
+
+    <div class="form-navigation">
+        <input
+            type="submit"
+            id="sendBtn"
+            class="cta-btn-light"
+            value="ENVOYER"
+        />
+    </div>
+</form>
+{{ end }}
