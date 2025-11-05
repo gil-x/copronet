@@ -151,6 +151,22 @@
             margin: 12px 0;
         }
     }
+
+    p {
+        margin: 12px 0;
+    }
+
+    p > br {
+        &::after {
+            display: inline-block;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: red;
+
+            margin-bottom: 8px;
+        }
+    }
 }
 
 .engagements {
@@ -287,7 +303,7 @@
         flex-direction: column;
 
         padding: calc(var(--gutter-y) * 2) calc(var(--gutter-x) * 1)
-            calc(var(--gutter-y) * 0);
+            calc(var(--gutter-y) * 1);
     }
 
     .boss {
