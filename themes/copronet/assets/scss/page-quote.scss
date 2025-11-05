@@ -2,6 +2,7 @@
 
 .hero {
     margin: var(--header-h) 0 0;
+    background: url(../img/stroke-quote.svg) no-repeat center center / 120%;
 
     &__title {
         display: block;
@@ -486,6 +487,11 @@
 
 @media (min-width: $bp-medium) {
     .hero {
+        margin: var(--header-h) 0 -30px;
+        padding: 0 100px 30px;
+        z-index: 1;
+        background: url(../img/stroke-quote.svg) no-repeat bottom center / 40%;
+
         &__title {
             strong {
                 display: inline;
@@ -515,7 +521,7 @@
 
     .form-step {
         padding: 20px calc(var(--gutter-x) * 3);
-        margin: 0 -80px;
+        margin: 0 -40px;
 
         .step-title {
             font-size: var(--font-l);
