@@ -533,6 +533,10 @@
                 margin: 12px 0;
                 background: var(--cpn-blue);
                 color: var(--cpn-blue-light);
+
+                &.first {
+                    margin-top: 0;
+                }
             }
 
             &__p {

@@ -26,10 +26,10 @@ prestationsTexte = """
 supervisionTitre = "Supervision Qualité au quotidien"
 supervisionTexte = """Nos superviseurs, munis de tablettes numériques,
 garantissent la qualité des services en temps réel.
-Servant de relais d'information, Ils sont en mesure de
+Servant de relais d'information, ils sont en mesure de
 signaler immédiatement toute fuite, anomalie électrique
 ou autre problème, et coordonner efficacement les
-interventions. Tout cela en maintenant une relation
+interventions, tout en maintenant une relation
 humaine de proximité."""
 
 [[offre]]
