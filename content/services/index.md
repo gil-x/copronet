@@ -52,8 +52,8 @@ texte = """**Sols impeccables et propreté durable grâce à un
 traitement sur-mesure.**
 Pour que vos sols restent entretenus sur le long terme,
 nous proposons un traitement mécanisé adapté à chaque
-type de surface.
-Redonnez vie à vos sols !
+type de surface.<br>
+**Redonnez vie à vos sols !**
 Shampoing moquette, Ponçage, vitrification ou
 cristallisation du marbre, carrelage et parquet, Copronet
 se charge de tout !"""
@@ -83,11 +83,11 @@ image = "petit_bricolage.webp"
 texte = """**Chez Copronet, nous avons l’expertise pour résoudre
 efficacement vos petits soucis du quotidien.**
 Nos techniciens interviennent rapidement pour réparer
-vos équipements courants : portails, poignées de porte,
+vos équipements courants&nbsp;: portails, poignées de porte,
 boîtes aux lettres, rampes d’escalier, et plus encore."""
 
 [[extra]]
-texte1 = """Chez **COPRONET**, Nous proposons également une gamme complète de services spécifiques :
+texte1 = """Chez **COPRONET**, nous proposons également une gamme complète de services spécifiques :
 entretien des espaces verts, vitrerie en hauteur, remise en état d'appartements, lessivage de murs, et bien plus encore."""
 texte2 = """N’hésitez pas à nous faire part de vos besoins à l’adresse :"""
 mail = "info@copronetproprete.fr"

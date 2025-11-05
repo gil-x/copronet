@@ -118,7 +118,8 @@
     }
 
     &__p {
-        flex-basis: 150px;
+        /* flex-basis: 150px; */
+        flex-grow: 2;
     }
 }
 
