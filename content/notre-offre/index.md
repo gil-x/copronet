@@ -22,7 +22,7 @@ prestationsTitre = "Prestations incluses"
 prestationsTexte = """
 - Nettoyage des parties communes
 - Vitrerie
-- Gestion des containers"""
+- Gestion des conteneurs"""
 supervisionTitre = "Supervision Qualité au quotidien"
 supervisionTexte = """Nos superviseurs, munis de tablettes numériques,
 garantissent la qualité des services en temps réel.

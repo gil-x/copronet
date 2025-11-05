@@ -34,11 +34,11 @@ chiffre = "350"
 texte = "agent(e)s de propreté<br>formé(e)s et impliqué(e)s"
 [[chiffre]]
 image = "chiffre3.png"
-chiffre = "1200"
+chiffre = "1600"
 texte = "copropriétés entretenues<br>quotidiennement"
 [[chiffre]]
 image = "chiffre4.svg"
-chiffre = "4,6/5"
+chiffre = "4,4/5"
 texte = "appréciation<br>sur Google"
 
 [[offre]]
@@ -50,12 +50,12 @@ prix = "459 € TTC"
 frequence = "par mois"
 texte3 = "Prestations incluses"
 prestation1 = "Nettoyage des parties communes"
-prestation2 = "Gestion des containers"
+prestation2 = "Vitrerie - Gestion des conteneurs"
 asterisque = "pour un immeuble de 5-6 étages à Paris ou en Île-de-France)"
 
 [[clients]]
 titre = "Ils nous font **confiance**"
-texte = """Nous ne nous contentons pas de nettoyer les immeubles, nous prenons soins de leurs résidents. Toujours à l’écoute des syndics, nous sommes engagés au quotidien pour l’entretien de leurs copropriétés dans un esprit de partenariat professionnel et direct."""
+texte = """Nous ne nous contentons pas de nettoyer les immeubles, nous prenons soin de leurs résidents. Toujours à l’écoute des syndics, nous sommes engagés au quotidien pour l’entretien de leurs copropriétés dans un esprit de partenariat professionnel et direct."""
 # liste = ["Artcop", "Century 21", "Citya", "Cogeim", "Craunot", "Credassur", "Degueldre", "Foncia", "Jean-Charpentier", "Tiffen Coge", "Jourdan", "Larigaudry", "Lema Immobilier", "Loiselet & Daigremont", "Nation Gestion Conseil", "Nexity"]
 liste = [
   "Cabinet Credassur",
@@ -85,7 +85,7 @@ bouton = "Voir **tous nos services**"
 [[service]]
 titre = "**Nettoyage**<br>des parties communes"
 photo = "offre1.webp"
-texte = """Parce que les premières impressions comptent, nous veillons à"""
+texte = """Des espaces toujours propres à la fréquence de votre choix."""
 [[service]]
 titre = "Gestion<br> **des conteneurs**"
 photo = "offre2.webp"
