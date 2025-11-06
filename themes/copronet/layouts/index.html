@@ -124,7 +124,7 @@
     {{ end }}
     <div class="section__services__container">
         {{ range .Params.service}}
-        <a class="section__services__service">
+        <a class="section__services__service" href="{{ .lien | safeURL }}">
             <h3 class="section__services__service__title title-medium">
                 {{ .titre | markdownify }}
             </h3>

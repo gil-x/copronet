@@ -20,7 +20,9 @@
     </div>
     {{ else }}
     <div class="service">
-        <h2 class="service__name">{{ .titre | markdownify }}</h2>
+        <h2 id="{{ .titre | urlize }}" class="service__name">
+            {{ .titre | markdownify }}
+        </h2>
         <div class="service__img">
             <img src="{{ .image | markdownify }}" alt="" />
         </div>

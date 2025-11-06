@@ -36,12 +36,12 @@ Grâce à des contrôles réguliers et une gestion optimisée des remplacements,
 vous bénéficiez d’un service fiable, continu et conforme à vos standards.
 Leurs coordonnées sont disponibles sur demande."""
 texte2 = """L’organisation par zone géographique renforce notre efficacité sur le terrain.<br>
-Nos superviseurs.ses sont appuyés.es au quotidien par une équipe d’assistants.es d’exploitation, disponibles et réactif(ve)s."""
+Nos superviseurs.es sont appuyés.es au quotidien par une équipe d’assistants.es d’exploitation, disponibles et réactif(ve)s."""
 texte2b = "Pour les joindre par tél.&nbsp;"
 tel = "**01 53 11 08 58**"
 jointure = "ou par mail&nbsp;:"
 mail = "**info@copronetproprete.fr**"
-texte2c = """du lundi au vendredi de 9h à 13h et de 14h à 17h"""
+texte2c = """du lundi au vendredi de 9h à 13h et de 14h à 17h."""
 
 [[responsables]]
 [[responsable]]

@@ -37,7 +37,7 @@ efficacement et dans le respect des horaires de collecte."""
 [[service]]
 titre = "**Gardiens** & Régisseurs"
 image = "gardiens_et_regisseurs.webp"
-texte = """**Besoin d’un gardien ou d’un régisseur ?** Nous avons la solution ! Notre équipe est prête à
+texte = """**Besoin d’un gardien ou d’un régisseur ? Nous avons la solution !** Notre équipe est prête à
 intervenir rapidement pour remplacer votre gardien.
 Nous mettons également en place des régisseurs
 permanents, ayant toutes les attributions du gardien,
@@ -54,7 +54,7 @@ Pour que vos sols restent entretenus sur le long terme,
 nous proposons un traitement mécanisé adapté à chaque
 type de surface.<br>
 **Redonnez vie à vos sols !**
-Shampoing moquette, Ponçage, vitrification ou
+Shampoing moquette, ponçage, vitrification ou
 cristallisation du marbre, carrelage et parquet, Copronet
 se charge de tout !"""
 [[service]]

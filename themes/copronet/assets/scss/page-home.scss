@@ -237,6 +237,8 @@ $bp-fhd: 1920px;
         }
 
         &__service {
+            text-decoration: none;
+
             &__title {
                 margin: 32px 0 16px;
                 text-transform: none;
@@ -445,6 +447,7 @@ $bp-fhd: 1920px;
                 }
 
                 .t1 {
+                    margin: 20px 0 0;
                     font-size: var(--font-l);
                 }
 

@@ -86,14 +86,17 @@ bouton = "Voir **tous nos services**"
 titre = "**Nettoyage**<br>des parties communes"
 photo = "offre1.webp"
 texte = """Des espaces toujours propres à la fréquence de votre choix."""
+lien = "/nos-services/#nettoyage-parkings-caves"
 [[service]]
 titre = "Gestion<br> **des conteneurs**"
 photo = "offre2.webp"
 texte = """Fini les tracas liés à la gestion des poubelles ! Nous sortons et rentrons dans le respect des horaires de collecte"""
+lien = "/nos-services/#gestion-des-conteneurs"
 [[service]]
 titre = "**Gardien**<br>régisseur"
 photo = "offre3.webp"
 texte = """Un gardien absent ou en congé ? Besoin d’un régisseur ? Pas de souci, nous avons la solution"""
+lien = "/nos-services/#gardiens-r%C3%A9gisseurs"
 
 [[servicesBouton]]
 bouton = "Voir **tous nos services**"
