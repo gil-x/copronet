@@ -285,8 +285,13 @@
 
             border-left-color: var(--cpn-blue-light);
             transform: rotate(-45deg);
-            animation: rotate-right 0.5s cubic-bezier(0.27, 1.11, 0.65, 1.35)
-                0.5s 1 forwards;
+        }
+
+        &.desktop.on {
+            &::before {
+                animation: rotate-right 0.5s
+                    cubic-bezier(0.27, 1.11, 0.65, 1.35) 0.5s 1 forwards;
+            }
         }
 
         .w1 {

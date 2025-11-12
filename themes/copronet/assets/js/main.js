@@ -97,4 +97,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     lastScrollTop = scrollTop;
   });
+
+  // Animations when elements visibles
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("on");
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+
+  document
+    .querySelectorAll(
+      ".service__img, .boss__pict__container--left, .free-quote.desktop",
+    )
+    .forEach((el) => observer.observe(el));
 });
