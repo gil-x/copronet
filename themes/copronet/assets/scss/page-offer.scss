@@ -772,6 +772,11 @@
 
       &__item {
 
+          &__img {
+              height: 395px;
+              object-fit: cover;
+          }
+
 
         &__span {
           width: 50%;
@@ -826,7 +831,8 @@
             }
 
             div {
-                height: calc(100% - 50px);
+                height: 395px;
+                /* height: calc(100% - 50px); */
                 /* aspect-ratio: 550/367; */
                 padding: calc(var(--gutter-y) * 1.5) calc(var(--gutter-x) * 1);
                 font-size: var(--font-m);

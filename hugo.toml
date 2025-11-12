@@ -9,25 +9,25 @@ unsafe = true
 [menu]
 [[menu.main]]
 name = "Nous connaître"
-url = "/nous-connaitre/"
+url = "/nous-connaitre"
 weight = 10
 
 [[menu.main]]
 name = "Nos Services"
-url = "/nos-services/"
+url = "/nos-services"
 weight = 20
 
 [[menu.main]]
 name = "Notre Offre"
-url = "/notre-offre/"
+url = "/notre-offre"
 weight = 30
 
 [[menu.main]]
 name = "Nous Contacter"
-url = "/nous-contacter/"
+url = "/nous-contacter"
 weight = 40
 
 [[menu.main]]
 name = "Blog"
-url = "/blog/"
+url = "/blog"
 weight = 50
