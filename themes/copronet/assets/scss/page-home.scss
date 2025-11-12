@@ -46,11 +46,11 @@ $bp-fhd: 1920px;
 
             &--left {
                 grid-area: image;
-                padding: 40px var(--gutter-y) 70px;
+                padding: 40px calc(var(--gutter-x) * 0 + 15%) 70px;
                 background: var(--cpn-blue-light) url("../img/stroke1.svg")
                     no-repeat bottom right / 170%;
                 font-size: var(--font-m-l);
-                /* font-weight: bold; */
+                font-family: "Open Sans Bold";
 
                 strong {
                     color: var(--cpn-blue);

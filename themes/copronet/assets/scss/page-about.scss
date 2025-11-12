@@ -73,12 +73,6 @@
             margin: 0 10px;
             font-weight: 600;
         }
-        /* span:nth-child(1) {
-            background: url("../img/hw_votre.png") no-repeat center / contain;
-        }
-        span:nth-child(2) {
-            background: url("../img/hw_notre.png") no-repeat center / contain;
-        } */
     }
 
     &__content {
@@ -101,7 +95,7 @@
         display: grid;
         place-items: center;
         width: 70%;
-        margin: 40px auto;
+        margin: 40px auto 10px;
 
         $arc-width: 10px;
 
@@ -141,7 +135,7 @@
     }
 
     &__content {
-        padding: calc(var(--gutter-y) * 1.5) calc(var(--gutter-x) * 1)
+        padding: calc(var(--gutter-y) * 0) calc(var(--gutter-x) * 1)
             calc(var(--gutter-y) * 2);
 
         &__p {

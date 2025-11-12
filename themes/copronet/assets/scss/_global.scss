@@ -90,7 +90,6 @@ a {
 
 p {
     margin: 0;
-    text-align: justify;
 }
 
 .title-medium {
@@ -221,6 +220,10 @@ p {
             background: url(../img/logo_bars3.svg) no-repeat left center / 66px
                 65px;
         }
+    }
+
+    p {
+        text-align: justify;
     }
 }
 

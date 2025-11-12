@@ -46,7 +46,7 @@ texte2c = """du lundi au vendredi de 9h à 13h et de 14h à 17h."""
 [[responsables]]
 [[responsable]]
 titreP1 = "Notre **responsable commercial**<br>"
-titreP2 = "Faîtes connaissance avec **Wilson Da Moura** !"
+titreP2 = "Faites connaissance avec **Wilson Da Moura** !"
 photoSrc = "wilson.webp"
 photoAlt = "Wilson Da Moura"
 photoTitle = "Wilson Da Moura"

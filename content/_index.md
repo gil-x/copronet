@@ -12,7 +12,7 @@ title = "Site de test"
 description = "Page d'accueil de mon premier site Hugo"
 
 [[hero]]
-intro = """Chez **Copronet**, nous savons combien il est important de rentrer chez soi, et de se sentir bien, dans un espace propre et accueillant."""
+intro = """Chez **Copronet**,<br>nous savons combien il est important de rentrer chez soi, et de se sentir bien, dans un espace propre et accueillant."""
 video = "vid1.mp4"
 h1 = """Chaque jour, nous vous assurons <br>un nettoyage de qualité des
 parties communes de vos immeubles :"""
@@ -86,7 +86,7 @@ bouton = "Voir **tous nos services**"
 titre = "**Nettoyage**<br>des parties communes"
 photo = "offre1.webp"
 texte = """Des espaces toujours propres à la fréquence de votre choix."""
-lien = "/nos-services/#nettoyage-parkings-caves"
+lien = "/nos-services/#nettoyage-vitrerie"
 [[service]]
 titre = "Gestion<br> **des conteneurs**"
 photo = "offre2.webp"
