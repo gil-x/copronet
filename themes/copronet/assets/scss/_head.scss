@@ -6,8 +6,9 @@
     height: var(--header-h);
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     background: var(--white);
+    /* background: green; */
     transition: transform 0.5s;
 
     &.hidden {
@@ -17,9 +18,12 @@
     &__logo {
         display: inline-block;
         box-sizing: border-box;
+        font-size: 0;
+        transform: translateY(5px);
 
         &__img {
-            height: 25vw;
+            height: 35px;
+            margin: 0 0 0 24px;
         }
     }
 
@@ -76,6 +80,12 @@
             }
 
             &.active {
+                a {
+                    color: var(--cpn-blue-light);
+                }
+            }
+
+            &--quote {
                 a {
                     color: var(--cpn-blue-light);
                 }
@@ -148,6 +158,10 @@
                 /* &:last-child {
                     padding: 30px 0 20px 100px;
                 } */
+
+                &--quote {
+                    display: none;
+                }
             }
         }
     }

@@ -13,6 +13,18 @@
         strong {
             color: var(--cpn-blue-light);
         }
+
+        &::before {
+            display: inline-block;
+            content: "";
+            height: 54px;
+            width: 54px;
+            background: url(../img/logo_bars3.svg) no-repeat bottom center /
+                41px 41px;
+            position: relative;
+            bottom: -2px;
+            left: -15px;
+        }
     }
 
     &__content {

@@ -14,7 +14,7 @@
             color: var(--cpn-blue-light);
         }
 
-        /* &::before {
+        &::before {
             display: inline-block;
             content: "";
             height: 54px;
@@ -24,7 +24,7 @@
             position: relative;
             bottom: -2px;
             left: -15px;
-        } */
+        }
     }
 
     &__content {
