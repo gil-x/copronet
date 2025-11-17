@@ -6,8 +6,12 @@
         autoplay
         muted
         loop
-        src="{{ $hero.video }}"
-    ></video>
+        poster="{{ $hero.video }}.webp"
+    >
+        <source src="{{ $hero.video }}.mp4" type="video/mp4" />
+        <source src="{{ $hero.video }}.webm" type="video/webm" />
+        <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
+    </video>
 
     <div class="section__hero__block section__hero__block--left">
         <p class="p">{{ $hero.intro | markdownify }}</p>

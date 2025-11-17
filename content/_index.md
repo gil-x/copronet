@@ -13,7 +13,7 @@ description = "Page d'accueil de mon premier site Hugo"
 
 [[hero]]
 intro = """Chez **Copronet**,<br>nous savons combien il est important de rentrer chez soi, et de se sentir bien, dans un espace propre et accueillant."""
-video = "vid1.mp4"
+video = "video"
 h1 = """Chaque jour, nous vous assurons <br>un nettoyage de qualité des
 parties communes de vos immeubles :"""
 texte = """des halls aux escaliers, en passant par les ascenseurs, couloirs, parkings
