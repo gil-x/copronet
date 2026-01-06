@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+
+    {{ block "head" . }} {{ partial "head.html" (dict "page" . "css" "") }} {{
+    end }}
+
+    <body class="body">
+
+
+        {{ partial "fixed.html" . }}
+
+        {{ partial "header.html" . }}
+
+        {{ block "main" . }}{{ end }}
+
+        {{ partial "footer.html" . }}
+        {{ partial "loader-js.html" . }}
+        {{ block "additional-js" . }}{{ end }}
+    </body>
+</html>

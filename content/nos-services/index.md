@@ -1,9 +1,4 @@
 +++
-# ⚠️ NE PAS TOUCHER !
-styles = ["page-services"]
-scripts = ["damier"]
-layout = "page-services"
-
 ##############
 ####  SEO ####
 ##############

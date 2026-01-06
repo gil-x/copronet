@@ -1,3 +1,11 @@
+{{ define "head" }}
+{{ partial "head.html" (dict "page" . "css" "page-about") }}
+{{ end }}
+
+{{ define "additional-js" }}
+{{ partial "additional-js.html" "about" }}
+{{ end }}
+
 {{ define "main" }}
 
 <div class="hero">

@@ -1,9 +1,4 @@
 +++
-# ⚠️ NE PAS TOUCHER !
-styles = ["page-home"]
-# scripts = ["modules/concession"]
-# layout = "estimer"
-
 # SEO
 slug = ""
 # Meta Title

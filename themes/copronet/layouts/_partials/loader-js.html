@@ -1,0 +1,3 @@
+<!-- Common JS -->
+{{ $mainjs := resources.Get "js/main.js" | js.Build }}
+<script src="{{ $mainjs.RelPermalink }}" type="module"></script>

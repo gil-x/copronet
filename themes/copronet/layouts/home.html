@@ -1,3 +1,11 @@
+{{ define "head" }}
+{{ partial "head.html" (dict "page" . "css" "page-home") }}
+{{ end }}
+
+{{ define "additional-js" }}
+{{ partial "additional-js.html" "home" }}
+{{ end }}
+
 {{ define "main" }} {{ with .Params.hero }} {{ $hero := index . 0 }}
 <section class="section section__hero">
     <video

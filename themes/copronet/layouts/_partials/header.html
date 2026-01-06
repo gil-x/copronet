@@ -1,0 +1,24 @@
+<header class="header">
+    <a class="header__logo" href="/">
+        <picture class="hero__pict">
+            <source media="(min-width: 768px)" srcset="/img/logo.svg" />
+            <img
+                class="header__logo__img"
+                src="/img/logo_text.svg"
+                alt="Copronet logo"
+                title="Copronet"
+            />
+        </picture>
+    </a>
+
+    {{ partial "menu.html" . }}
+
+    <a class="header__call-menu">
+        <img
+            class="header__call-menu-icon"
+            src="/img/menu_icon5.svg"
+            alt="call menu"
+            title="call menu"
+        />
+    </a>
+</header>

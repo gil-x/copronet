@@ -1,8 +1,4 @@
 +++
-# ⚠️ NE PAS TOUCHER !
-styles = ["page-contact"]
-layout = "page-contact"
-
 ##############
 ####  SEO ####
 ##############

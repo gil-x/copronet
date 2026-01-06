@@ -1,9 +1,4 @@
 +++
-# ⚠️ NE PAS TOUCHER !
-styles = ["page-quote"]
-layout = "page-quote"
-scripts = ["quote"]
-
 ##############
 ####  SEO ####
 ##############

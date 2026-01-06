@@ -1,9 +1,4 @@
 +++
-# ⚠️ NE PAS TOUCHER !
-styles = ["page-about"]
-layout = "page-about"
-scripts = ["about"]
-
 ##############
 ####  SEO ####
 ##############

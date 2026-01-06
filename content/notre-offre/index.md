@@ -1,9 +1,4 @@
 +++
-# ⚠️ NE PAS TOUCHER !
-styles = ["page-offer"]
-layout = "page-offer"
-scripts = ["offer"]
-
 ##############
 ####  SEO ####
 ##############

@@ -1,0 +1,4 @@
+{{ $js := resources.Get (printf "js/%s.js" .) }} {{ if $js }} {{ $js =
+$js | js.Build }}
+<script src="{{ $js.RelPermalink }}" type="module"></script>
+{{ else }} {{ errorf "Fichier JS introuvable : %s" $js }} {{ end }}
