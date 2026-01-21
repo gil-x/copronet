@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document
     .querySelectorAll(
-      ".service__img, .boss__pict__container--left",
+      ".service__img, .post__img, .boss__pict__container--left",
       "free-quote.desktop",
     )
     .forEach((el) => observer.observe(el));

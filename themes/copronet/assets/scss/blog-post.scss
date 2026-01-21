@@ -33,6 +33,20 @@
         grid-column: -1/1;
     }
 
+    &__title {
+        /* color: red; */
+        font-size: var(--font-m-l);
+        text-transform: uppercase;
+        margin: 0 0 20px 0;
+    }
+
+    &__date {
+        display: none;
+        font-size: var(--font-m-s);
+        color: var(--gray-d2);
+        margin: 10px 0;
+    }
+
     &__pict {
         grid-column: 1;
         grid-row: 3/99;
@@ -50,63 +64,97 @@
 
     &__summary {
         grid-column: 2;
+        margin: 20px 0;
     }
 
     &__text {
         grid-column: 2;
+        margin: 20px 0;
     }
 
     &__author {
         grid-column: 2;
+        font-weight: 800;
+    }
+
+    &__tags {
+        /* grid-column: 2; */
+        margin: 20px 0;
+        font-weight: 800;
     }
 }
 
 @media (min-width: $bp-medium) {
     .widget-title {
         /* display: inline-block; */
-        margin: calc(var(--header-h) * 2) 0 var(--header-h);
+        margin: calc(var(--header-h) + 50px) 0 0 0;
         /* padding:  */
         /* background: var(--cpn-blue); */
         /* color: var(--white); */
+
+        /* Fixed ? */
+        /* position: fixed;
+        top: calc(150px);
+        left: 0;
+        margin: 0; */
     }
     .post {
-        padding: var(--header-h) var(--gutter-x) 0;
+        /* padding: var(--header-h) var(--gutter-x) 0; */
+        padding: 0 var(--gutter-x);
         /* height: 50vh; */
         /* background: greenyellow; */
         display: grid;
         grid-template-columns: 45% 1fr;
         gap: 0 37px;
 
-        &__title,
-        &__date {
-            grid-column: -1/1;
+        &__title {
+            /* margin: calc(var(--header-h) + 50px) 0 36px; if widget fixed */
+            margin: 36px 0;
+            font-size: var(--font-xxl);
+            text-transform: none;
+            max-width: 75%;
         }
 
         &__pict {
             grid-column: 1;
-            grid-row: 3/99;
+            grid-row: 2/99;
             &__img {
                 grid-column: 1;
                 grid-row: -1/1;
                 width: 100%;
                 /* width: 45%; */
                 height: 100%;
-                /* object-fit: cover; */
+                aspect-ratio: 4/3;
+                object-fit: cover;
+                object-position: center top;
                 /* float: left; */
                 /* margin-right: 37px; */
             }
         }
 
-        &__summary {
+        &__summary,
+        &__text,
+        &__author,
+        &__tags {
             grid-column: 2;
+            font-size: var(--font-m-l);
         }
 
-        &__text {
+        &__author {
+            margin: 20px 0 0;
+        }
+
+        &__tags {
+            margin: 0;
+            max-width: 60%;
+        }
+
+        /* &__text {
             grid-column: 2;
         }
 
         &__author {
             grid-column: 2;
-        }
+        } */
     }
 }

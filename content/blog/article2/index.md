@@ -20,13 +20,13 @@ tags = ["Audi", "Technologie"]
 related_posts = ["article1", "article3", "article4", "article5"]
 
 #### HERO ####
-h1 = "2.Chez Copronet, on sait qu’un petit geste peut avoir un grand impact"
+h1 = "Chez COPRONET, on sait qu’un petit geste peut avoir un grand impact"
 
 summary = "Audi élargit sa famille Gran Turismo. L'Audi e-tron GT quattro rend encore plus attrayante l'entrée dans le segment premium des sportives 100% électriques. Le nouveau modèle est disponible en France à partir du Jeudi 15 Mai."
 
 lienCarte = "Découvrir l'événement"
 
-[[hero_pict]]
+[[image_grande]]
 title = "article1 image"
 alt = "article1 image"
 src_mobile = "article1_small.png"

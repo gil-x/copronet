@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document
     .querySelectorAll(
-      ".service__img, .boss__pict__container--left, .free-quote.desktop",
+      ".service__img, .post-card__img, .boss__pict__container--left, .free-quote.desktop",
     )
     .forEach((el) => observer.observe(el));
 });

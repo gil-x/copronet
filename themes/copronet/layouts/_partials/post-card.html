@@ -7,8 +7,8 @@
     </h2>
 
 
-  {{ if .Params.hero_pict }}
-    {{ $heroPict := index .Params.hero_pict 0 }}
+  {{ if .Params.image_grande }}
+    {{ $heroPict := index .Params.image_grande 0 }}
     {{ if and $heroPict.src_mobile $heroPict.src_desktop }}
       {{ $mobileImg := .Resources.GetMatch (printf "medias/%s" $heroPict.src_mobile)  }}
       {{ $desktopImg := .Resources.GetMatch (printf "medias/%s" $heroPict.src_desktop)  }}

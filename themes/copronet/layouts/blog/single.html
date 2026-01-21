@@ -22,7 +22,7 @@
       </span>
     {{ end }}
 
-    {{ $hero := index .Params.hero_pict 0 }} {{ $desktopImg :=
+    {{ $hero := index .Params.image_grande 0 }} {{ $desktopImg :=
     .Resources.GetMatch (printf "medias/%s" $hero.src_desktop) }} {{ $mobileImg
     := .Resources.GetMatch (printf "medias/%s" $hero.src_mobile) }} {{ if and
     $desktopImg $mobileImg }}
@@ -45,13 +45,17 @@
     <div class="post__author">{{ .Params.auteur | markdownify }}</div>
 
     {{ with .Params.tags }}
-    <div class="article__tags">
+    <div class="post__tags">
         {{ range . }}
         <a href="/tags/{{ . | urlize }}" class="article__tag">#{{ . }}</a>
         {{ end }}
     </div>
     {{ end }}
 </main>
+
+<a class="widget-title" href="/blog/">
+    <strong>Lire</strong> d'autres articles
+</a>
 
 {{ if not .Params.related_posts  }}
 <section class="related">
