@@ -1,0 +1,51 @@
+{{ define "head" }}
+{{ partial "head.html" (dict "page" . "css" "blog") }}
+{{ end }}
+
+{{ define "main" }}
+
+<div class="hero">
+    <span class="hero__title">{{ .Params.h0 | markdownify }}</span>
+    <div class="hero__content">
+        <h1 class="hero__content__h1">{{ .Params.h1 | markdownify }}</h1>
+        <p class="hero__content__p">{{ .Params.intro | markdownify }}</p>
+    </div>
+</div>
+
+<ul class="categories">
+    {{ range .Site.Taxonomies.categories }}
+    <li class="categories__item">
+        <a class="categories__item__a" href="{{ .Page.RelPermalink }}">
+            {{ .Page.Title }}
+            <span class="categories__item__count">({{ .Count }})</span>
+        </a>
+    </li>
+    {{ end }}
+</ul>
+
+<div class="posts">
+    {{ $paginator := .Paginate .Pages }} {{ range $paginator.Pages }} {{ partial
+    "post-card.html" . }} {{ end }}
+</div>
+
+{{ if .Paginator.HasNext }}
+<div class="load-more">
+    <div class="load-more__text">
+        Vous avez vu ${currentCount} contenus sur ${totalCount}
+    </div>
+    <div class="load-more__progress">
+        <div
+            class="load-more__fill"
+            style="width: ${(currentCount / totalCount) * 100}%"
+        ></div>
+    </div>
+    <button
+        class="load-more__btn"
+        id="load-more-btn"
+        data-next="{{ .Paginator.Next.URL | absURL }}"
+        data-total="{{ .Paginator.TotalNumberOfElements }}"
+    >
+        Charger davantage
+    </button>
+</div>
+{{ end }} {{ end }}

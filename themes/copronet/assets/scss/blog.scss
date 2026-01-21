@@ -1,0 +1,85 @@
+@import "sass_vars";
+@import "blog-common";
+
+.hero {
+    margin: var(--header-h) 0 0;
+
+    &__title {
+        display: block;
+        margin: 0 0 24px;
+        font-size: var(--font-m-xxl);
+        text-transform: uppercase;
+        text-align: center;
+
+        strong {
+            color: var(--cpn-blue-light);
+        }
+
+        &::before {
+            display: inline-block;
+            content: "";
+            height: 54px;
+            width: 54px;
+            background: url(../img/logo_bars3.svg) no-repeat bottom center /
+                41px 41px;
+            position: relative;
+            bottom: -2px;
+            left: -15px;
+        }
+    }
+
+    &__content {
+        padding: calc(var(--gutter-y) * 1.5) calc(var(--gutter-x) * 2)
+            calc(var(--gutter-y) * 2);
+        background:
+            url(../img/stroke2m.svg) no-repeat right 20px / 135%,
+            var(--cpn-blue);
+        color: var(--white);
+
+        &__h1 {
+            text-align: center;
+            font-size: var(--font-m-l);
+            margin: 0;
+        }
+
+        &__p {
+            text-align: center;
+            strong {
+                color: var(--cpn-blue-light);
+            }
+        }
+    }
+}
+
+@media (min-width: $bp-medium) {
+    .hero {
+        &__title {
+            margin: 48px 0 0;
+            font-size: var(--font-xxl);
+
+            &::before {
+                display: inline-block;
+                content: "";
+                height: 54px;
+                width: 54px;
+                background: url(../img/logo_bars3.svg) no-repeat bottom center /
+                    41px 41px;
+                position: relative;
+                bottom: -2px;
+                left: -15px;
+            }
+        }
+
+        &__content {
+            padding: calc(var(--gutter-y) * 1) calc(var(--gutter-x) * 3);
+            background: url("../img/stroke-blue.svg") no-repeat center center;
+            background-size: contain;
+            font-size: var(--font-l);
+            color: var(--cpn-blue);
+
+            &__h1 {
+                font-size: var(--font-l);
+            }
+        }
+    }
+}

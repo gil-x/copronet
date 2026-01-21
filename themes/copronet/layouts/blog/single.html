@@ -1,0 +1,88 @@
+{{ define "head" }}
+{{ partial "head.html" (dict "page" . "css" "blog-post") }}
+{{ end }}
+
+{{ define "main" }}
+
+<a class="widget-title" href="/blog/">
+    <strong>Copronet</strong> Inside
+</a>
+
+<main class="post">
+    <h1 class="post__title">{{ .Params.h1 | markdownify }}</h1>
+    <time class="post__date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2 January 2006" }}</time>
+
+    {{ if not .Params.categories }}
+      <span class="hero__cat categories__item">
+        {{ range .Params.categories }}
+          <a class="categories__item__a" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="post__category-link">
+            {{ . | title }}
+          </a>
+        {{ end }}
+      </span>
+    {{ end }}
+
+    {{ $hero := index .Params.hero_pict 0 }} {{ $desktopImg :=
+    .Resources.GetMatch (printf "medias/%s" $hero.src_desktop) }} {{ $mobileImg
+    := .Resources.GetMatch (printf "medias/%s" $hero.src_mobile) }} {{ if and
+    $desktopImg $mobileImg }}
+    <picture class="post__pict">
+        <source
+            media="(min-width: 768px)"
+            srcset="{{ $desktopImg.RelPermalink }}"
+        />
+        <img
+            class="post__pict__img"
+            src="{{ $mobileImg.RelPermalink }}"
+            alt="{{ $hero.alt }}"
+        />
+    </picture>
+    {{ end }}
+
+
+    <div class="post__summary">{{ .Params.summary | markdownify }}</div>
+    <div class="post__text">{{ .Params.texte | markdownify }}</div>
+    <div class="post__author">{{ .Params.auteur | markdownify }}</div>
+
+    {{ with .Params.tags }}
+    <div class="article__tags">
+        {{ range . }}
+        <a href="/tags/{{ . | urlize }}" class="article__tag">#{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+</main>
+
+{{ if not .Params.related_posts  }}
+<section class="related">
+    <h2 class="related__title">Cela pourrait aussi vous intéresser</h2>
+    <div class="related-posts">
+      <div class="related-posts__container carrousel">
+        {{ range .Params.related_posts }}
+          {{ $slug := . }}
+          {{ $found := where $.Site.RegularPages ".Params.slug" $slug }}
+          {{ if $found }}
+            {{ range $found }}
+                <div class="carrousel__item">
+              {{ partial "post-card.html" . }}
+                </div>
+            {{ end }}
+          {{ else }}
+            <!-- En dev, affiche les slugs manquants -->
+            {{ if hugo.IsServer }}
+              <div class="related-posts__error">
+                ⚠️ Article non trouvé : "{{ $slug }}"
+              </div>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+      <div class="controls">
+          <div class="controls__btn"></div>
+          <div class="controls__btn r"></div>
+      </div>
+    </div>
+</section>
+{{ end }}
+
+  {{ end }}

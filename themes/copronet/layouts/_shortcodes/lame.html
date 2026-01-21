@@ -1,0 +1,21 @@
+{{ $titre := .Get "titre" }} {{ $text := .Get "text" }} {{ $mobile := .Get
+"mobile" }} {{ $desktop := .Get "desktop" }} {{ $alt := .Get "alt" }} {{
+$mobileImg := $.Page.Resources.GetMatch (printf "medias/%s" $mobile) }} {{
+$desktopImg := $.Page.Resources.GetMatch (printf "medias/%s" $desktop) }} {{ if
+and $mobileImg $desktopImg }}
+<div class="lame">
+    <h2>{{ $titre | markdownify }}</h2>
+    <p>{{ $text | markdownify }}</p>
+    <picture>
+        <source
+            media="(min-width: 768px)"
+            srcset="{{ $desktopImg.RelPermalink }}"
+        />
+        <img
+            src="{{ $mobileImg.RelPermalink }}"
+            alt="{{ $alt }}"
+            loading="lazy"
+        />
+    </picture>
+</div>
+{{ end }}

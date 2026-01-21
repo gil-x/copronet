@@ -30,7 +30,7 @@
     &__call-menu {
         position: fixed;
         top: 20px;
-        right: 20px;
+        left: calc(100vw - (35px + 20px));
         cursor: pointer;
 
         &-icon {

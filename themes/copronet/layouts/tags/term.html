@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+<div class="hero">
+    <h1>Articles tagués "{{ .Title }}"</h1>
+</div>
+
+<div class="grid">
+    {{ range .Pages }}
+    <a class="card" href="{{ .Permalink }}">
+        {{ $pict := .Resources.GetMatch (.Params.pict.src) }} {{ if $pict }}
+        <img
+            class="card__pict"
+            src="{{ $pict.RelPermalink }}"
+            alt="{{ .Params.pict.alt}}"
+            title="{{ .Params.pict.title}}"
+            loading="lazy"
+        />
+        {{ end }}
+
+        <div class="card__tags">
+            {{ range .Params.tags }}
+            <span class="card__tags__tag">{{ . }}</span>
+            {{ end }}
+        </div>
+        <h4 class="card__title">{{ .Params.title_h1 }}</h4>
+
+        <div class="info">
+            {{ $pict := .Resources.GetMatch (.Params.pict.src) }} {{ if $pict }}
+            <img
+                class="info__by__pict"
+                src="{{ $pict.RelPermalink }}"
+                alt="{{ .Params.pict.alt}}"
+                title="{{ .Params.pict.title}}"
+                loading="lazy"
+            />
+            {{ end }}
+
+            <div>
+                <span class="info__by">{{ .Params.by.name }}</span>
+                <div>
+                    <span class="info__read-time">{{ .Params.read_time }}</span>
+                    <time class="info__date">{{ .Params.pub_date }}</time>
+                </div>
+            </div>
+        </div>
+    </a>
+    {{ end }}
+</div>
+
+{{ end }}

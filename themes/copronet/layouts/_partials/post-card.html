@@ -1,0 +1,39 @@
+<a class="post-card" href="{{ .RelPermalink }}">
+
+    <h2 class="post-card__title">
+      <!-- <a class="post-card__title__a" href="{{ .RelPermalink }}"> -->
+        {{ .Params.h1 | default .Title | markdownify }}
+      <!-- </a> -->
+    </h2>
+
+
+  {{ if .Params.hero_pict }}
+    {{ $heroPict := index .Params.hero_pict 0 }}
+    {{ if and $heroPict.src_mobile $heroPict.src_desktop }}
+      {{ $mobileImg := .Resources.GetMatch (printf "medias/%s" $heroPict.src_mobile)  }}
+      {{ $desktopImg := .Resources.GetMatch (printf "medias/%s" $heroPict.src_desktop)  }}
+
+      {{ if and $mobileImg $desktopImg }}
+      <!-- <a href="{{ .RelPermalink }}"> -->
+        <picture class="post-card__img">
+
+          <img
+            class="post-card__pict__img"
+            src="{{ $mobileImg.RelPermalink }}"
+            alt="{{ $heroPict.alt | default .Title }}"
+            loading="lazy"
+          />
+        </picture>
+      <!-- </a> -->
+      {{ end }}
+
+      <div class="post-card__p">
+          {{ .Params.summary | markdownify }}
+      </div>
+
+      <span class="post-card__read">Lire <strong>l'article</strong></span>
+    {{ end }}
+  {{ end }}
+
+
+</a>

@@ -1,0 +1,27 @@
+{{ $data := transform.Unmarshal (dict "format" "toml") .Inner }}
+<div class="gallery">
+    {{ range $data.image }}
+    <a {{ if .src_desktop }} href='{{ printf "medias/%s" .src_desktop }}' {{ else }} {{ errorf "L'image src_desktop n'est pas définie" }} {{ end }} {{ if .src_mobile }} data-mobileSrc="{{ printf "medias/%s" .src_mobile }}" {{ end }}>
+        <picture>
+            <source
+                media="(min-width: 768px)"
+                {{ if .src_desktop_vignette }}
+                srcset="{{ printf "medias/%s" .src_desktop_vignette }}"
+                {{ else }}
+                srcset="{{ printf "medias/%s" .src_desktop }}"
+                {{ end }}
+            />
+            <img
+                {{ if .src_mobile_vignette }}
+                src="{{ printf "medias/%s" .src_mobile_vignette }}"
+                {{ else }}
+                srcset="{{ printf "medias/%s" .src_desktop }}"
+                {{ warnf "L'image src_mobile_vignette n'est pas définie" }}
+                {{ end }}
+                title="{{ .title }}"
+                alt="{{ .alt }}"
+            />
+        </picture>
+    </a>
+    {{ end }}
+</div>
