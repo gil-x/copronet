@@ -13,7 +13,7 @@
 </div>
 
 <ul class="categories">
-    {{ range .Site.Taxonomies.categories }}
+    {{ range .Site.Taxonomies.tags }}
     <li class="categories__item">
         <a class="categories__item__a" href="{{ .Page.RelPermalink }}">
             {{ .Page.Title }}
