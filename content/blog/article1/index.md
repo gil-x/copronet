@@ -32,6 +32,27 @@ Conçues avec eux et pour eux, elles reflètent ce qu’est Copronet : une équi
 auteur = "Aurélie BOILEAU & Sebastien BOILEAU"
 
 
+[[image]]
+title = "article1 image"
+alt = "article1 image"
+src_mobile = "PHOTO 1.jpg"
+src_desktop = "PHOTO 1.jpg"
+[[image]]
+title = "article1 image"
+alt = "article1 image"
+src_mobile = "PHOTO 2.jpg"
+src_desktop = "PHOTO 2.jpg"
+[[image]]
+title = "article1 image"
+alt = "article1 image"
+src_mobile = "PHOTO 3.jpg"
+src_desktop = "PHOTO 3.jpg"
+[[image]]
+title = "article1 image"
+alt = "article1 image"
+src_mobile = "PHOTO 4.jpg"
+src_desktop = "PHOTO 4.jpg"
+
 [[image_grande]]
 title = "article1 image"
 alt = "article1 image"

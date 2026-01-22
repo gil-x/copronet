@@ -2,6 +2,10 @@
 {{ partial "head.html" (dict "page" . "css" "blog-post") }}
 {{ end }}
 
+{{ define "additional-js" }}
+{{ partial "additional-js.html" "lightbox" }}
+{{ end }}
+
 {{ define "main" }}
 
 <a class="widget-title" href="/blog/">
@@ -22,22 +26,30 @@
       </span>
     {{ end }}
 
-    {{ $hero := index .Params.image_grande 0 }} {{ $desktopImg :=
-    .Resources.GetMatch (printf "medias/%s" $hero.src_desktop) }} {{ $mobileImg
-    := .Resources.GetMatch (printf "medias/%s" $hero.src_mobile) }} {{ if and
-    $desktopImg $mobileImg }}
-    <picture class="post__pict">
-        <source
-            media="(min-width: 768px)"
-            srcset="{{ $desktopImg.RelPermalink }}"
-        />
-        <img
-            class="post__pict__img"
-            src="{{ $mobileImg.RelPermalink }}"
-            alt="{{ $hero.alt }}"
-        />
-    </picture>
+
+
+    <div class="post__picts gallery">
+    {{ range .Params.image }}
+        {{ $desktopImg :=
+        $.Resources.GetMatch (printf "medias/%s" .src_desktop) }} {{ $mobileImg
+        := $.Resources.GetMatch (printf "medias/%s" .src_mobile) }} {{ if and
+        $desktopImg $mobileImg }}
+        <a class="post__picts__a" {{ if .src_desktop }} href='{{ printf "medias/%s" .src_desktop }}' {{ else }} {{ errorf "L'image src_desktop n'est pas définie" }} {{ end }} {{ if .src_mobile }} data-mobileSrc="{{ printf "medias/%s" .src_mobile }}" {{ end }}>
+        <picture class="post__picts__pict">
+            <source
+                media="(min-width: 768px)"
+                srcset="{{ $desktopImg.RelPermalink }}"
+            />
+            <img
+                class="post__picts__pict__img"
+                src="{{ $mobileImg.RelPermalink }}"
+                alt="{{ .alt }}"
+            />
+        </picture>
+        </a>
+        {{ end }}
     {{ end }}
+    </div>
 
 
     <div class="post__summary">{{ .Params.summary | markdownify }}</div>
