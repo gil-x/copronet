@@ -1,24 +1,5 @@
 @import "sass_vars";
-
-.widget-title {
-    height: 62px;
-    display: flex;
-    align-items: center;
-    align-self: start;
-    gap: 6px;
-
-    margin: calc(var(--header-h) * 1) 0 0;
-    padding: 0 21px 0 42px;
-
-    background:
-        url("/img/arrow_r_bluelight.svg") no-repeat left center / auto 38px,
-        var(--cpn-blue);
-    color: var(--white);
-
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 18px;
-}
+@import "blog-common";
 
 .post {
     padding: var(--gutter-y) var(--gutter-x);
@@ -85,19 +66,6 @@
 }
 
 @media (min-width: $bp-medium) {
-    .widget-title {
-        /* display: inline-block; */
-        margin: calc(var(--header-h) + 50px) 0 0 0;
-        /* padding:  */
-        /* background: var(--cpn-blue); */
-        /* color: var(--white); */
-
-        /* Fixed ? */
-        /* position: fixed;
-        top: calc(150px);
-        left: 0;
-        margin: 0; */
-    }
     .post {
         /* padding: var(--header-h) var(--gutter-x) 0; */
         padding: 0 var(--gutter-x);

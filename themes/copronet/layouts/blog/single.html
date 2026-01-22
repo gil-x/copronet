@@ -53,13 +53,12 @@
     {{ end }}
 </main>
 
-<a class="widget-title" href="/blog/">
+<div class="widget-title" href="/blog/">
     <strong>Lire</strong> d'autres articles
-</a>
+</div>
 
-{{ if not .Params.related_posts  }}
+{{ if .Params.related_posts  }}
 <section class="related">
-    <h2 class="related__title">Cela pourrait aussi vous intéresser</h2>
     <div class="related-posts">
       <div class="related-posts__container carrousel">
         {{ range .Params.related_posts }}

@@ -1,6 +1,24 @@
 @import "sass_vars";
 @import "blog-common";
 
+.category {
+    &__title {
+        /* height: 50vh; */
+        /* padding: var(--header-h) 0; */
+        /* background: pink; */
+        padding: 0 0 0 36px;
+        font-size: var(--font-m-xxl);
+
+        &:before {
+            content: "Articles taggés #";
+        }
+    }
+
+    &__count {
+        padding: 0 0 24px 36px;
+    }
+}
+
 .hero {
     margin: var(--header-h) 0 0;
 

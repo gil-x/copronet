@@ -1,3 +1,23 @@
+.widget-title {
+    height: 62px;
+    display: flex;
+    align-items: center;
+    align-self: start;
+    gap: 6px;
+
+    margin: calc(var(--header-h) * 1) 0 0;
+    padding: 0 21px 0 42px;
+
+    background:
+        url("/img/arrow_r_bluelight.svg") no-repeat left center / auto 38px,
+        var(--cpn-blue);
+    color: var(--white);
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
 .posts {
     .post-card:nth-child(odd) {
         background: var(--gray-d0);
@@ -76,7 +96,8 @@
         align-items: center;
         gap: 6px;
         padding: 0 0 0 36px;
-        margin: 0 0 calc(var(--gutter-y) * 2) var(--gutter-x);
+        /* margin: 0 0 calc(var(--gutter-y) * 2) var(--gutter-x); */
+        margin: 24px 0 0;
         height: 37px;
         background: url("/img/arrow_r_bluelight.svg") no-repeat left center /
             auto 37px;
@@ -86,6 +107,10 @@
 }
 
 @media (min-width: $bp-medium) {
+    .widget-title {
+        margin: calc(var(--header-h) + 50px) 0 0 0;
+    }
+
     .posts {
         /* overflow-x: hidden; */
         /* overflow-y: unset; */

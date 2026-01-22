@@ -16,11 +16,11 @@ description = "META DESCRIPTION A REDIGER"
 
 date = 2026-01-20
 categories = ["Actualités"]
-tags = ["Audi", "Technologie"]
-related_posts = ["article1", "article3", "article4", "article5"]
+tags = ["Tenuesdetravail", "Propreté"]
+related_posts = ["article1", "article3"]
 
 #### HERO ####
-h1 = "Chez COPRONET, on sait qu’un petit geste peut avoir un grand impact"
+h1 = "2.Chez COPRONET, on sait qu’un petit geste peut avoir un grand impact"
 
 summary = "Audi élargit sa famille Gran Turismo. L'Audi e-tron GT quattro rend encore plus attrayante l'entrée dans le segment premium des sportives 100% électriques. Le nouveau modèle est disponible en France à partir du Jeudi 15 Mai."
 
@@ -29,8 +29,23 @@ lienCarte = "Découvrir l'événement"
 [[image_grande]]
 title = "article1 image"
 alt = "article1 image"
-src_mobile = "article1_small.png"
-src_desktop = "article1_big.png"
+src_mobile = "PHOTO 1.jpg"
+src_desktop = "PHOTO 1.jpg"
+[[image1]]
+title = "article1 image"
+alt = "article1 image"
+src_mobile = "PHOTO 2.jpg"
+src_desktop = "PHOTO 2.jpg"
+[[image2]]
+title = "article1 image"
+alt = "article1 image"
+src_mobile = "PHOTO 3.jpg"
+src_desktop = "PHOTO 3.jpg"
+[[image3]]
+title = "article1 image"
+alt = "article1 image"
+src_mobile = "PHOTO 4.jpg"
+src_desktop = "PHOTO 4.jpg"
 
 [[gallery]]
 [[gallery-image]]
