@@ -43,23 +43,25 @@
         transform 0.5s,
         filter 0.5s;
     z-index: 10;
-    font-family: Ubuntu;
     pointer-events: none;
 
     span {
         color: white;
-        background: black;
+        background: var(--cpn-blue);
         margin-top: 1rem;
         padding: 1rem;
         display: block;
         min-width: 50vw;
         box-shadow: 0 0px 7px rgba(0, 0, 0, 0.5);
         pointer-events: all;
+        border-radius: 10px 10px 0 0;
     }
 
     p {
-        background: white;
-        color: #333;
+        background: var(--white);
+        color: var(--cpn-blue);
+        font-size: 0.9rem;
+        text-align: center;
         margin: 0;
         padding: 1rem;
         max-width: 50vw;
@@ -83,7 +85,7 @@
     transition:
         opacity 1s,
         transform 0.35s;
-    z-index: 100;
+    z-index: 1000;
 
     &.off {
         opacity: 0;

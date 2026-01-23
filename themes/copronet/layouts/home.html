@@ -156,7 +156,7 @@
         <hr class="mobile" />
         {{ end}} {{ with .Params.servicesBouton }} {{ $bouton := index . 0 }}
         <div class="section__services__service__button-container">
-            <a class="cta-btn-blue">{{ $bouton.bouton | markdownify }}</a>
+            <a class="cta-btn-blue" href="/nos-services/">{{ $bouton.bouton | markdownify }}</a>
         </div>
         {{ end}}
     </div>

@@ -2,6 +2,7 @@ baseURL = 'https://cpnet2.gil-web.com/'
 languageCode = 'fr-fr'
 title = 'Copronet'
 theme = 'copronet'
+pagination.pagerSize = 2
 
 [markup.goldmark.renderer]
 unsafe = true

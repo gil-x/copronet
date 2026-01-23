@@ -34,7 +34,10 @@
         $.Resources.GetMatch (printf "medias/%s" .src_desktop) }} {{ $mobileImg
         := $.Resources.GetMatch (printf "medias/%s" .src_mobile) }} {{ if and
         $desktopImg $mobileImg }}
-        <a class="post__picts__a" {{ if .src_desktop }} href='{{ printf "medias/%s" .src_desktop }}' {{ else }} {{ errorf "L'image src_desktop n'est pas définie" }} {{ end }} {{ if .src_mobile }} data-mobileSrc="{{ printf "medias/%s" .src_mobile }}" {{ end }}>
+
+        {{ $desktopImg = $desktopImg.Resize "552x webp" }}
+        {{ $mobileImg = $mobileImg.Resize "440x webp" }}
+        <a class="post__picts__a" {{ if .src_desktop }} href='{{ $desktopImg.RelPermalink }}' {{ else }} {{ errorf "L'image src_desktop n'est pas définie" }} {{ end }} {{ if .src_mobile }} data-mobileSrc="{{ $mobileImg.RelPermalink }}" {{ end }}>
         <picture class="post__picts__pict">
             <source
                 media="(min-width: 768px)"
@@ -44,6 +47,7 @@
                 class="post__picts__pict__img"
                 src="{{ $mobileImg.RelPermalink }}"
                 alt="{{ .alt }}"
+                title="{{ .title }}"
             />
         </picture>
         </a>

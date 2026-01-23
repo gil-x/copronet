@@ -16,9 +16,9 @@ tags = ["Tenuesdetravail", "Propreté", "Copropriétés", "RSE", "Proximité"]
 related_posts = ["article2", "article3"]
 
 #### HERO ####
-h1 = "1.Des tenues qui accompagnent le quotidien de ceux qui font COPRONET"
+h1 = "Des tenues qui accompagnent le quotidien de ceux qui font COPRONET"
 
-summary = """Prendre soin de votre quotidien, ça commence par prendre soin de celles et ceux qui le rendent possible"""
+summary = """Prendre soin de votre quotidien, ça commence par prendre soin de celles et ceux qui le rendent possible."""
 
 texte = """Nos agents disposent désormais de tenues de travail :
 
@@ -34,7 +34,7 @@ auteur = "Aurélie BOILEAU & Sebastien BOILEAU"
 
 [[image]]
 title = "article1 image"
-alt = "article1 image"
+alt = "article1 image article1 image article1 image article1 image"
 src_mobile = "PHOTO 1.jpg"
 src_desktop = "PHOTO 1.jpg"
 [[image]]

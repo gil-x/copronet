@@ -80,6 +80,10 @@
     &__text {
         grid-column: 2;
         margin: 20px 0;
+
+        & > p {
+            margin: 10px 0 0;
+        }
     }
 
     &__author {
@@ -112,9 +116,14 @@
             max-width: 75%;
         }
 
-        &__pict {
+        &__picts {
             grid-column: 1;
             grid-row: 2/99;
+        }
+
+        &__pict {
+            /* grid-column: 1;
+            grid-row: 2/99; */
             &__img {
                 grid-column: 1;
                 grid-row: -1/1;

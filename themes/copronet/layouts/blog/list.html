@@ -2,6 +2,10 @@
 {{ partial "head.html" (dict "page" . "css" "blog") }}
 {{ end }}
 
+{{ define "additional-js" }}
+{{ partial "additional-js.html" "paginate" }}
+{{ end }}
+
 {{ define "main" }}
 
 <div class="hero">
@@ -12,12 +16,12 @@
     </div>
 </div>
 
-<ul class="categories">
+<ul class="all-tags">
     {{ range .Site.Taxonomies.tags }}
-    <li class="categories__item">
-        <a class="categories__item__a" href="{{ .Page.RelPermalink }}">
+    <li class="all-tags__item">
+        <a class="all-tags__item__a" href="{{ .Page.RelPermalink }}">
             {{ .Page.Title }}
-            <span class="categories__item__count">({{ .Count }})</span>
+            <span class="all-tags__item__count">({{ .Count }})</span>
         </a>
     </li>
     {{ end }}

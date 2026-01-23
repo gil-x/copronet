@@ -28,7 +28,7 @@
       {{ end }}
 
       <div class="post-card__p">
-          {{ .Params.summary | markdownify }}
+          {{ .Params.summary | truncate 120 " (…)" | markdownify }}
       </div>
 
       <span class="post-card__read">Lire <strong>l'article</strong></span>
