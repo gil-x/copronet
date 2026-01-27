@@ -27,9 +27,13 @@
     {{ end }}
 </ul>
 
+<a class="widget-title" href="/blog/">
+    <strong>Copronet</strong> Inside
+</a>
+
 <div class="posts">
     {{ $paginator := .Paginate .Pages }} {{ range $paginator.Pages }} {{ partial
-    "post-card.html" . }} {{ end }}
+    "post-card-for-list.html" . }} {{ end }}
 </div>
 
 {{ if .Paginator.HasNext }}

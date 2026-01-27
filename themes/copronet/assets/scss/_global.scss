@@ -191,6 +191,14 @@ p {
     }
 }
 
+.mobile {
+    display: inline-block;
+}
+
+.desktop {
+    display: none;
+}
+
 @media (min-width: $bp-medium) {
     .mobile {
         display: none;
@@ -224,6 +232,14 @@ p {
 
     p {
         text-align: justify;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: inline-block;
     }
 }
 

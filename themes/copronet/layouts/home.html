@@ -6,7 +6,21 @@
 {{ partial "additional-js.html" "home" }}
 {{ end }}
 
-{{ define "main" }} {{ with .Params.hero }} {{ $hero := index . 0 }}
+{{ define "main" }}
+
+<a class="home__logo" href="/">
+    <picture class="home__pict">
+        <source media="(min-width: 768px)" srcset="/img/logo.svg" />
+        <img
+            class="home__logo__img"
+            src="/img/logo.svg"
+            alt="Copronet logo"
+            title="Copronet"
+        />
+    </picture>
+</a>
+
+{{ with .Params.hero }} {{ $hero := index . 0 }}
 <section class="section section__hero">
     <video
         class="video"
