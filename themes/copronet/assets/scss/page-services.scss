@@ -15,15 +15,12 @@
         }
 
         &::before {
-            display: inline-block;
             content: "";
-            height: 54px;
-            width: 54px;
-            background: url(../img/logo_bars3.svg) no-repeat bottom center /
-                41px 41px;
+            display: block;
+            height: 61px;
+            width: 100vw;
+            background: url(../img/logo_bars3.svg) no-repeat center / 51px 51px;
             position: relative;
-            bottom: -2px;
-            left: -15px;
         }
     }
 

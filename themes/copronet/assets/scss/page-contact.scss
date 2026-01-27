@@ -15,7 +15,7 @@
         }
 
         &::before {
-            display: inline-block;
+            /* display: inline-block;
             content: "";
             height: 54px;
             width: 54px;
@@ -23,7 +23,13 @@
                 41px 41px;
             position: relative;
             bottom: -2px;
-            left: -15px;
+            left: -15px; */
+            content: "";
+            display: block;
+            height: 61px;
+            width: 100vw;
+            background: url(../img/logo_bars3.svg) no-repeat center / 51px 51px;
+            position: relative;
         }
     }
 
