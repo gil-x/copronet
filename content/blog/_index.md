@@ -1,5 +1,5 @@
 +++
-slug = "blog"
+slug = "blogo"
 # Meta Title
 title = "Copronet Inside"
 # Meta Description

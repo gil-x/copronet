@@ -1,0 +1,15 @@
+{{ define "head" }}
+{{ partial "head.html" (dict "page" . "css" "page-legal") }}
+{{ end }}
+
+{{ define "additional-js" }}
+{{ partial "additional-js.html" "damier" }}
+{{ end }}
+
+{{ define "main" }}
+
+<main>
+{{ .Content }}
+</main>
+
+{{ end }}

@@ -1,0 +1,11 @@
+@import "sass_vars";
+
+main {
+    margin: var(--header-h) 0;
+    padding: calc(var(--gutter-y) * 2) calc(var(--gutter-x) * 2);
+    /* background: pink; */
+}
+
+hr {
+    margin: calc(var(--gutter-y) * 1);
+}
