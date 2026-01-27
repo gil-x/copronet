@@ -21,7 +21,7 @@ src_desktop = "superviseurs.webp"
 
 [[equipe]]
 titre = """Nos **Superviseurs**"""
-titreImage1 = "hw_notre.png"
+titreImage1 = "hw_nos.png"
 titreInter1 = "relais de confiance avec"
 titreImage2 = "hw_votre.png"
 titreInter2 = "équipe sur le terrain"
@@ -37,6 +37,18 @@ tel = "**01 53 11 08 58**"
 jointure = "ou par mail&nbsp;:"
 mail = "**info@copronetproprete.fr**"
 texte2c = """du lundi au vendredi de 9h à 13h et de 14h à 17h."""
+[[membre]]
+title = "?"
+alt = "?"
+src = "p1.webp"
+[[membre]]
+title = "?"
+alt = "?"
+src = "p2.webp"
+[[membre]]
+title = "?"
+alt = "?"
+src = "p3.webp"
 
 [[responsables]]
 [[responsable]]

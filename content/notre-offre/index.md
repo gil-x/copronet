@@ -12,7 +12,7 @@ h0 = """Notre **Offre**"""
 h1Part1 = "Depuis 2004, COPRONET est votre partenaire pour le nettoyage"
 h1Part2 = "et l'entretien des parties communes de vos immeubles."
 
-intro = """**Nous avons conçu une offre standard pour un immeuble haussmannien de 5/6 étages à Paris & Île-de-France.** Le tarif sera adapté en fonction de la taille de l’immeuble et des prestations de nettoyage choisies afin de vous proposer une solution juste, efficace et sur mesure."""
+intro = """**Nous avons conçu une offre standard pour un immeuble haussmannien de 5/6 étages à Paris & Île-de-France.** Le&nbsp;tarif sera adapté en fonction de la taille de l’immeuble et des prestations de nettoyage choisies afin de vous proposer une solution juste, efficace et sur mesure."""
 prestationsTitre = "Prestations incluses"
 prestationsTexte = """
 - Nettoyage des parties communes

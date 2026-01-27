@@ -152,7 +152,8 @@
 
         .form-group {
             input,
-            select {
+            select,
+            textarea {
                 background: var(--gray-d0);
                 background: #aaaaaa;
 
@@ -183,8 +184,10 @@
 
         .form-group {
             input,
-            select {
+            select,
+            textarea {
                 background: var(--white);
+                background: pink !important;
                 /* outline: none; */
 
                 & + label {
@@ -278,7 +281,8 @@
     }
 
     input,
-    select {
+    select,
+    textarea {
         max-width: 100%;
         box-sizing: border-box;
         background: var(--white);
@@ -436,6 +440,20 @@
     margin: 10px 0;
     text-align: right;
     font-size: var(--font-m-s);
+    color: var(--white);
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 1rem;
+
+    &:focus {
+        outline: none;
+        border: none;
+        border: 1px solid var(--cpn-blue);
+    }
 }
 
 .form-navigation {
@@ -522,6 +540,10 @@
 
         /* padding: calc(var(--gutter-y) * 0.5) 0 0 calc(var(--gutter-y) * 4); */
         font-size: var(--font-xl);
+
+        span {
+            margin: 0 20px;
+        }
     }
 
     .form-title {

@@ -113,7 +113,7 @@
         border-radius: 10px;
         background: var(--cpn-blue);
         cursor: pointer;
-        transition: all 0.35s;
+        transition: all 0.15s;
 
         &.disapear {
             opacity: 0;
@@ -154,6 +154,14 @@
 
             &__h1 {
                 font-size: var(--font-l);
+            }
+        }
+    }
+    .load-more {
+        &__btn {
+            &:hover {
+                color: var(--cpn-blue);
+                background: var(--cpn-blue-light);
             }
         }
     }

@@ -1,3 +1,53 @@
+@keyframes vibrate {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    20% {
+        transform: translateX(2px) rotate(1deg);
+    }
+    30% {
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    40% {
+        transform: translateX(2px) rotate(1deg);
+    }
+    50% {
+        transform: translateX(-1px) rotate(-0.5deg);
+    }
+    60% {
+        transform: translateX(1px) rotate(0.5deg);
+    }
+    70% {
+        transform: translateX(-1px) rotate(-0.5deg);
+    }
+    80% {
+        transform: translateX(1px) rotate(0.5deg);
+    }
+    90% {
+        transform: translateX(-0.5px);
+    }
+}
+
+@keyframes vibrate-subtle {
+    0%,
+    100% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-1px, 1px);
+    }
+    50% {
+        transform: translate(1px, -1px);
+    }
+    75% {
+        transform: translate(-1px, -1px);
+    }
+}
+
 .footer {
     color: var(--white);
     /* margin: 40px 0 0; */
@@ -136,20 +186,6 @@
     }
 }
 
-/* .curved-text {
-    offset-path: path("M 50,150 A 100,100 0 0,1 250,150");
-    animation: move 10s linear infinite;
-}
-
-@keyframes move {
-    0% {
-        offset-distance: 0%;
-    }
-    100% {
-        offset-distance: 100%;
-    }
-} */
-
 @media (min-width: $bp-medium) {
     .footer {
         display: grid;
@@ -165,6 +201,14 @@
             padding: 48px 0;
 
             &__icon {
+                &__img {
+                    transition: transform 0.15s ease-in-out;
+
+                    &:hover {
+                        /* transform: scale(1.1); */
+                        animation: vibrate-subtle 0.2s ease-in-out 2;
+                    }
+                }
                 &__text {
                     line-height: 1.1;
                 }
@@ -237,6 +281,11 @@
             &__li {
                 &.desktop {
                     text-decoration: underline;
+                }
+                &__a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }
