@@ -37,6 +37,7 @@ tel = "**01 53 11 08 58**"
 jointure = "ou par mail&nbsp;:"
 mail = "**info@copronetproprete.fr**"
 texte2c = """du lundi au vendredi de 9h à 13h et de 14h à 17h."""
+
 [[membre]]
 title = "?"
 alt = "?"
@@ -49,6 +50,34 @@ src = "p2.webp"
 title = "?"
 alt = "?"
 src = "p3.webp"
+[[membre]]
+title = "?"
+alt = "?"
+src = "p4.webp"
+[[membre]]
+title = "?"
+alt = "?"
+src = "p5.webp"
+[[membre]]
+title = "?"
+alt = "?"
+src = "p6.webp"
+[[membre]]
+title = "?"
+alt = "?"
+src = "p7.webp"
+[[membre]]
+title = "?"
+alt = "?"
+src = "p8.webp"
+[[membre]]
+title = "?"
+alt = "?"
+src = "p9.webp"
+[[membre]]
+title = "?"
+alt = "?"
+src = "p10.webp"
 
 [[responsables]]
 [[responsable]]

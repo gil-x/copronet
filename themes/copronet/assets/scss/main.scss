@@ -45,6 +45,22 @@
     display: none;
 }
 
+@keyframes vibrate-subtle {
+    0%,
+    100% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-1px, 1px);
+    }
+    50% {
+        transform: translate(1px, -1px);
+    }
+    75% {
+        transform: translate(-1px, -1px);
+    }
+}
+
 @media (min-width: $bp-medium) {
     .fixed {
         position: fixed;

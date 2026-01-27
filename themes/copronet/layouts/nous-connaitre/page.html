@@ -4,6 +4,7 @@
 
 {{ define "additional-js" }}
 {{ partial "additional-js.html" "about" }}
+{{ partial "additional-js.html" "carrousel" }}
 {{ end }}
 
 {{ define "main" }}
@@ -17,22 +18,31 @@
 </div>
 
 <div class="team">
-    {{ with .Params.image }} {{ $hero := index . 0 }} {{ $desktopImg :=
-    $.Resources.GetMatch $hero.src_desktop }} {{ $mobileImg :=
-    $.Resources.GetMatch $hero.src_mobile }} {{ if and $desktopImg $mobileImg }}
-    <picture class="team__pict">
+
+    <div class="members carrousel">
+    {{ $page := . }}
+    {{ range .Params.membre }}
+
+    {{ $img :=  $page.Resources.GetMatch (printf "medias/%s" .src) }}
+    {{ $mobileImg := $img.Fill "85x235 webp q85 top" }}
+    {{ $desktopImg := $img.Fit "140x346 webp q99" }}
+    <picture class="members__pict carrousel__item">
         <source
             media="(min-width: 768px)"
             srcset="{{ $desktopImg.RelPermalink }}"
         />
         <img
-            class="team__img"
+            class="members__img"
             src="{{ $mobileImg.RelPermalink }}"
-            alt="{{ $hero.alt }}"
+            alt="r"
         />
     </picture>
-    {{ end }} {{ end }} {{ with .Params.equipe }} {{ $equipe := index . 0 }}
-    <!--<h2 class="team__title title-big">{{ $equipe.titre | markdownify }}</h2>-->
+    {{ end }}
+    </div>
+
+    {{ with .Params.equipe }}
+    {{ $equipe := index . 0 }}
+
     <h2 class="team__title">
         <span
             style='

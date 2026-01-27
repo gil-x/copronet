@@ -1,4 +1,31 @@
 @import "sass_vars";
+@import "carrousel";
+
+@keyframes appears {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 .hero {
     margin: var(--header-h) 0 0;
@@ -48,7 +75,16 @@
 }
 
 .team {
-    display: flex;
+    .members {
+        &__pict {
+            line-height: 0;
+        }
+        &__img {
+            line-height: 0;
+            width: 100%;
+        }
+    }
+    /* display: flex;
     flex-direction: column;
 
     &__pict {
@@ -59,16 +95,19 @@
     &__img {
         width: 100%;
         height: auto;
-    }
+    } */
+    /* display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    gap: 2px; */
 
     &__title {
         padding: calc(var(--gutter-y) * 1.5) calc(var(--gutter-x) * 2)
-            calc(var(--gutter-y) * 2);
+            calc(var(--gutter-y) * 0.5);
         background: var(--cpn-blue-light);
         text-align: center;
         line-height: 1.75;
         color: var(--white);
-        margin: 0;
+        margin: 0 0 -1px;
         order: 1;
 
         & > h2 {
@@ -98,6 +137,7 @@
 .boss {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 
     &__pict__container {
         position: relative;
@@ -273,6 +313,15 @@
     }
 
     .team {
+        .members {
+            opacity: 0;
+            animation: appears 0.1s ease-in-out forwards;
+            animation-delay: 0.5s;
+            &__pict {
+                transform: translateY(100%);
+                animation: popup 0.5s ease-in-out forwards;
+            }
+        }
         &__title {
             order: 2;
             padding: calc(var(--gutter-y) * 1) calc(var(--gutter-x) * 0)
@@ -320,6 +369,7 @@
         grid-template-columns: auto 1fr;
         align-items: center;
         gap: calc(var(--gutter-x) * 1);
+        overflow-x: visible;
 
         &__pict__container {
             /* max-width: 50%; */

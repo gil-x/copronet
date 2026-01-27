@@ -171,6 +171,10 @@ $bp-fhd: 1920px;
         padding: var(--gutter-y) var(--gutter-y) 0;
         box-sizing: border-box;
 
+        &__p {
+            margin: 20px 0 0;
+        }
+
         &__roll {
             margin: 32px 0 0;
             padding: 0;
@@ -439,11 +443,24 @@ $bp-fhd: 1920px;
                 }
 
                 &__digit {
+                    transition: transform 0.5s
+                        cubic-bezier(0.39, -1.41, 0.66, 1.7);
                 }
 
                 &__text {
                     font-size: var(--font-root);
                     line-height: 1.1;
+                }
+
+                &:hover {
+                    .section__numbers__number__img {
+                        /* transform: scale(1.1); */
+                        animation: vibrate-subtle 0.2s ease-in-out 2;
+                    }
+                    .section__numbers__number__digit {
+                        transform: scale(1.05);
+                        /* animation: vibrate-subtle 0.2s ease-in-out 2; */
+                    }
                 }
             }
         }
