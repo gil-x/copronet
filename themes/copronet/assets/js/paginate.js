@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalCount = parseInt(loadMoreBtn.dataset.total) || 0;
 
     function updateButton() {
-      loadMoreText.innerHTML = `Vous avez vu ${currentCount} aricles sur ${totalCount}`;
+      loadMoreText.innerHTML = `Vous avez vu ${currentCount} articles sur ${totalCount}`;
       loadMoreFill.style.width = `${(currentCount / totalCount) * 100}%`;
       loadMoreBtn.innerHTML = "Charger davantage";
       // loadMoreBtn.innerHTML = `

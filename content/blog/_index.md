@@ -1,15 +1,11 @@
 +++
-##############
-####  SEO ####
-##############
-slug = "le-mag-auto"
+slug = "blog"
 # Meta Title
-title = "Le Mag Auto"
+title = "Copronet Inside"
 # Meta Description
 description = "BLOG META DESCRIPTION A REDIGER"
 
-h0 = "**Copronet** Inside"
+h0 = "Copronet **Inside**"
 h1 = "Les coulisses de nos équipes"
-intro = """actions du terrain, instants partagés et actualités. Découvrez les temps forts et les news qui mettent
-de la bonne humeur dans la propreté !"""
+intro = """actions du terrain, instants partagés et actualités. Découvrez les temps forts et les news qui mettent de la bonne humeur dans la propreté !"""
 +++

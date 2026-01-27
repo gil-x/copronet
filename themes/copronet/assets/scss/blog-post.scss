@@ -101,12 +101,13 @@
 @media (min-width: $bp-medium) {
     .post {
         /* padding: var(--header-h) var(--gutter-x) 0; */
-        padding: 0 var(--gutter-x);
+        padding: 0 var(--gutter-x) var(--gutter-y);
         /* height: 50vh; */
         /* background: greenyellow; */
         display: grid;
         grid-template-columns: 45% 1fr;
         gap: 0 37px;
+        border-bottom: 1px solid var(--cpn-blue);
 
         &__title {
             /* margin: calc(var(--header-h) + 50px) 0 36px; if widget fixed */
@@ -162,5 +163,9 @@
         &__author {
             grid-column: 2;
         } */
+
+        & + .widget-title {
+            margin: var(--gutter-y) 0 0;
+        }
     }
 }
