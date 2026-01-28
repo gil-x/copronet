@@ -567,7 +567,7 @@ $bp-fhd: 1920px;
                 margin: 0 calc(-1 * var(--gutter-x));
             }
 
-            &__roll {
+            &__rollOLD {
                 margin: 20px 0;
                 list-style-type: none;
                 display: flex;
@@ -701,5 +701,44 @@ $bp-fhd: 1920px;
 
     .footer {
         order: 8;
+    }
+
+    .section__customers__roll__container {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .section__customers__roll {
+        margin: 24px 0;
+        display: flex;
+        /* gap: 2rem; // Ajuste selon besoin */
+        width: max-content;
+        animation: scroll-infinite 30s linear infinite; // Ajuste la durée
+
+        &:hover {
+            animation-play-state: paused; // Pause au survol
+        }
+    }
+
+    .section__customers__roll__item {
+        flex-shrink: 0;
+        // Tes styles d'item
+        /* &__item { */
+        font-family: "Open Sans Light";
+        font-size: var(--font-l);
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: white;
+    }
+
+    @keyframes scroll-infinite {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(
+                -50%
+            ); // On déplace de la moitié (items dupliqués)
+        }
     }
 }
