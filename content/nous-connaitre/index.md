@@ -20,18 +20,18 @@ src_mobile = "superviseurs_x4.webp"
 src_desktop = "superviseurs.webp"
 
 [[equipe]]
-titre = """Nos **Superviseurs**"""
+titre = """Nos **Responsables de Secteur**"""
 titreImage1 = "hw_nos.png"
 titreInter1 = "relais de confiance avec"
 titreImage2 = "hw_votre.png"
 titreInter2 = "équipe sur le terrain"
-texte1 = """**Un.e Superviseur.e Qualité dédié.e assure le suivi rigoureux de l’entretien de vos locaux :** contrôle des prestations,
+texte1 = """**Un.e responsable de secteur dédié.e assure le suivi rigoureux de l’entretien de vos locaux :** contrôle des prestations,
 respect de vos consignes et intervention rapide en cas de besoin.<br>
 Grâce à des contrôles réguliers et une gestion optimisée des remplacements,
 vous bénéficiez d’un service fiable, continu et conforme à vos standards.
 Leurs coordonnées sont disponibles sur demande."""
 texte2 = """L’organisation par zone géographique renforce notre efficacité sur le terrain.<br>
-Nos superviseurs.es sont appuyés.es au quotidien par une équipe d’assistants.es d’exploitation, disponibles et réactif(ve)s."""
+Nos responsables de secteur sont appuyés.es au quotidien par une équipe d’assistants.es d’exploitation, disponibles et réactif(ve)s."""
 texte2b = "Pour les joindre par tél.&nbsp;"
 tel = "**01 53 11 08 58**"
 jointure = "ou par mail&nbsp;:"
@@ -131,7 +131,7 @@ photoSrc = "engage2.webp"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
 texte = """Votre copropriété est entre de bonnes mains avec un.e
-superviseur.se réactif.ve et disponible. Il/elle veille à la
+responsable de secteur réactif.ve et disponible. Il/elle veille à la
 qualité des prestations et répond rapidement à vos demandes."""
 [[engagemment]]
 titre = "Un suivi direct et efficace"

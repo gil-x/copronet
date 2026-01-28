@@ -22,7 +22,7 @@ C’est aussi et surtout une équipe engagée au quotidien pour que 𝐯𝐨𝐬
 
 - 🌱 Des produits plus respectueux de l’environnement.
 - 📍 1200 copropriétés suivies chaque jour, par 350 agent.e.s impliqué.e.s.
-- 📞 Et un.e superviseur.e dédié.e, joignable directement.
+- 📞 Et un.e responsable de secteur dédié.e, joignable directement.
 
 📄 On vous dit tout dans notre nouvelle plaquett
 """

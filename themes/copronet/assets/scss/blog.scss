@@ -148,7 +148,8 @@
         &__content {
             padding: calc(var(--gutter-y) * 1) calc(var(--gutter-x) * 3);
             background: url("../img/stroke-blue.svg") no-repeat center center;
-            background-size: contain;
+            /* background-size: contain; */
+            background-size: 565px;
             font-size: var(--font-l);
             color: var(--cpn-blue);
 

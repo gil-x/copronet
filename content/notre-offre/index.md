@@ -19,7 +19,7 @@ prestationsTexte = """
 - Vitrerie
 - Gestion des conteneurs"""
 supervisionTitre = "Supervision Qualité au quotidien"
-supervisionTexte = """Nos superviseurs, munis de tablettes numériques,
+supervisionTexte = """Nos responsables de secteur, munis de tablettes numériques,
 garantissent la qualité des services en temps réel.
 Servant de relais d'information, ils sont en mesure de
 signaler immédiatement toute fuite, anomalie électrique

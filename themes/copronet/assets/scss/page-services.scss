@@ -227,7 +227,8 @@
         &__content {
             padding: calc(var(--gutter-y) * 1) calc(var(--gutter-x) * 3);
             background: url("../img/stroke-blue.svg") no-repeat center center;
-            background-size: contain;
+            /* background-size: contain; */
+            background-size: 565px;
             font-size: var(--font-l);
             color: var(--cpn-blue);
 
@@ -342,6 +343,10 @@
             calc(var(--gutter-y) * 1);
         background: var(--cpn-blue-light);
         font-size: var(--font-l);
+
+        &__p:last-child {
+            font-size: var(--font-m);
+        }
     }
 
     .cta {

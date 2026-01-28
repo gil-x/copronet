@@ -26,6 +26,6 @@ Nullam posuere convallis nisi. Pellentesque habitant morbi tristique senectus et
 <span id="credits"></span>
 ## Crédits
 
-Que va-t-on mettre ici ?
+Design graphique et illustrations : **©Virginie Bréham** & **Illustrons-nous !**
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas id ipsum nec elit placerat tincidunt. Nunc et sapien ligula. Ut molestie quam vitae egestas pulvinar. Pellentesque nulla ligula, mollis imperdiet dui at, molestie imperdiet diam. Vivamus aliquam lobortis arcu id sollicitudin. Sed nec lectus ut sapien vulputate molestie. Vestibulum accumsan est eleifend nisi varius, id eleifend velit viverra. Cras dignissim libero et nisl pharetra, in vehicula augue consectetur. Donec eget auctor mauris. Nam eget ipsum sed est vehicula eleifend dignissim eu enim. Vestibulum ac nisi interdum, fringilla leo ac, feugiat mi. Donec id est et dolor sodales interdum.
+Photographies : **Morgane Mazurier**

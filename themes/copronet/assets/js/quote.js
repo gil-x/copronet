@@ -33,18 +33,24 @@ function addEventListeners() {
   });
 
   // Add input validation feedback listener
-  steps.forEach((step) => {
+  steps.forEach((step, stepIndex) => {
     const inputs = step.querySelectorAll(
       "input[required], select[required], textarea[required]",
     );
     inputs.forEach((input) => {
-      input.addEventListener("input", () => validateInput(input)); // Live validation feedback
+      input.addEventListener("input", () => {
+        validateInput(input);
+        checkStepCompletion(stepIndex); // ← Ajout
+      });
+      input.addEventListener("change", () => {
+        // Pour radios/selects
+        checkStepCompletion(stepIndex); // ← Ajout
+      });
       input.addEventListener("invalid", (e) => {
-        // Handle browser's native invalid event
-        e.preventDefault(); // Prevent default bubble
+        e.preventDefault();
         markInputInvalid(input);
       });
-      input.addEventListener("blur", () => validateInput(input)); // Validate on blur too
+      input.addEventListener("blur", () => validateInput(input));
     });
   });
 }
@@ -153,27 +159,32 @@ function handleTitleClick(targetStepIndex) {
 
 // --- Step Visibility and State ---
 function showStep(stepIndex) {
+  // Retire accessible de toutes les steps
+  steps.forEach((step) => {
+    step.classList.remove("accessible");
+  });
+
+  // Ajoute accessible uniquement à la step courante
+  steps[stepIndex].classList.add("accessible");
+
   steps.forEach((step, index) => {
     const title = stepTitles[index];
-    const content = step.querySelector(".step-content");
     const arrow = title.querySelector(".step-arrow");
 
     if (index === stepIndex) {
       step.classList.add("active");
       title.classList.add("active-title");
-      content.style.display = "block"; // Ensure it's block
-      if (arrow) arrow.innerHTML = "▼"; // Down arrow for active
+      if (arrow) arrow.innerHTML = "▼";
     } else {
       step.classList.remove("active");
       title.classList.remove("active-title");
-      content.style.display = "none";
-      if (arrow) arrow.innerHTML = "▶"; // Right arrow for inactive
+      if (arrow) arrow.innerHTML = "▶";
     }
-    // Add completed class for styling if step is marked complete
+
     if (stepsCompleted[index]) {
       title.classList.add("completed");
     } else {
-      title.classList.remove("completed"); // Ensure it's removed if state changes
+      title.classList.remove("completed");
     }
   });
   updateButtonVisibility();
@@ -215,13 +226,17 @@ function validateInput(input) {
     if (!isChecked) {
       // Mark the group or the first radio? Let's mark the group's container/label if possible
       const radioGroup = input.closest(".radio-group"); // Find the container
-      if (radioGroup) radioGroup.classList.add("group-invalid"); // Add a class for group error styling (add SCSS for this)
+      if (radioGroup) {
+        radioGroup.classList.add("group-invalidd");
+      } // Add a class for group error styling (add SCSS for this)
       // Also mark the first input for consistency?
       markInputInvalid(input);
       return false;
     } else {
       const radioGroup = input.closest(".radio-group");
-      if (radioGroup) radioGroup.classList.remove("group-invalid");
+      if (radioGroup) {
+        radioGroup.classList.remove("group-invalid");
+      }
       // Need to clear invalid state from *all* radios in the group if one is valid
       const groupName = input.name;
       const group = steps[currentStep].querySelectorAll(
@@ -238,6 +253,45 @@ function validateInput(input) {
   } else {
     markInputValid(input);
     return true;
+  }
+}
+
+function checkStepCompletion(stepIndex) {
+  const step = steps[stepIndex];
+  const requiredInputs = step.querySelectorAll("[required]");
+
+  let allValid = true;
+  requiredInputs.forEach((input) => {
+    if (input.type === "radio") {
+      const groupName = input.name;
+      const group = step.querySelectorAll(`input[name="${groupName}"]`);
+      const isChecked = Array.from(group).some((radio) => radio.checked);
+      console.log(
+        "isChecked:",
+        Array.from(group).some((radio) => radio.checked),
+      );
+      if (!isChecked) allValid = false;
+    } else if (!input.value.trim() || !input.checkValidity()) {
+      allValid = false;
+    }
+  });
+
+  // Gère la classe completed
+  if (allValid) {
+    steps[stepIndex].classList.add("completed");
+    stepsCompleted[stepIndex] = true;
+
+    if (steps[stepIndex + 1]) {
+      steps[stepIndex + 1].classList.add("accessible");
+      console.log("apply accessible to:", steps[stepIndex + 1]);
+    }
+  } else {
+    steps[stepIndex].classList.remove("completed"); // ← Retire si invalide
+    stepsCompleted[stepIndex] = false;
+    if (steps[stepIndex + 1]) {
+      steps[stepIndex + 1].classList.remove("accessible");
+      console.log("remove accessible to:", steps[stepIndex + 1]);
+    }
   }
 }
 

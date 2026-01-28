@@ -2,7 +2,7 @@
     <ul id="menu-menu-principal" class="nav__ul">
         {{ range .Site.Menus.main }}
         <li
-            class="nav__ul__li {{ if eq $.Page.RelPermalink .URL }}active{{ end }}"
+            class="nav__ul__li {{ if in $.Page.RelPermalink .URL }}active{{ end }}"
         >
             <a href="{{ .URL }}/">{{ .Name }}</a>
         </li>

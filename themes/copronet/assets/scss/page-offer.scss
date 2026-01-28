@@ -503,9 +503,10 @@
             margin: 0;
             grid-column: 1 / -1;
             background: var(--cpn-blue);
-            padding: calc(var(--gutter-y) * 1) calc(var(--gutter-x) * 1)
+            padding: calc(var(--gutter-y) * 0.5) calc(var(--gutter-x) * 1)
                 calc(var(--gutter-y) * 1);
 
+                font-size: var(--font-l);
             span {
                 display: block;
             }
