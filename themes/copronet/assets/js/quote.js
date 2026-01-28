@@ -18,8 +18,12 @@ function initializeForm() {
 
 // --- Event Listeners ---
 function addEventListeners() {
-  nextBtn.addEventListener("click", handleNext);
-  prevBtn.addEventListener("click", handlePrevious);
+  if (nextBtn) {
+    nextBtn.addEventListener("click", handleNext);
+  }
+  if (prevBtn) {
+    prevBtn.addEventListener("click", handlePrevious);
+  }
   sendBtn.addEventListener("click", handleSubmit); // Changed type="submit" button
   steps[1].querySelector(".step-title").addEventListener("click", handleNext);
   steps[2].querySelector(".step-title").addEventListener("click", handleNext);
@@ -82,29 +86,32 @@ function handleSubmit(event) {
 
     const formData = new FormData(form); // Create a FormData object
     formData.append("action", "multistep_form_submit");
-    formData.append("nonce", multistepForm.nonce);
+    formData.append("nonce", form.nonce);
 
     // Use Fetch API to send the form data
-    fetch(multistepForm.ajaxurl, {
+    fetch(form.ajaxurl, {
       method: "POST",
       body: formData,
     })
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          alert("Thank you! Your form has been submitted.");
+          console.log("Thank you! Your form has been submitted.");
           form.reset(); // Reset the form
         } else {
-          alert("An error occurred: " + data.data);
+          console.log("An error occurred: " + data.data);
+          form.innerHTML =
+            '<p class="form-message form-message--error">Problème d\'envoi, veuillez réessayer.</p>';
+          // Or gather data: const formData = new FormData(form);
         }
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("An unexpected error occurred.");
+        // alert("An unexpected error occurred.");
       });
     // Disable form / show success message
     form.innerHTML =
-      '<p style="color: green; text-align: center; font-size: 1.2em;">Merci pour votre demande de devis, elle a bien été prise en compte. Notre équipe y travaille et vous fera un retour sous 24h maximum. À très bientôt !</p>';
+      '<p class="form-message form-message--success">Merci pour votre demande de devis, elle a bien été prise en compte.<br>Notre équipe y travaille et vous fera un retour sous 24h maximum. À très bientôt !</p>';
     // Or gather data: const formData = new FormData(form);
   } else {
     console.log(`Final step (${currentStep + 1}) is invalid.`);
@@ -253,11 +260,17 @@ function clearStepErrors(stepIndex) {
 
 // --- Button Visibility ---
 function updateButtonVisibility() {
-  prevBtn.style.display = currentStep > 0 ? "inline-block" : "none";
+  if (prevBtn) {
+    prevBtn.style.display = currentStep > 0 ? "inline-block" : "none";
+  }
+
   sendBtn.style.display =
     currentStep === steps.length - 1 ? "inline-block" : "none";
-  nextBtn.style.display =
-    currentStep < steps.length - 1 ? "inline-block" : "none";
+
+  if (nextBtn) {
+    nextBtn.style.display =
+      currentStep < steps.length - 1 ? "inline-block" : "none";
+  }
 }
 
 // --- Start the form ---

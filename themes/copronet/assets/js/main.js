@@ -15,21 +15,6 @@ const isTouchDevice = () => {
   return false;
 };
 
-// DESIGN TEST
-const designTest = document.querySelector(".design");
-const actions = {
-  i: () => (designTest.style.opacity = 0),
-  v: () => (designTest.style.opacity = 1.0),
-  d: () => (designTest.style.opacity = 0.5),
-};
-
-document.addEventListener("keydown", (e) => {
-  const key = e.key.toLowerCase();
-  if (actions[key]) {
-    actions[key]();
-  }
-});
-
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains("header__call-menu-icon")) {
     toggleMobileMenu();

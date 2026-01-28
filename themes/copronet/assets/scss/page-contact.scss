@@ -125,7 +125,7 @@
     }
 }
 
-#multiStepForm {
+#contactForm {
     padding: 20px 40px;
     background: var(--cpn-blue);
 }
@@ -487,6 +487,7 @@ textarea {
         background: var(--cpn-blue-light);
     }
 }
+
 @media (min-width: $bp-medium) {
     .hero {
         &__title {
@@ -569,7 +570,7 @@ textarea {
         }
     }
 
-    #multiStepForm {
+    #contactForm {
         padding: 20px calc(var(--gutter-x) * 3);
         max-width: 100%;
 
