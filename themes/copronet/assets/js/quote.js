@@ -5,6 +5,7 @@ const stepTitles = Array.from(form.querySelectorAll(".step-title"));
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 const sendBtn = document.getElementById("sendBtn");
+const sendResult = document.getElementById("send-result");
 
 let currentStep = 0;
 const stepsCompleted = Array(steps.length).fill(false);
@@ -14,6 +15,28 @@ function initializeForm() {
   showStep(0); // Show the first step initially
   updateButtonVisibility();
   addEventListeners();
+
+  // sendBtn.classList.add("ended");
+  // sendBtn.value = "Envoyer";
+  // displayEndMessage(true, sendBtn);
+}
+
+function displayEndMessage(success) {
+  var message;
+  sendResult.classList.remove("success", "error");
+  if (success) {
+    message = "Votre demande de devis a bien été prise en compte";
+    sendResult.classList.add("success");
+    sendBtn.value = "Merci !";
+    sendBtn.disabled = true;
+  } else {
+    message =
+      "Une erreur s'est produite lors de l'envoi du message.<br>Veuillez réessayer.";
+    sendResult.classList.add("error");
+    sendBtn.value = "Aïe...";
+    sendBtn.disabled = true;
+  }
+  sendResult.innerHTML = message;
 }
 
 // --- Event Listeners ---
@@ -102,12 +125,13 @@ function handleSubmit(event) {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          console.log("Thank you! Your form has been submitted.");
+          // console.log("Thank you! Your form has been submitted.");
           form.reset(); // Reset the form
         } else {
-          console.log("An error occurred: " + data.data);
-          form.innerHTML =
-            '<p class="form-message form-message--error">Problème d\'envoi, veuillez réessayer.</p>';
+          displayEndMessage(false);
+          // console.log("An error occurred: " + data.data);
+          // form.innerHTML =
+          //   '<p class="form-message form-message--error">Problème d\'envoi, veuillez réessayer.</p>';
           // Or gather data: const formData = new FormData(form);
         }
       })
@@ -116,8 +140,9 @@ function handleSubmit(event) {
         // alert("An unexpected error occurred.");
       });
     // Disable form / show success message
-    form.innerHTML =
-      '<p class="form-message form-message--success">Merci pour votre demande de devis, elle a bien été prise en compte.<br>Notre équipe y travaille et vous fera un retour sous 24h maximum. À très bientôt !</p>';
+    displayEndMessage(true);
+    // form.innerHTML =
+    //   '<p class="form-message form-message--success">Merci pour votre demande de devis, elle a bien été prise en compte.<br>Notre équipe y travaille et vous fera un retour sous 24h maximum. À très bientôt !</p>';
     // Or gather data: const formData = new FormData(form);
   } else {
     console.log(`Final step (${currentStep + 1}) is invalid.`);
