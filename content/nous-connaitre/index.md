@@ -11,7 +11,7 @@ description = "Nous Connaître"
 
 h0 = """Nous **Connaître**"""
 h1 = """Confiez-nous l'entretien de votre copropriété."""
-intro = """Nous prendrons soin de votre immeuble pour vous offrir, chaque jour, **un cadre de vie agréable et accueillant !**"""
+intro = """Nous prendrons soin de votre immeuble pour vous offrir, chaque jour, **un cadre de vie agréable et accueillant&nbsp;!**"""
 
 [[image]]
 title = "hero-mobile.jpg"
@@ -82,7 +82,7 @@ src = "p10.webp"
 [[responsables]]
 [[responsable]]
 titreP1 = "Notre **responsable commercial**<br>"
-titreP2 = "Faites connaissance avec **Wilson Da Moura** !"
+titreP2 = "Faites connaissance avec **Wilson Da Moura**&nbsp;!"
 photoSrc = "wilson.webp"
 photoAlt = "Wilson Da Moura"
 photoTitle = "Wilson Da Moura"
@@ -91,11 +91,11 @@ toujours à l’écoute.** Il apporte à l’équipe sa bonne humeur, son sens d
 contact et sa générosité.
 Professionnel et bienveillant, il prend le temps de comprendre chaque
 besoin et **sait accompagner les projets avec rigueur et simplicité.**"""
-contactTexte = "Pour le joindre :"
+contactTexte = "Pour le joindre&nbsp;:"
 mail = "dmwilson@copronetproprete.fr"
 [[responsable]]
 titreP1 = "**Chez Copronet** Une nouvelle génération de talents "
-titreP2 = "prend les commandes de l’exploitation !"
+titreP2 = "prend les commandes de l’exploitation&nbsp;!"
 photoSrc = "maimouna_dia_mehdi_chekkal.webp"
 photoAlt = "Maïmouna Dia & Mehdi Chekkal"
 photoTitle = "Maïmouna Dia & Mehdi Chekkal"
@@ -110,7 +110,7 @@ pragmatique.
 coordination fluide avec les équipes. Elle est votre interlocutrice privilégiée
 pour toutes les questions techniques et organisationnelles du quotidien.<br>
 Ensemble, ils forment un duo complémentaire, réactif et à votre écoute pour **vous garantir un service efficace, jour après jour**."""
-contactTexte = "Pour les joindre :"
+contactTexte = "Pour les joindre&nbsp;:"
 mail = "info@copronetproprete.fr"
 
 [[engagemments]]

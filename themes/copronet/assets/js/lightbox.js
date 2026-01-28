@@ -3,6 +3,8 @@ class Gallery {
     // Attributes
     this.currentImage;
     this.thumbnails;
+    this.touchStartX = 0;
+    this.touchStartY = 0;
 
     // UI
     this.lightBox = this.buildDOM();
@@ -87,10 +89,12 @@ class Gallery {
   }
 
   /**
-   * Listen to 'click' event on differents parts of Lightbox.
+   * Listen to 'click' and 'touch' events on differents parts of Lightbox.
    */
   setEventListeners() {
     this.lightBox.addEventListener("click", this);
+    this.lightBox.addEventListener("touchstart", this, { passive: true });
+    this.lightBox.addEventListener("touchend", this);
   }
 
   /**
@@ -111,6 +115,40 @@ class Gallery {
         } else if (event.target.classList.contains("container")) {
           this.hideLightbox();
         }
+        break;
+
+      case "touchstart":
+        this.handleTouchStart(event);
+        break;
+
+      case "touchend":
+        this.handleTouchEnd(event);
+        break;
+    }
+  }
+
+  /**
+   * Store initial touch position.
+   * @param {TouchEvent} event
+   */
+  handleTouchStart(event) {
+    this.touchStartX = event.touches[0].clientX;
+    this.touchStartY = event.touches[0].clientY;
+  }
+
+  /**
+   * Detect swipe direction and navigate between images.
+   * @param {TouchEvent} event
+   */
+  handleTouchEnd(event) {
+    const touchEndX = event.changedTouches[0].clientX;
+    const touchEndY = event.changedTouches[0].clientY;
+    const diffX = this.touchStartX - touchEndX;
+    const diffY = this.touchStartY - touchEndY;
+
+    // Swipe horizontal uniquement (évite conflit avec scroll vertical)
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+      diffX > 0 ? this.changeImage("right") : this.changeImage("left");
     }
   }
 
@@ -146,7 +184,8 @@ class Gallery {
   }
 
   /**
-   *
+   * Navigate between images.
+   * @param {String} direction - 'left' or 'right'
    */
   changeImage(direction) {
     this.imageLegendBox.classList.remove("active");
@@ -170,7 +209,8 @@ class Gallery {
   }
 
   /**
-   *
+   * Load image from URL with loader.
+   * @param {String} url
    */
   loadImage(url) {
     this.imageContainer.innerHTML = "";
@@ -218,6 +258,7 @@ class Gallery {
   showLightBox() {
     this.loadImage(this.thumbnails[this.currentImage].href);
     this.updateImageLegend();
+    document.body.classList.add("no-scroll");
   }
 
   /**
@@ -225,6 +266,7 @@ class Gallery {
    */
   hideLightbox() {
     this.lightBox.classList.toggle("off");
+    document.body.classList.remove("no-scroll");
   }
 }
 

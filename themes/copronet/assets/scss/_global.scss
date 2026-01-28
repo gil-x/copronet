@@ -199,6 +199,10 @@ p {
     display: none;
 }
 
+.no-scroll {
+    overflow-y: hidden;
+}
+
 @media (min-width: $bp-medium) {
     .mobile {
         display: none;

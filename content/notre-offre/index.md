@@ -40,7 +40,7 @@ asterisque = "pour un immeuble de 5-6 étages à Paris ou en Île-de-France"
 [[reputation]]
 titre = "Votre avis **compte**"
 bouton = "Retrouvez **tous nos avis**"
-lien = ""
+lien = "https://www.google.com/search?q=Copro-Net%20Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDYyMzUyNrY0tDSyMLI0NTUwN9rAyPiKkc85v6AoX9cvtUTBsSyzeBErmgAATusDij0AAAA&rldimm=13265233919282955072&tbm=lcl&cs=1&hl=fr&sa=X&ved=0CCcQ9fQKKABqFwoTCLiygK3qrZIDFQAAAAAdAAAAABAH&biw=1920&bih=959&dpr=1&aic=0#lkt=LocalPoiReviews"
 
 [[immeubles]]
 titre = "**Copronet** prend soin de tous vos immeubles"

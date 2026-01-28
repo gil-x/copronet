@@ -17,7 +17,7 @@
     <p class="hero__intro">{{ .Params.intro | markdownify }}</p>
 
     {{ with .Params.offre }} {{ $offre := index . 0 }}
-    <div class="offer">
+    <a class="offer" href="{{ "devis-gratuit-sous-24h" | relURL }}">
         <div class="hero__brush"></div>
         <div class="offer__reflect"></div>
         <h2 class="offer__title">{{ $offre.titre | markdownify }}</h2>
@@ -45,7 +45,7 @@
                 (<sup>*</sup>{{ $offre.asterisque | markdownify }})</small
             >
         </p>
-    </div>
+    </a>
 
     <div class="illustration">
         <img class="illustration__img" src="{{ $offre.photo }}" alt="" />
@@ -115,9 +115,9 @@
 </div>
 
 <div class="reputation">
-    <button class="offer__cta__btn">
+    <a class="offer__cta__btn" href="{{ $reputation.lien | markdownify }}">
         {{ $reputation.bouton | markdownify }}
-    </button>
+    </a>
 </div>
 {{ end }} {{ with .Params.immeubles }} {{ $immeubles := index . 0 }}
 <h2 class="title-medium">{{ $immeubles.titre | markdownify }}</h2>
