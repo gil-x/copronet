@@ -168,6 +168,9 @@ function showStep(stepIndex) {
   steps[stepIndex].classList.add("accessible");
 
   steps.forEach((step, index) => {
+    if (step.classList.contains("form-navigation")) {
+      return;
+    }
     const title = stepTitles[index];
     const arrow = title.querySelector(".step-arrow");
 
@@ -293,6 +296,7 @@ function checkStepCompletion(stepIndex) {
       console.log("remove accessible to:", steps[stepIndex + 1]);
     }
   }
+  updateButtonVisibility();
 }
 
 function markInputInvalid(input) {
@@ -318,8 +322,18 @@ function updateButtonVisibility() {
     prevBtn.style.display = currentStep > 0 ? "inline-block" : "none";
   }
 
-  sendBtn.style.display =
-    currentStep === steps.length - 1 ? "inline-block" : "none";
+  if (stepsCompleted[0] && stepsCompleted[1] && stepsCompleted[2]) {
+    sendBtn.disabled = false;
+    // console.log("loupé", stepsCompleted);
+    // return;
+  } else {
+    sendBtn.disabled = true;
+  }
+  // console.log("réussi!");
+  // button.disabled = false;
+
+  // sendBtn.style.display =
+  //   currentStep === steps.length - 1 ? "inline-block" : "none";
 
   if (nextBtn) {
     nextBtn.style.display =
