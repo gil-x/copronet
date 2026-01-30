@@ -462,7 +462,23 @@
             calc(var(--gutter-y) * 0);
         background: var(--gray-d0);
 
-        .left {
+        .left.hovered {
+            color: var(--white);
+            background:
+                url("../img/arrow_r_white.svg") no-repeat left center,
+                var(--cpn-blue);
+        }
+
+        .right.hovered {
+            .b {
+                color: var(--cpn-blue);
+            }
+            background:
+                url("../img/arrow_r_blue.svg") no-repeat left center,
+                var(--cpn-blue-light);
+        }
+
+        .nleft {
             &:hover,
             &.hovered {
                 color: var(--white);
@@ -484,7 +500,7 @@
             }
         }
 
-        .right {
+        .nright {
             &:hover {
                 color: var(--cpn-blue);
                 background:
