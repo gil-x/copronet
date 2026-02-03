@@ -46,11 +46,11 @@
 
     // Mobile
     position: fixed;
-    top: 0;
+    top: var(--header-h);
     left: 0;
-    height: 100vh;
+    height: calc(100vh - var(--header-h));
     width: 100vw;
-    background: rgba($color: #fff, $alpha: 0.9);
+    background: rgba($color: #fff, $alpha: 1);
     transform: translateX(150vw);
     transition: transform 0.35s;
 
@@ -66,10 +66,13 @@
 
         // Mobile
         flex-direction: column;
+        width: 100%;
 
         &__li {
             padding: 20px;
-
+            box-shadow:
+                0px 3px 3px rgba(0, 86, 141, 0.15),
+                0px 12px 12px rgba(59, 185, 205, 0.05);
             a {
                 text-transform: uppercase;
                 color: var(--cpn-blue);
@@ -110,7 +113,7 @@
 @media (min-width: $bp-medium) {
     .header {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         left: 0;
         width: var(--body-max-width);
         height: var(--header-h);
@@ -138,6 +141,13 @@
 
             &__img {
                 height: 70px;
+                transition: transform 0.25s cubic-bezier(0.39, -1.41, 0.66, 1.7);
+            }
+
+            &:hover {
+                .header__logo__img {
+                    transform: scale(1.15);
+                }
             }
         }
 
@@ -155,6 +165,7 @@
         &__ul {
             &__li {
                 padding: 21px 30px 0;
+                box-shadow: none;
 
                 a {
                     &:hover {

@@ -25,7 +25,7 @@ titreImage1 = "hw_nos.png"
 titreInter1 = "relais de confiance avec"
 titreImage2 = "hw_votre.png"
 titreInter2 = "équipe sur le terrain"
-texte1 = """**Un.e responsable de secteur dédié.e assure le suivi rigoureux de l’entretien de vos locaux :** contrôle des prestations,
+texte1 = """**Nos responsables de secteur dédié.es assurent le suivi rigoureux de l’entretien de vos locaux :** contrôle des prestations,
 respect de vos consignes et intervention rapide en cas de besoin.<br>
 Grâce à des contrôles réguliers et une gestion optimisée des remplacements,
 vous bénéficiez d’un service fiable, continu et conforme à vos standards.
@@ -124,9 +124,9 @@ titre = "Des prestations sur-mesure"
 photoSrc = "engage1.webp"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
-texte = """Chez Copronet, nous ajustons nos services de nettoyage, entretien et gestion des espaces communs de vos copropriétés selon vos besoins. Notre équipe garantit une qualité constante à chaque intervention."""
+texte = """Nous ajustons nos services de nettoyage, entretien et gestion des espaces communs de vos copropriétés selon vos besoins. Notre équipe garantit une qualité constante à chaque intervention."""
 [[engagemment]]
-titre = "Un.e superviseur.se impliqué.e"
+titre = "Des responsables de secteur impliqués"
 photoSrc = "engage2.webp"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
@@ -147,7 +147,7 @@ photoSrc = "engage4.webp"
 photoAlt = "engage1.png a"
 photoTitle = "engage1.png t"
 texte = """Nous privilégions des produits écologiques et des méthodes
-de nettoyage respectueuses de l'environnement,
+de nettoyage respectueux de l'environnement,
 assurant ainsi des espaces propres tout en préservant la planète."""
 
 +++

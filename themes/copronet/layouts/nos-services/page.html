@@ -19,12 +19,12 @@
 <div class="services">
     {{ range .Params.service }} {{ if eq .titre "cta" }}
     <div class="cta">
-        <button class="cta__btn">
+        <a class="cta__btn" href="/notre-offre/">
             <strong>Voir</strong> notre <strong>offre</strong>
-        </button>
-        <button class="cta__btn cta__btn--light">
+        </a>
+        <a class="cta__btn cta__btn--light" href="{{ "devis-gratuit-sous-24h" | relURL }}">
             Devis <strong>gratuit</strong> sous 24h
-        </button>
+        </a>
     </div>
     {{ else }}
     <div class="service">

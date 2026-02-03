@@ -79,6 +79,15 @@
         padding: calc(var(--gutter-y) * 1.5) calc(var(--gutter-x) * 2)
             calc(var(--gutter-y) * 2);
             text-align: center;
+
+        &__a {
+            display: block;
+            margin: 20px auto 0 ;
+
+            & > strong {
+                display: block;
+            }
+        }
     }
 
     &__expend {
@@ -141,6 +150,7 @@
 }
 
 .offer {
+    display: block;
     background: var(--cpn-blue);
     padding: 30px 50px 0;
     color: var(--white);
@@ -518,6 +528,20 @@
             padding: calc(var(--gutter-y) * 1) calc(var(--gutter-x) * 1) calc(var(--gutter-y) * 1) calc(var(--gutter-x) * 0);
             font-size: var(--font-m);
             text-align: left;
+
+            &__a {
+                width: fit-content;
+                margin: 20px 0 0 -10px;
+                padding: 4px 10px;
+                &:hover {
+                    background: var(--cpn-blue);
+                    color: var(--cpn-blue-light);
+                    text-decoration: none;
+                }
+                & > strong {
+                    display: inline;
+                }
+            }
         }
 
         &__expends {

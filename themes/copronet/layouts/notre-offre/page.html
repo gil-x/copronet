@@ -14,7 +14,11 @@
         <span>{{ .Params.h1Part1 | markdownify }}</span>
         <span>{{ .Params.h1Part2 | markdownify }}</span>
     </h1>
-    <p class="hero__intro">{{ .Params.intro | markdownify }}</p>
+    <p class="hero__intro">x{{ .Params.intro | markdownify }}
+        <a class="hero__intro__a" href="{{ "devis-gratuit-sous-24h" | relURL }}">
+        {{ .Params.lienDevis | markdownify }}
+    </a></p>
+
 
     {{ with .Params.offre }} {{ $offre := index . 0 }}
     <a class="offer" href="{{ "devis-gratuit-sous-24h" | relURL }}">
@@ -79,35 +83,35 @@
 <div class="section__customers__comments">
     <div class="section__customers__comments__comment">
         <img
-            src="avis1.png"
+            src="avis4.png"
             alt=""
             class="section__customers__comments__debug_img"
         />
     </div>
     <div class="section__customers__comments__comment">
         <img
-            src="avis2.png"
+            src="avis6.png"
             alt=""
             class="section__customers__comments__debug_img"
         />
     </div>
     <div class="section__customers__comments__comment">
         <img
-            src="avis3.png"
+            src="avis7.png"
             alt=""
             class="section__customers__comments__debug_img"
         />
     </div>
     <div class="section__customers__comments__comment">
         <img
-            src="avis1.png"
+            src="avis5.png"
             alt=""
             class="section__customers__comments__debug_img"
         />
     </div>
     <div class="section__customers__comments__comment">
         <img
-            src="avis2.png"
+            src="avis4.png"
             alt=""
             class="section__customers__comments__debug_img"
         />

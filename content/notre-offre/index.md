@@ -13,12 +13,14 @@ h1Part1 = "Depuis 2004, COPRONET est votre partenaire pour le nettoyage"
 h1Part2 = "et l'entretien des parties communes de vos immeubles."
 
 intro = """**Nous avons conçu une offre standard pour un immeuble haussmannien de 5/6 étages à Paris & Île-de-France.** Le&nbsp;tarif sera adapté en fonction de la taille de l’immeuble et des prestations de nettoyage choisies afin de vous proposer une solution juste, efficace et sur mesure."""
+lienDevis = "Pour un devis personnalisé, **cliquez ICI**"
 prestationsTitre = "Prestations incluses"
 prestationsTexte = """
 - Nettoyage des parties communes
 - Vitrerie
-- Gestion des conteneurs"""
-supervisionTitre = "Supervision Qualité au quotidien"
+- Gestion des conteneurs
+- Entretien des ampoules"""
+supervisionTitre = "La qualité au quotidien"
 supervisionTexte = """Nos responsables de secteur, munis de tablettes numériques,
 garantissent la qualité des services en temps réel.
 Servant de relais d'information, ils sont en mesure de

@@ -33,7 +33,7 @@ chiffre = "1600"
 texte = "copropriétés entretenues<br>quotidiennement"
 [[chiffre]]
 image = "chiffre4.svg"
-chiffre = "4,4/5"
+chiffre = "4,6/5"
 texte = "appréciation<br>sur Google"
 
 [[offre]]
@@ -46,6 +46,7 @@ frequence = "par mois"
 texte3 = "Prestations incluses"
 prestation1 = "Nettoyage des parties communes"
 prestation2 = "Vitrerie - Gestion des conteneurs"
+prestation3 = "Entretien des ampoules"
 asterisque = "pour un immeuble de 5-6 étages à Paris ou en Île-de-France)"
 
 [[clients]]
