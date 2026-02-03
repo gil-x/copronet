@@ -29,7 +29,7 @@ texte = """Nos agents disposent désormais de tenues de travail :
 Conçues avec eux et pour eux, elles reflètent ce qu’est Copronet : une équipe engagée, pro et fière de son métier.
 """
 
-auteur = "Aurélie BOILEAU & Sebastien BOILEAU"
+auteur = "Aurélie BOILEAU & Sébastien BOILEAU"
 
 
 [[image]]

@@ -1,5 +1,6 @@
 baseURL = 'https://cpnet2.gil-web.com/'
-languageCode = 'fr-fr'
+defaultContentLanguage = "fr"
+languageCode = 'fr-FR'
 title = 'Copronet'
 theme = 'copronet'
 pagination.pagerSize = 2

@@ -19,14 +19,18 @@
         /* color: red; */
         font-size: var(--font-m-l);
         text-transform: uppercase;
-        margin: 0 0 20px 0;
+        margin: 0 0 1px 0;
     }
 
     &__date {
-        display: none;
+        display: block;
+        /* grid-column: 1; */
+        /* grid-column: -1/1; */
+        /* display: none; */
+        margin: 0 0 20px 0;
         font-size: var(--font-m-s);
         color: var(--gray-d2);
-        margin: 10px 0;
+        /* margin: 10px 0; */
     }
 
     &__picts {
@@ -111,15 +115,20 @@
 
         &__title {
             /* margin: calc(var(--header-h) + 50px) 0 36px; if widget fixed */
-            margin: 36px 0;
+            margin: 36px 0 0;
             font-size: var(--font-xxl);
             text-transform: none;
             max-width: 75%;
         }
 
+        &__date {
+            grid-column: 1;
+            font-size: var(--font-root);
+        }
+
         &__picts {
             grid-column: 1;
-            grid-row: 2/99;
+            grid-row: 3/99;
         }
 
         &__pict {

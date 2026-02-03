@@ -14,7 +14,7 @@
 
 <main class="post">
     <h1 class="post__title">{{ .Params.h1 | markdownify }}</h1>
-    <time class="post__date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2 January 2006" }}</time>
+    <time class="post__date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02/01/2006" }}</time>
 
     {{ if not .Params.categories }}
       <span class="hero__cat categories__item">

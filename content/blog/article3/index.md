@@ -11,20 +11,18 @@ tags = ["Copropriétés", "RSE", "Proximité"]
 related_posts = ["article1"]
 
 #### HERO ####
-h1 = "COPRONET, ce n’est pas que du nettoyage"
+h1 = "COPRONET, ce n’est pas que du nettoyage…"
 
-summary = """… c’est prendre soin de votre quotidien. C’est un service essentiel, humain et réactif. C’est aussi et surtout une équipe engagée (…)"""
+summary = """… c’est prendre soin de votre quotidien. C’est un service essentiel, humain et réactif. C’est aussi et surtout une équipe engagée au quotidien pour que vos parties communes soient toujours propres et accueillantes."""
 
-texte = """C’est un service essentiel, humain, et réactif.
-C’est aussi et surtout une équipe engagée au quotidien pour que 𝐯𝐨𝐬 𝐩𝐚𝐫𝐭𝐢𝐞𝐬 𝐜𝐨𝐦𝐦𝐮𝐧𝐞𝐬 𝐬𝐨𝐢𝐞𝐧𝐭 𝐭𝐨𝐮𝐣𝐨𝐮𝐫𝐬 𝐩𝐫𝐨𝐩𝐫𝐞𝐬 𝐞𝐭 𝐚𝐜𝐜𝐮𝐞𝐢𝐥𝐥𝐚𝐧𝐭𝐞𝐬.
-
+texte = """
 🛠️ Nettoyage, gestion des poubelles, vitrerie, entretien de parkings, bricolages, débarras…
 
 - 🌱 Des produits plus respectueux de l’environnement.
 - 📍 1200 copropriétés suivies chaque jour, par 350 agent.e.s impliqué.e.s.
 - 📞 Et un.e responsable de secteur dédié.e, joignable directement.
 
-📄 On vous dit tout dans notre nouvelle plaquett
+📄 On vous dit tout dans notre nouvelle plaquette !
 """
 
 [[image]]
