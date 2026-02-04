@@ -18,102 +18,11 @@
 
 <div class="contact-content">
     <form id="multiStepForm" novalidate>
-        <!-- Step 1: Vos Informations -->
+
+
+        <!-- Step 1: Votre Résidence -->
         <div class="form-step" data-step="1">
             <h2 class="step-title" data-target-step="1">
-                <span>VOS INFORMATIONS</span
-                ><img
-                    src="/img/arrow_r_bluelight.svg"
-                    alt=""
-                    class="step-arrow"
-                />
-            </h2>
-            <div class="step-content">
-                <div class="form-group form-row">
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            id="prenom"
-                            name="prenom"
-                            placeholder="prenom"
-                            required
-                        />
-                        <label for="prenom">Prénom*</label>
-                    </div>
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            id="nom"
-                            name="nom"
-                            placeholder="nom"
-                            required
-                        />
-                        <label for="nom">Nom*</label>
-                    </div>
-                </div>
-                <!--<div class="form-group form-row">-->
-                <div class="form-group">
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="email"
-                        required
-                    />
-                    <label for="email">Mail*</label>
-                </div>
-                <div class="form-group">
-                    <input
-                        type="tel"
-                        id="telephone"
-                        name="telephone"
-                        placeholder="téléphone"
-                        required
-                        pattern="[0-9\s\-\+]{10,}"
-                        title="Numéro de téléphone valide (min 10 chiffres)"
-                    />
-                    <label for="telephone">Téléphone*</label>
-                </div>
-                <!--</div>-->
-                <!--<div class="form-group form-row">-->
-                <div class="form-group">
-                    <input
-                        type="text"
-                        id="adresse"
-                        name="adresse"
-                        placeholder="adresse"
-                        required
-                    />
-                    <label for="adresse">Adresse*</label>
-                </div>
-                <div class="form-group">
-                    <input
-                        type="text"
-                        id="cpville"
-                        name="cpville"
-                        placeholder="CP et ville"
-                        required
-                    />
-                    <label for="cpville">CP et Ville*</label>
-                </div>
-                <!--</div>-->
-                <div class="form-group">
-                    <input
-                        type="text"
-                        id="syndic"
-                        name="syndic"
-                        placeholder="syndic"
-                        required
-                    />
-                    <label for="syndic">Nom du syndic*</label>
-                </div>
-                <p class="required-notice">* obligatoire</p>
-            </div>
-        </div>
-
-        <!-- Step 2: Votre Résidence -->
-        <div class="form-step" data-step="2">
-            <h2 class="step-title" data-target-step="2">
                 <span>VOTRE <span class="blue-light">RÉSIDENCE</span></span
                 ><img src="/img/arrow_r_blue.svg" alt="" class="step-arrow" />
             </h2>
@@ -235,9 +144,9 @@
             </div>
         </div>
 
-        <!-- Step 3: Question de Fréquence -->
-        <div class="form-step" data-step="3">
-            <h2 class="step-title" data-target-step="3">
+        <!-- Step 2: Question de Fréquence -->
+        <div class="form-step" data-step="2">
+            <h2 class="step-title" data-target-step="2">
                 <span
                     >QUESTION DE <span class="blue-light">FRÉQUENCE</span></span
                 ><img src="/img/arrow_r_white.svg" alt="" class="step-arrow" />
@@ -278,6 +187,97 @@
                         <option value="all-days">Tous les jours</option>
                     </select>
                     <!-- <input type="text" id="freq_collecte" name="freq_collecte" value="1 fois par semaine" required> -->
+                </div>
+
+                <p class="required-notice">* obligatoire</p>
+            </div>
+        </div>
+
+        <!-- Step 3: Vos Informations -->
+        <div class="form-step" data-step="3">
+            <h2 class="step-title" data-target-step="3">
+                <span>VOS INFORMATIONS</span
+                ><img
+                    src="/img/arrow_r_bluelight.svg"
+                    alt=""
+                    class="step-arrow"
+                />
+            </h2>
+            <div class="step-content">
+                <div class="form-group form-row">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            id="prenom"
+                            name="prenom"
+                            placeholder="prenom"
+                        />
+                        <label for="prenom">Prénom</label>
+                    </div>
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            placeholder="nom"
+                        />
+                        <label for="nom">Nom</label>
+                    </div>
+                </div>
+                <!--<div class="form-group form-row">-->
+                <div class="form-group">
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="email"
+                        required
+                    />
+                    <label for="email">Mail*</label>
+                </div>
+                <div class="form-group">
+                    <input
+                        type="tel"
+                        id="telephone"
+                        name="telephone"
+                        placeholder="téléphone"
+                        required
+                        pattern="[0-9\s\-\+]{10,}"
+                        title="Numéro de téléphone valide (min 10 chiffres)"
+                    />
+                    <label for="telephone">Téléphone*</label>
+                </div>
+                <!--</div>-->
+                <!--<div class="form-group form-row">-->
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="adresse"
+                        name="adresse"
+                        placeholder="adresse"
+                        required
+                    />
+                    <label for="adresse">Adresse*</label>
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="cpville"
+                        name="cpville"
+                        placeholder="CP et ville"
+                        required
+                    />
+                    <label for="cpville">CP et Ville*</label>
+                </div>
+                <!--</div>-->
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="syndic"
+                        name="syndic"
+                        placeholder="syndic"
+                    />
+                    <label for="syndic">Nom du syndic</label>
                 </div>
                 <div class="form-group gdpr-group">
                     <input type="checkbox" id="gdpr" name="gdpr" required />
