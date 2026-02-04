@@ -16,7 +16,7 @@ intro = """Complétez notre formulaire de contact et nous reviendrons vers vous 
 [[illustration]]
 title = "hero-mobile.jpg"
 alt = "Hero"
-src_mobile = "illustration_mob.webp"
+src_mobile = "illustration_mob2.webp"
 src_desktop = "illustration.webp"
 
 [[slogan]]
