@@ -1,0 +1,384 @@
+{{ define "head" }}
+{{ partial "head.html" (dict "page" . "css" "page-quality") }}
+{{ end }}
+
+
+{{ define "main" }}
+
+<form class="form">
+
+    <!-- INFORMATIONS GÉNÉRALES -->
+    <fieldset>
+        <legend>Informations générales</legend>
+
+        <div class="form-group form-row">
+            <div class="form-group">
+                <label for="date_visite">Date de la visite*</label>
+                <input type="date" id="date_visite" name="date_visite" required />
+            </div>
+
+            <div class="form-group">
+                <label for="jours_passage">Jour(s) de passage au contrat</label>
+                <input type="text" id="jours_passage" name="jours_passage" placeholder="Jour(s) de passage au contrat" />
+            </div>
+        </div>
+
+        <div class="form-group form-row">
+            <div class="form-group">
+                <label for="superviseur">Superviseur*</label>
+                <input type="text" id="superviseur" name="superviseur" placeholder="Superviseur" required />
+            </div>
+
+            <div class="form-group form-group--radio">
+                <label>Photo(s) prise(s)</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="photos" value="oui" /> Oui</label>
+                    <label><input type="radio" name="photos" value="non" /> Non</label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <!-- AGENT / ÉQUIPE -->
+    <fieldset>
+        <legend>Agent / Équipe</legend>
+
+        <div class="form-group form-row">
+            <div class="form-group">
+                <label for="nom_agent">Nom et prénom de l'agent*</label>
+                <input type="text" id="nom_agent" name="nom_agent" placeholder="Nom et prénom de l'agent" required />
+            </div>
+
+            <div class="form-group">
+                <label for="matricule">Matricule</label>
+                <input type="text" id="matricule" name="matricule" placeholder="Matricule" />
+            </div>
+        </div>
+
+        <div class="form-group form-row">
+            <div class="form-group form-group--radio">
+                <label>Ponctualité</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="ponctualite" value="bien" /> Bien</label>
+                    <label><input type="radio" name="ponctualite" value="moyen" /> Moyen</label>
+                    <label><input type="radio" name="ponctualite" value="mauvais" /> Mauvais</label>
+                </div>
+            </div>
+
+            <div class="form-group form-group--radio">
+                <label>Port de la tenue</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="port_tenue" value="bien" /> Bien</label>
+                    <label><input type="radio" name="port_tenue" value="moyen" /> Moyen</label>
+                    <label><input type="radio" name="port_tenue" value="mauvais" /> Mauvais</label>
+                </div>
+            </div>
+
+            <div class="form-group form-group--radio">
+                <label>Respect du binôme</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="respect_binome" value="bien" /> Bien</label>
+                    <label><input type="radio" name="respect_binome" value="moyen" /> Moyen</label>
+                    <label><input type="radio" name="respect_binome" value="mauvais" /> Mauvais</label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <!-- IMMEUBLE -->
+    <fieldset>
+        <legend>Immeuble</legend>
+
+        <div class="form-group form-row">
+            <div class="form-group">
+                <label for="nom_immeuble">Nom de l'immeuble*</label>
+                <input type="text" id="nom_immeuble" name="nom_immeuble" placeholder="Nom de l'immeuble" required />
+            </div>
+        </div>
+
+        <div class="form-group form-row">
+            <div class="form-group">
+                <label for="adresse">Adresse complète</label>
+                <input type="text" id="adresse" name="adresse" placeholder="Adresse complète" />
+            </div>
+        </div>
+
+        <div class="form-group form-row">
+            <div class="form-group form-group--radio">
+                <label>État général de l'immeuble :</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="etat_immeuble" value="impeccable" /> Impeccable</label>
+                    <label><input type="radio" name="etat_immeuble" value="bon" /> Bon</label>
+                    <label><input type="radio" name="etat_immeuble" value="correct" /> Correct</label>
+                    <label><input type="radio" name="etat_immeuble" value="mauvais" /> Mauvais</label>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <!-- ÉVALUATION DES PRESTATIONS -->
+    <fieldset>
+        <legend>Évaluation des prestations</legend>
+
+        <table class="prestations-table">
+            <thead>
+                <tr>
+                    <th>Prestation</th>
+                    <th>Bien</th>
+                    <th>Moyen</th>
+                    <th>Mauvais</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- Conteneurs -->
+                <tr class="section-header"><td colspan="4">Conteneurs</td></tr>
+                <tr>
+                    <td>Nettoyage du local poubelle</td>
+                    <td><input type="radio" name="local_poubelle" value="bien" /></td>
+                    <td><input type="radio" name="local_poubelle" value="moyen" /></td>
+                    <td><input type="radio" name="local_poubelle" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Nettoyage et désinfection des conteneurs</td>
+                    <td><input type="radio" name="desinfection_conteneurs" value="bien" /></td>
+                    <td><input type="radio" name="desinfection_conteneurs" value="moyen" /></td>
+                    <td><input type="radio" name="desinfection_conteneurs" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Entrée et sortie des conteneurs</td>
+                    <td><input type="radio" name="entree_sortie_conteneurs" value="bien" /></td>
+                    <td><input type="radio" name="entree_sortie_conteneurs" value="moyen" /></td>
+                    <td><input type="radio" name="entree_sortie_conteneurs" value="mauvais" /></td>
+                </tr>
+
+                <!-- Hall(s) -->
+                <tr class="section-header"><td colspan="4">Hall(s)</td></tr>
+                <tr>
+                    <td>Propreté extérieure (abords) – cour / devant immeuble</td>
+                    <td><input type="radio" name="proprete_exterieure" value="bien" /></td>
+                    <td><input type="radio" name="proprete_exterieure" value="moyen" /></td>
+                    <td><input type="radio" name="proprete_exterieure" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Portes d'accès, plaques, digicode</td>
+                    <td><input type="radio" name="portes_acces" value="bien" /></td>
+                    <td><input type="radio" name="portes_acces" value="moyen" /></td>
+                    <td><input type="radio" name="portes_acces" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Boîte aux lettres</td>
+                    <td><input type="radio" name="boite_lettres" value="bien" /></td>
+                    <td><input type="radio" name="boite_lettres" value="moyen" /></td>
+                    <td><input type="radio" name="boite_lettres" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Interrupteurs</td>
+                    <td><input type="radio" name="interrupteurs_hall" value="bien" /></td>
+                    <td><input type="radio" name="interrupteurs_hall" value="moyen" /></td>
+                    <td><input type="radio" name="interrupteurs_hall" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Corbeille à papiers</td>
+                    <td><input type="radio" name="corbeille_papiers" value="bien" /></td>
+                    <td><input type="radio" name="corbeille_papiers" value="moyen" /></td>
+                    <td><input type="radio" name="corbeille_papiers" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Cuivre</td>
+                    <td><input type="radio" name="cuivre" value="bien" /></td>
+                    <td><input type="radio" name="cuivre" value="moyen" /></td>
+                    <td><input type="radio" name="cuivre" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Plinthes et boiseries</td>
+                    <td><input type="radio" name="plinthes_boiseries_hall" value="bien" /></td>
+                    <td><input type="radio" name="plinthes_boiseries_hall" value="moyen" /></td>
+                    <td><input type="radio" name="plinthes_boiseries_hall" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Tapis</td>
+                    <td><input type="radio" name="tapis_hall" value="bien" /></td>
+                    <td><input type="radio" name="tapis_hall" value="moyen" /></td>
+                    <td><input type="radio" name="tapis_hall" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Sols (carrelage, marbre, thermoplastique)</td>
+                    <td><input type="radio" name="sols_hall" value="bien" /></td>
+                    <td><input type="radio" name="sols_hall" value="moyen" /></td>
+                    <td><input type="radio" name="sols_hall" value="mauvais" /></td>
+                </tr>
+
+                <!-- Ascenseur(s) -->
+                <tr class="section-header"><td colspan="4">Ascenseur(s)</td></tr>
+                <tr>
+                    <td>Porte</td>
+                    <td><input type="radio" name="ascenseur_porte" value="bien" /></td>
+                    <td><input type="radio" name="ascenseur_porte" value="moyen" /></td>
+                    <td><input type="radio" name="ascenseur_porte" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Miroir</td>
+                    <td><input type="radio" name="ascenseur_miroir" value="bien" /></td>
+                    <td><input type="radio" name="ascenseur_miroir" value="moyen" /></td>
+                    <td><input type="radio" name="ascenseur_miroir" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Parois + platine</td>
+                    <td><input type="radio" name="ascenseur_parois" value="bien" /></td>
+                    <td><input type="radio" name="ascenseur_parois" value="moyen" /></td>
+                    <td><input type="radio" name="ascenseur_parois" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Sol + rail</td>
+                    <td><input type="radio" name="ascenseur_sol" value="bien" /></td>
+                    <td><input type="radio" name="ascenseur_sol" value="moyen" /></td>
+                    <td><input type="radio" name="ascenseur_sol" value="mauvais" /></td>
+                </tr>
+
+                <!-- Escalier(s) -->
+                <tr class="section-header"><td colspan="4">Escalier(s)</td></tr>
+                <tr>
+                    <td>Rampe</td>
+                    <td><input type="radio" name="escalier_rampe" value="bien" /></td>
+                    <td><input type="radio" name="escalier_rampe" value="moyen" /></td>
+                    <td><input type="radio" name="escalier_rampe" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Barreaudage</td>
+                    <td><input type="radio" name="escalier_barreaudage" value="bien" /></td>
+                    <td><input type="radio" name="escalier_barreaudage" value="moyen" /></td>
+                    <td><input type="radio" name="escalier_barreaudage" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Plinthes et boiseries</td>
+                    <td><input type="radio" name="escalier_plinthes" value="bien" /></td>
+                    <td><input type="radio" name="escalier_plinthes" value="moyen" /></td>
+                    <td><input type="radio" name="escalier_plinthes" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Marches et contremarches (balayage ou aspiration)</td>
+                    <td><input type="radio" name="marches_balayage" value="bien" /></td>
+                    <td><input type="radio" name="marches_balayage" value="moyen" /></td>
+                    <td><input type="radio" name="marches_balayage" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Marches et contremarches (cirage)</td>
+                    <td><input type="radio" name="marches_cirage" value="bien" /></td>
+                    <td><input type="radio" name="marches_cirage" value="moyen" /></td>
+                    <td><input type="radio" name="marches_cirage" value="mauvais" /></td>
+                </tr>
+
+                <!-- Paliers -->
+                <tr class="section-header"><td colspan="4">Paliers</td></tr>
+                <tr>
+                    <td>Vitrerie et encadrement fenêtres</td>
+                    <td><input type="radio" name="vitrerie" value="bien" /></td>
+                    <td><input type="radio" name="vitrerie" value="moyen" /></td>
+                    <td><input type="radio" name="vitrerie" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Plinthes et boiseries</td>
+                    <td><input type="radio" name="palier_plinthes" value="bien" /></td>
+                    <td><input type="radio" name="palier_plinthes" value="moyen" /></td>
+                    <td><input type="radio" name="palier_plinthes" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Rebords de fenêtres</td>
+                    <td><input type="radio" name="rebords_fenetres" value="bien" /></td>
+                    <td><input type="radio" name="rebords_fenetres" value="moyen" /></td>
+                    <td><input type="radio" name="rebords_fenetres" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Interrupteurs</td>
+                    <td><input type="radio" name="interrupteurs_palier" value="bien" /></td>
+                    <td><input type="radio" name="interrupteurs_palier" value="moyen" /></td>
+                    <td><input type="radio" name="interrupteurs_palier" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Sols</td>
+                    <td><input type="radio" name="palier_sols" value="bien" /></td>
+                    <td><input type="radio" name="palier_sols" value="moyen" /></td>
+                    <td><input type="radio" name="palier_sols" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Tapis des résidents</td>
+                    <td><input type="radio" name="tapis_residents" value="bien" /></td>
+                    <td><input type="radio" name="tapis_residents" value="moyen" /></td>
+                    <td><input type="radio" name="tapis_residents" value="mauvais" /></td>
+                </tr>
+
+                <!-- Divers -->
+                <tr class="section-header"><td colspan="4">Divers</td></tr>
+                <tr>
+                    <td>Propreté des accès caves</td>
+                    <td><input type="radio" name="acces_caves" value="bien" /></td>
+                    <td><input type="radio" name="acces_caves" value="moyen" /></td>
+                    <td><input type="radio" name="acces_caves" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Remplacement des points lumineux</td>
+                    <td><input type="radio" name="remplacement_lumineux" value="bien" /></td>
+                    <td><input type="radio" name="remplacement_lumineux" value="moyen" /></td>
+                    <td><input type="radio" name="remplacement_lumineux" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Propreté des points lumineux</td>
+                    <td><input type="radio" name="proprete_lumineux" value="bien" /></td>
+                    <td><input type="radio" name="proprete_lumineux" value="moyen" /></td>
+                    <td><input type="radio" name="proprete_lumineux" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Propreté cour ou courette</td>
+                    <td><input type="radio" name="proprete_cour" value="bien" /></td>
+                    <td><input type="radio" name="proprete_cour" value="moyen" /></td>
+                    <td><input type="radio" name="proprete_cour" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Toiles d'araignées</td>
+                    <td><input type="radio" name="toiles_araignees" value="bien" /></td>
+                    <td><input type="radio" name="toiles_araignees" value="moyen" /></td>
+                    <td><input type="radio" name="toiles_araignees" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Rangement et propreté du local</td>
+                    <td><input type="radio" name="rangement_local" value="bien" /></td>
+                    <td><input type="radio" name="rangement_local" value="moyen" /></td>
+                    <td><input type="radio" name="rangement_local" value="mauvais" /></td>
+                </tr>
+                <tr>
+                    <td>Propreté des accès parking</td>
+                    <td><input type="radio" name="acces_parking" value="bien" /></td>
+                    <td><input type="radio" name="acces_parking" value="moyen" /></td>
+                    <td><input type="radio" name="acces_parking" value="mauvais" /></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </fieldset>
+
+    <!-- SIGNATURES -->
+    <fieldset>
+        <legend>Signatures</legend>
+
+        <div class="form-group form-row">
+            <div class="form-group">
+                <label for="nom_representant">Nom du représentant du conseil syndical / syndic</label>
+                <input type="text" id="nom_representant" name="nom_representant" placeholder="Nom du représentant du conseil syndical / syndic" />
+            </div>
+
+            <div class="form-group">
+                <label for="nom_salarie">Nom du salarié</label>
+                <input type="text" id="nom_salarie" name="nom_salarie" placeholder="Nom du salarié" />
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="form-actions">
+        <button class="btn" type="submit">Envoyer</button>
+        <!-- <button type="reset">Réinitialiser</button> -->
+    </div>
+
+</form>
+
+{{ end }}
