@@ -44,14 +44,12 @@
 @media (min-width: $bp-medium) {
     .carrousel {
         &__item {
-            width: calc(10%);
+            width: calc(100% / 9);
             overflow: auto;
         }
     }
 }
 
-@media (min-width: $bp-hd) {
-}
+@media (min-width: $bp-hd) {}
 
-@media (min-width: $bp-fhd) {
-}
+@media (min-width: $bp-fhd) {}

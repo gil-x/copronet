@@ -14,7 +14,7 @@
         <span>{{ .Params.h1Part1 | markdownify }}</span>
         <span>{{ .Params.h1Part2 | markdownify }}</span>
     </h1>
-    <p class="hero__intro">x{{ .Params.intro | markdownify }}
+    <p class="hero__intro">{{ .Params.intro | markdownify }}
         <a class="hero__intro__a" href="{{ "devis-gratuit-sous-24h" | relURL }}">
         {{ .Params.lienDevis | markdownify }}
     </a></p>
