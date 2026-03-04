@@ -44,7 +44,7 @@
 @media (min-width: $bp-medium) {
     .carrousel {
         &__item {
-            width: calc(100% / 9);
+            width: calc(100% / 10);
             overflow: auto;
         }
     }

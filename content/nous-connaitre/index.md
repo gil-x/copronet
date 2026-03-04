@@ -58,7 +58,10 @@ src = "p4.webp"
 title = "?"
 alt = "?"
 src = "p5.webp"
-
+[[membre]]
+title = "?"
+alt = "?"
+src = "p6.webp"
 [[membre]]
 title = "?"
 alt = "?"
