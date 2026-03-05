@@ -2,6 +2,10 @@
 {{ partial "head.html" (dict "page" . "css" "page-quality") }}
 {{ end }}
 
+{{ define "additional-js" }}
+{{ partial "additional-js.html" "quality" }}
+{{ end }}
+
 
 {{ define "main" }}
 
@@ -19,7 +23,8 @@
 
             <div class="form-group">
                 <label for="jours_passage">Jour(s) de passage au contrat</label>
-                <input type="text" id="jours_passage" name="jours_passage" placeholder="Jour(s) de passage au contrat" />
+                <input type="text" id="jours_passage" name="jours_passage"
+                    placeholder="Jour(s) de passage au contrat" />
             </div>
         </div>
 
@@ -132,7 +137,9 @@
             <tbody>
 
                 <!-- Conteneurs -->
-                <tr class="section-header"><td colspan="4">Conteneurs</td></tr>
+                <tr class="section-header">
+                    <td colspan="4">Conteneurs</td>
+                </tr>
                 <tr>
                     <td>Nettoyage du local poubelle</td>
                     <td><input type="radio" name="local_poubelle" value="bien" /></td>
@@ -153,7 +160,9 @@
                 </tr>
 
                 <!-- Hall(s) -->
-                <tr class="section-header"><td colspan="4">Hall(s)</td></tr>
+                <tr class="section-header">
+                    <td colspan="4">Hall(s)</td>
+                </tr>
                 <tr>
                     <td>Propreté extérieure (abords) – cour / devant immeuble</td>
                     <td><input type="radio" name="proprete_exterieure" value="bien" /></td>
@@ -210,7 +219,9 @@
                 </tr>
 
                 <!-- Ascenseur(s) -->
-                <tr class="section-header"><td colspan="4">Ascenseur(s)</td></tr>
+                <tr class="section-header">
+                    <td colspan="4">Ascenseur(s)</td>
+                </tr>
                 <tr>
                     <td>Porte</td>
                     <td><input type="radio" name="ascenseur_porte" value="bien" /></td>
@@ -237,7 +248,9 @@
                 </tr>
 
                 <!-- Escalier(s) -->
-                <tr class="section-header"><td colspan="4">Escalier(s)</td></tr>
+                <tr class="section-header">
+                    <td colspan="4">Escalier(s)</td>
+                </tr>
                 <tr>
                     <td>Rampe</td>
                     <td><input type="radio" name="escalier_rampe" value="bien" /></td>
@@ -270,7 +283,9 @@
                 </tr>
 
                 <!-- Paliers -->
-                <tr class="section-header"><td colspan="4">Paliers</td></tr>
+                <tr class="section-header">
+                    <td colspan="4">Paliers</td>
+                </tr>
                 <tr>
                     <td>Vitrerie et encadrement fenêtres</td>
                     <td><input type="radio" name="vitrerie" value="bien" /></td>
@@ -309,7 +324,9 @@
                 </tr>
 
                 <!-- Divers -->
-                <tr class="section-header"><td colspan="4">Divers</td></tr>
+                <tr class="section-header">
+                    <td colspan="4">Divers</td>
+                </tr>
                 <tr>
                     <td>Propreté des accès caves</td>
                     <td><input type="radio" name="acces_caves" value="bien" /></td>
@@ -364,7 +381,8 @@
         <div class="form-group form-row">
             <div class="form-group">
                 <label for="nom_representant">Nom du représentant du conseil syndical / syndic</label>
-                <input type="text" id="nom_representant" name="nom_representant" placeholder="Nom du représentant du conseil syndical / syndic" />
+                <input type="text" id="nom_representant" name="nom_representant"
+                    placeholder="Nom du représentant du conseil syndical / syndic" />
             </div>
 
             <div class="form-group">

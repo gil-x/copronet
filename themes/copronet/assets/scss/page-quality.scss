@@ -11,6 +11,10 @@
 .header {
     background: transparent;
     box-shadow: none;
+
+    &__call-menu {
+        display: none;
+    }
 }
 
 .nav,

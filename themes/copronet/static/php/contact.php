@@ -1,71 +1,74 @@
 <?php
-header("Content-Type: application/json; charset=utf-8");
+require_once __DIR__ . '/config.php';
 
-define("DEST_EMAIL", "xxx@gmail.com");
-define("SITE_NAME", "Copronet TEST");
-define("FROM_EMAIL", "noreply@" . $_SERVER["HTTP_HOST"]); // Important !
+// Configuration
+$config = [
+    'to'      => MAIL_TO,
+    'from'    => 'noreply@qhubegh.cluster121.hosting.ovh.net',
+    'subject' => 'Nouveau message de contact',
+];
 
-function sanitize($data)
-{
-    return htmlspecialchars(strip_tags(trim($data)), ENT_QUOTES, "UTF-8");
+// Headers CORS si nécessaire (Hugo dev server sur un autre port)
+// header('Access-Control-Allow-Origin: *');
+header('Content-Type: text/plain; charset=utf-8');
+
+// Refuser toute méthode autre que POST
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    exit('Méthode non autorisée.');
 }
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    echo json_encode([
-        "success" => false,
-        "message" => "Méthode non autorisée",
-    ]);
-    exit();
+// --- Récupération et nettoyage des champs ---
+function clean(string $value): string {
+    return htmlspecialchars(strip_tags(trim($value)), ENT_QUOTES, 'UTF-8');
 }
 
-$prenom = sanitize($_POST["prenom"] ?? "");
-$nom = sanitize($_POST["nom"] ?? "");
-$email = sanitize($_POST["email"] ?? "");
-$telephone = sanitize($_POST["telephone"] ?? "");
-$adresse = sanitize($_POST["adresse"] ?? "");
-$cpville = sanitize($_POST["cpville"] ?? "");
-$syndic = sanitize($_POST["syndic"] ?? "");
-$message = sanitize($_POST["message"] ?? "");
+$prenom    = clean($_POST['prenom']    ?? '');
+$nom       = clean($_POST['nom']       ?? '');
+$email     = trim($_POST['email']      ?? '');
+$telephone = clean($_POST['telephone'] ?? '');
+$message   = clean($_POST['message']   ?? '');
 
-if (
-    empty($prenom) ||
-    empty($nom) ||
-    empty($email) ||
-    empty($telephone) ||
-    empty($cpville) ||
-    empty($message)
-) {
-    echo json_encode([
-        "success" => false,
-        "message" => "Champs obligatoires manquants",
-    ]);
-    exit();
+// --- Validation ---
+$errors = [];
+
+if (empty($prenom))                          $errors[] = 'Prénom manquant.';
+if (empty($nom))                             $errors[] = 'Nom manquant.';
+if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL))
+                                             $errors[] = 'Email invalide.';
+if (empty($telephone) || !preg_match('/^[\d\s\-\+]{10,}$/', $telephone))
+                                             $errors[] = 'Téléphone invalide.';
+if (empty($message))                         $errors[] = 'Message manquant.';
+
+if (!empty($errors)) {
+    http_response_code(422);
+    exit(implode(' ', $errors));
 }
 
-// Headers corrects (crucial pour mail())
-$headers = "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-$headers .= "From: " . SITE_NAME . " <" . FROM_EMAIL . ">\r\n";
+// --- Protection anti-injection dans les headers ---
+$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+// --- Construction du mail ---
+$corps  = "Nouveau message reçu depuis le formulaire de contact.\n";
+$corps .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n";
+$corps .= "Prénom    : $prenom\n";
+$corps .= "Nom       : $nom\n";
+$corps .= "Email     : $email\n";
+$corps .= "Téléphone : $telephone\n\n";
+$corps .= "Message :\n$message\n";
+
+$headers  = "From: {$config['from']}\r\n";
 $headers .= "Reply-To: $email\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion();
+$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-// Email admin
-$subject_admin = "Nouveau contact - " . SITE_NAME;
-$body_admin = "Prénom : $prenom\nNom : $nom\nEmail : $email\nTéléphone : $telephone\nCP/Ville : $cpville\n\nMessage :\n$message";
-
-$mail1 = @mail(DEST_EMAIL, $subject_admin, $body_admin, $headers);
-
-// Email user
-$subject_user = "Confirmation - " . SITE_NAME;
-$body_user =
-    "Bonjour $prenom,\n\nNous avons bien reçu votre message.\n\nCordialement,\n" .
-    SITE_NAME;
-
-$mail2 = @mail($email, $subject_user, $body_user, $headers);
-
-echo json_encode([
-    "success" => $mail1 && $mail2,
-    "message" => $mail1 && $mail2 ? "Message envoyé !" : "Erreur serveur mail",
-    "debug" => ["mail1" => $mail1, "mail2" => $mail2], // Retire en prod
-]);
+// --- Envoi ---
+if (mail($config['to'], $config['subject'], $corps, $headers)) {
+    http_response_code(200);
+    exit('Message envoyé.');
+} else {
+    http_response_code(500);
+    exit('Échec de l\'envoi. Veuillez réessayer.');
+}
 ?>
